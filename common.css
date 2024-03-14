@@ -1,4 +1,13 @@
+@import url("reset.css");
+@import url("normalize.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap')
 :root {
   --mainblue : #00427A;
   --mainorange : #F5821F;
+  --mainfont: "Noto Sans KR", sans-serif;
+  --h1: 70px; 
+  --h2: 55px;
+  --h3: 48px;
+  --h4: 38px;
+  --bodytext: 24px;
 }
