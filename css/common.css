@@ -1,3 +1,6 @@
+@import url('normalize.css');
+@import url('reset.css');
+
 :root {
   --blue : #00427A;
   --orange : #F5821F;
