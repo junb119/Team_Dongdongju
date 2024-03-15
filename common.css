@@ -4,10 +4,12 @@
   --black : #000;
   --white : #fff;
   /* 색상 */
-  --mainH2 : 55px;
-  --mainH3: 48px;
-  --mainH4: 38px;
-  --mainP: 24px;
+  --H1 : 70px;
+  --H2 : 55px;
+  --H3: 48px;
+  --H4: 38px;
+  --P: 24px;
+
   --subTitle: 20px;
   --breadCrumb: 20px;
   --mobileH2: 40px;
