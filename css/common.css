@@ -7,17 +7,17 @@
   --C-black : #000;
   --C-white : #fff;
   /* 색상 */
-  --T-H1 : 70px;
-  --T-H2 : 55px;
-  --T-H3: 48px;
-  --T-H4: 38px;
-  --T-P: 24px;
-
-  --subTitle: 20px;
-  --breadCrumb: 20px;
-  --mobileH2: 40px;
-  --mobileP: 16px;
+  --T-base: 16px;  
+  --T-H1 : 4.375;
+  --T-H2 : 3.4375;
+  --T-H3: 3;
+  --T-H4: 2.375;
+  --T-P: 1.5;
+  --T-subTitle: 1.25;
+  --T-breadCrumb: 1.25;
+  --T-mobileH2: 2.5;
+  --T-mobileP: 1;
   /* 폰트 사이즈 */
 
-  --mainfont: "Noto Sans KR",sans-serif;
+  --T-mainfont: "Noto Sans KR",sans-serif;
 }
