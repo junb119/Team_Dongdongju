@@ -1,9 +1,16 @@
+
+
+
+/* variants */
 :root {
+
+  /* color */
   --blue : #00427A;
   --orange : #F5821F;
   --black : #000;
   --white : #fff;
-  /* 색상 */
+
+  /* typography */
   --H1 : 70px;
   --H2 : 55px;
   --H3: 48px;
@@ -14,7 +21,6 @@
   --breadCrumb: 20px;
   --mobileH2: 40px;
   --mobileP: 16px;
-  /* 폰트 사이즈 */
 
   --mainfont: "Noto Sans KR",sans-serif;
 }
