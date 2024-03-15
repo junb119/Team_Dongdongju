@@ -1,6 +1,6 @@
 :root {
-  --mainblue : #00427A;
-  --mainorange : #F5821F;
+  --blue : #00427A;
+  --orange : #F5821F;
   --black : #000;
   --white : #fff;
   /* 색상 */
@@ -15,4 +15,6 @@
   --mobileH2: 40px;
   --mobileP: 16px;
   /* 폰트 사이즈 */
+
+  --mainfont: "Noto Sans KR",sans-serif;
 }
