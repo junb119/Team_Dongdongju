@@ -8,15 +8,15 @@
   --C-white : #fff;
   /* 색상 */
   --T-base: 16px;  
-  --T-H1 : 4.375;
-  --T-H2 : 3.4375;
-  --T-H3: 3;
-  --T-H4: 2.375;
-  --T-P: 1.5;
-  --T-subTitle: 1.25;
-  --T-breadCrumb: 1.25;
-  --T-mobileH2: 2.5;
-  --T-mobileP: 1;
+  --T-H1 : calc(val(--T-base) * 4.375);
+  --T-H2 : calc(val(--T-base) * 3.4375) ;
+  --T-H3: calc(val(--T-base) * 3) ;
+  --T-H4: calc(val(--T-base) * 2.375) ;
+  --T-P: calc(val(--T-base) * 1.5) ;
+  --T-subTitle: calc(val(--T-base) * 1.25) ;
+  --T-breadCrumb: calc(val(--T-base) * 1.25) ;
+  --T-mobileH2: calc(val(--T-base) * 2.5) ;
+  --T-mobileP: val(--T-base);
   /* 폰트 사이즈 */
 
   --T-mainfont: "Noto Sans KR",sans-serif;
