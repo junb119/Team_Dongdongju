@@ -24,31 +24,56 @@
 * {
   font-family: var(--T-mainfont);
 }
+/* ---------------레이아웃 */
+
+.fsz { /*full size 레이아웃*/
+  width: 100%;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
 
 .grid {
   /*컨텐츠가 그리드 안에 위치한다면 추가*/
   padding: 0 8%;
 }
-/* 레이아웃 */
 
+/* ---------------//레이아웃 */
+
+
+/* ---------------정렬 */
 .df {
   display: flex;
 }
 
-.fdc{
+.fdc {
   flex-direction: column;
 }
 
-.jcc{
+.jcc {
   justify-content: center;
 }
 
-.acc{
+.acc {
   align-content: center;
 }
+/* ---------------// 정렬 */
 
+/* ---------------타이포그래피 */
+h2 {
+  font-size: var(--T-H2);
+  font-weight: bold;
+}
 
-/* 정렬  */
+p {
+  font-size: var(--T-P);
+}
+
+/* ---------------타이포그래피 */
+
 /* 헤더 - 송림    */
 /* --헤더 - 송림  */
 
