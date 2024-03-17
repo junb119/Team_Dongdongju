@@ -1,23 +1,56 @@
-@import url('normalize.css');
-@import url('reset.css');
+@import url("normalize.css");
+@import url("reset.css");
 
 :root {
-  --C-blue : #00427A;
-  --C-orange : #F5821F;
-  --C-black : #000;
-  --C-white : #fff;
+  --C-blue: #00427a;
+  --C-orange: #f5821f;
+  --C-black: #000;
+  --C-white: #fff;
   /* 색상 */
-  --T-base: 16px;  
-  --T-H1 : calc(val(--T-base) * 4.375);
-  --T-H2 : calc(val(--T-base) * 3.4375) ;
-  --T-H3: calc(val(--T-base) * 3) ;
-  --T-H4: calc(val(--T-base) * 2.375) ;
-  --T-P: calc(val(--T-base) * 1.5) ;
-  --T-subTitle: calc(val(--T-base) * 1.25) ;
-  --T-breadCrumb: calc(val(--T-base) * 1.25) ;
-  --T-mobileH2: calc(val(--T-base) * 2.5) ;
-  --T-mobileP: val(--T-base);
+  --T-base: 16px;
+  --T-H1: calc(var(--T-base) * 4.375); /*70px*/
+  --T-H2: calc(var(--T-base) * 3.4375); /*55px*/
+  --T-H3: calc(var(--T-base) * 3); /*48px*/
+  --T-H4: calc(var(--T-base) * 2.375); /*38px*/
+  --T-P: calc(var(--T-base) * 1.5); /*24px*/
+  --T-subTitle: calc(var(--T-base) * 1.25); /*20px*/
+  --T-breadCrumb: calc(var(--T-base) * 1.25); /*20px*/
+  --T-mobileH2: calc(var(--T-base) * 2.5); /*40px*/
+  --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
 
-  --T-mainfont: "Noto Sans KR",sans-serif;
+  --T-mainfont: "Noto Sans KR", sans-serif;
 }
+* {
+  font-family: var(--T-mainfont);
+}
+
+.grid {
+  /*컨텐츠가 그리드 안에 위치한다면 추가*/
+  padding: 0 8%;
+}
+/* 레이아웃 */
+
+.df {
+  display: flex;
+}
+
+.fdc{
+  flex-direction: column;
+}
+
+.jcc{
+  justify-content: center;
+}
+
+.acc{
+  align-content: center;
+}
+
+
+/* 정렬  */
+/* 헤더 - 송림    */
+/* --헤더 - 송림  */
+
+/* 푸터 - 선진  */
+/* --푸터 - 선진 */
