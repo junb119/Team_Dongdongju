@@ -20,3 +20,93 @@
 
   --mainfont: "Noto Sans KR",sans-serif;
 }
+
+
+
+/* 송림*/
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 120px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3);
+}
+#header.fixed {
+  background: var(--white);
+}
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 8%;
+}
+.gnb_wrap .gnb{
+  display: flex;
+  gap: 30px;
+}
+.gnb_wrap .gnb>li {
+  text-align: center;
+  position: relative;
+  width: 152px;
+}
+.gnb_wrap .gnb>li>a {
+  font-family: var(--mainfont);
+  font-size: var(--subTitle);
+  color: var(--white);
+  text-decoration: none;
+}
+.gnb_wrap .gnb>li>a.on {
+  color: var(--black);
+}
+.gnb_wrap .depth02 {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 152px;
+  visibility: hidden;
+}
+.gnb_wrap .depth02.on {
+  position: absolute;
+  left: 0;
+  top: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 152px;
+  visibility: visible;
+}
+.gnb_wrap .depth02>li {
+  text-align: center;
+}
+.gnb_wrap .depth02>li>a {
+  font-family: var(--mainfont);
+  text-decoration: none;
+  color: var(--black);
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+.gnb_wrap .depth02>li>a:hover {
+  color: var(--blue);
+}
+.lang_wrap {
+  display: flex;
+  gap: 15px;
+}
+.lang_wrap a {
+  font-family: var(--mainfont);
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 18px
+}
+.lang_wrap a.on {
+  color: var(--black);
+}
+
+/* //송림 */
