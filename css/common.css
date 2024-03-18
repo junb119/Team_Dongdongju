@@ -18,7 +18,7 @@
   --T-mobileH2: calc(var(--T-base) * 2.5); /*40px*/
   --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
-
+  
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
 * {
