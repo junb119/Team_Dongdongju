@@ -51,6 +51,67 @@
 /* --메인영상 - 준범  */
 
 /* 경영철학 - 선진    */
+.vision_wrapper{
+  position: relative;
+}
+
+.main_vision .vision_wrapper .vision_title{
+  font-size: calc(var(--T-base) * 4);
+  color:var(--C-black);
+  font-weight: bold;
+  margin :auto 9%;
+  padding: auto 0;
+  line-height: 100px;
+}
+
+.vision_inner_wrapper{
+  background:url(../images/main_vision/vision_bg.png);
+  object-fit: cover;
+  width: 1920px;
+  height: 100vh;
+  position: relative;
+  animation: vision_scroll duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes vision_scroll{
+  0%{
+transform: matrix();
+  }
+  25%{
+
+  }
+  50%{
+
+  }
+  75%{
+
+  }
+  100%{
+
+  }
+}
+.inner_contents{
+  position: absolute;
+  color: var(--C-white);
+  display: block;
+  left: 684px;
+  width: 1123px;
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+  opacity: 0.5;
+  h2{
+    font-size: 55px;  
+    font-weight: bold;
+    line-height: 80px;
+  }p{
+  font-size: 48px;
+  line-height: 58px;
+  }
+}
+.active{
+  opacity: 1;
+}
 /* --경영철학 - 선진  */
 
 /* 수상이력 - 송림    */
@@ -243,6 +304,127 @@
 /* --수치자료 - 준범  */
 
 /* 사회공헌 - 선진  */
+.social_wrapper{
+  height: 100vh;
+}
+.social_title h2{
+font-size: var(--T-H2);
+color: var(--C-blue);
+font-weight: bold;
+}
+
+.social_title hr{
+width: 1020px;
+height: 0px;
+left: 1194px;
+top: 206px;
+border: 5px solid #F5821F;
+transform: rotate(-180deg);
+}
+
+.social_boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 96px;
+  text-decoration: none;
+}
+.social_subbox1{
+  background: url(../images/main/main_csr/csr_1.png);
+  animation: csr_card_fade_in_1 2s;
+  transition: transform 1.5s rotateY 0.2s;
+  transform-style: preserve-3d;
+  object-fit: cover;
+}
+
+@keyframes csr_card_fade_in_1 {
+  0%{
+    transform:translateX(300%) rotateY(0deg);
+  }
+  100%{
+    transform:translateX(0%) rotateY(360deg);
+  }
+}
+.social_subbox2{
+  background: url(../images/main/main_csr/csr_2.png);
+  animation: csr_card_fade_in_2 2s;
+  animation-delay: 0.5s;
+  transition: transform 1.5s rotateY 0.2s;
+  transform-style: preserve-3d;
+  object-fit: cover;
+}
+@keyframes csr_card_fade_in_2 {
+  0%{
+    transform:translateX(300%) rotateY(0deg);
+  }
+  100%{
+    transform:translateX(0%) rotateY(360deg);
+  }
+}
+.social_subbox3{
+  background: url(../images/main/main_csr/csr_3.png);
+  animation: csr_card_fade_in_3 2s;
+  animation-delay: 1s;
+  transition: transform 1.5s rotateY 0.2s;
+  transform-style: preserve-3d;
+  object-fit: cover;
+}
+@keyframes csr_card_fade_in_3 {
+  0%{
+    transform:translateX(300%) rotateY(0deg);
+  }
+  100%{
+    transform:translateX(0%) rotateY(360deg);
+  }
+}
+
+.social_subbox1 ,
+.social_subbox2 ,
+.social_subbox3 {
+  display: flex;
+   display: block;
+   width :436px;
+   height: 541px;
+   border-radius : 50px;
+   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.social_subbox1 :hover,
+.social_subbox2 :hover,
+.social_subbox3 :hover{
+   filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+}
+
+.social_subbox1,
+.social_subbox2,
+.social_subbox3{
+  font-size: 80px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--C-white);
+}
+
+
+.social_subbox1_img,
+.social_subbox2_img,
+.social_subbox3_img{
+  padding: 36px;
+  display: flex;
+}
+
+.social_subbox1_desc,
+.social_subbox2_desc,
+.social_subbox3_desc{
+font-size: var(--T-P);
+width: 500px;
+height: 541px;
+left: 472.12px;
+top: 412px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 50px;
+visibility: hidden;
+}
 /* --사회공헌 - 선진  */
 
 /* 뉴스 - 준범  */
