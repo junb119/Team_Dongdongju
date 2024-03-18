@@ -280,6 +280,7 @@ transform: matrix();
   /* opacity: 0; */
 }
 
+
 .profit_data img:active {
   opacity: 1;
 }
