@@ -5,8 +5,10 @@
 $(function(){
     let header = $('#header'),
         headerLogo = header.find('.logo img'),
-        menu = $('.gnb_wrap .gnb>li>a'),
+        mainMenu = $('.gnb_wrap .gnb>li>a'),
         subMenu = $('.gnb_wrap .depth02'),
+        subMenuHeight = 0,
+		    headerHeight = header.height(),
         langMenu = $('.lang_wrap a');
 
     $(window).on('scroll', function () {
@@ -14,32 +16,40 @@ $(function(){
   
       if (st > 0) {
         header.addClass('fixed');
-        menu.addClass('on');
+        mainMenu.addClass('on');
         langMenu.addClass('on');
         headerLogo.attr('src','images/main_logo.png');
+      
       } else {
         header.removeClass('fixed');
-        menu.removeClass('on'); 
+        mainMenu.removeClass('on'); 
         langMenu.removeClass('on'); 
         headerLogo.attr('src','images/main_logo_white.png');
       }
     });
   
-    $('#header .gnb_wrap')
-      .on('mouseenter', function () {
-        $('#header').addClass('fixed');
-        menu.addClass('on');
-        subMenu.addClass('on');
-        langMenu.addClass('on');
-        headerLogo.attr('src','images/main_logo.png');
-      })
-      .on('mouseleave', function () {
-        $('#header').removeClass('fixed');
-        menu.removeClass('on'); 
-        subMenu.removeClass('on'); 
-        langMenu.removeClass('on'); 
-        headerLogo.attr('src','images/main_logo_white.png');
-      });
+    subMenu.each(function(){
+      if(subMenuHeight < $(this).height()){
+        subMenuHeight = $(this).height();
+      }
+    });
+
+    header.on('mouseenter', function(){
+      header.stop().animate({height:headerHeight + subMenuHeight + 75 + 'px'});
+      header.addClass('fixed');
+      mainMenu.addClass('on');
+      langMenu.addClass('on');
+      headerLogo.attr('src','images/main_logo.png');
+    })
+    .on('mouseleave',function(){
+      header.stop().animate({height:headerHeight+'px'});
+      // header.removeClass('fixed');
+      // mainMenu.removeClass('on'); 
+      // langMenu.removeClass('on'); 
+      // headerLogo.attr('src','images/main_logo_white.png');
+    })
+    
+
 //header 이벤트들
 
 

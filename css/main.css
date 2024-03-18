@@ -6,16 +6,22 @@
     font-family: var(--mainfont);
 }
 .hidden {
-    display: none;
+    position: relative;
+    left: 0;
+    top: -9999px;
+    overflow: hidden;
 }
 .main_award {
     padding: 140px 14%;
+
+}
+.main_award .content {
     display: flex;
     justify-content: space-between;
     gap: 200px;
 }
 .year_wrap {
-    width: 760px;
+    width: 50%;
 
 }
 .year_wrap img {
