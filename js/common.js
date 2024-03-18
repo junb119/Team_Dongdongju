@@ -11,15 +11,20 @@ $(function(){
 		    headerHeight = header.height(),
         langMenu = $('.lang_wrap a');
 
+
+        // header scroll,mouseenter 이벤트 효과 함수 생성
+        function headerEvent(){
+          header.addClass('fixed');
+          mainMenu.addClass('on');
+          langMenu.addClass('on');
+          headerLogo.attr('src','images/main_logo.png');
+        }
+        // header scroll,mouseenter 이벤트 효과 함수 생성
+
     $(window).on('scroll', function () {
       var st = $(this).scrollTop();
-  
       if (st > 0) {
-        header.addClass('fixed');
-        mainMenu.addClass('on');
-        langMenu.addClass('on');
-        headerLogo.attr('src','images/main_logo.png');
-      
+        headerEvent();
       } else {
         header.removeClass('fixed');
         mainMenu.removeClass('on'); 
@@ -33,23 +38,14 @@ $(function(){
         subMenuHeight = $(this).height();
       }
     });
-
     header.on('mouseenter', function(){
       header.stop().animate({height:headerHeight + subMenuHeight + 75 + 'px'});
-      header.addClass('fixed');
-      mainMenu.addClass('on');
-      langMenu.addClass('on');
-      headerLogo.attr('src','images/main_logo.png');
+      headerEvent();
     })
     .on('mouseleave',function(){
       header.stop().animate({height:headerHeight+'px'});
-      // header.removeClass('fixed');
-      // mainMenu.removeClass('on'); 
-      // langMenu.removeClass('on'); 
-      // headerLogo.attr('src','images/main_logo_white.png');
     })
     
-
 //header 이벤트들
 
 

@@ -72,11 +72,16 @@ p {
   font-size: var(--T-P);
 }
 
+.hidden {
+  position: relative;
+  left: 0;
+  top: -9999px;
+  overflow: hidden;
+}
+
 /* ---------------타이포그래피 */
 
 /* 헤더 - 송림    */
-
-/* 송림*/
 #header {
   position: fixed;
   left: 0;
@@ -85,14 +90,13 @@ p {
   width: 100%;
   z-index: 1000;
   height: 120px;
-  /* box-shadow: 0 0 4px 0 rgba(0, 0, 0, .3); */
   transition: 0.3s;
   overflow: hidden;
   background: transparent;
 }
 #header.fixed {
   transition: 0.3s;
-  background: var(--white);
+  background: var(--C-white);
 }
 .header_wrapper {
   display: flex;
@@ -110,15 +114,15 @@ p {
   width: 152px;
 }
 .gnb_wrap .gnb>li>a {
-  font-family: var(--mainfont);
-  font-size: var(--subTitle);
-  color: var(--white);
+  font-size: var(--T-subTitle);
+  color: var(--C-white);
   text-decoration: none;
   transition: 0.5s;
+  font-weight: 500;
 }
 .gnb_wrap .gnb>li>a.on {
   transition: 0.5s;
-  color: var(--black);
+  color: var(--C-black);
 }
 .gnb_wrap .depth02 {
   position: absolute;
@@ -134,30 +138,30 @@ p {
   text-align: center;
 }
 .gnb_wrap .depth02>li>a {
-  font-family: var(--mainfont);
   text-decoration: none;
-  color: var(--black);
+  color: var(--C-black);
   text-transform: uppercase;
   transition: color 0.5s;
+  font-size: 14px;
+  font-weight: 500;
 }
 .gnb_wrap .depth02>li>a:hover {
-  color: var(--blue);
+  color: var(--C-blue);
 }
 .lang_wrap {
   display: flex;
   gap: 15px;
 }
 .lang_wrap a {
-  font-family: var(--mainfont);
   text-decoration: none;
-  color: var(--white);
+  color: var(--C-white);
   text-transform: uppercase;
   font-size: 18px;
   transition: 0.5s;
 }
 .lang_wrap a.on {
   transition: 0.5s;
-  color: var(--black);
+  color: var(--C-black);
 }
 
 /* --헤더 - 송림  */

@@ -115,25 +115,9 @@ transform: matrix();
 /* --경영철학 - 선진  */
 
 /* 수상이력 - 송림    */
-.test {
-  height: 1000px;
-  background: #eee;
-}
-*{
-  font-family: var(--mainfont);
-}
-.hidden {
-  position: relative;
-  left: 0;
-  top: -9999px;
-  overflow: hidden;
-}
-.main_award {
-  padding: 140px 14%;
 
-}
+
 .main_award .content {
-  display: flex;
   justify-content: space-between;
   gap: 200px;
 }
@@ -146,13 +130,13 @@ transform: matrix();
   margin: 0 auto;
 }
 .year_wrap .year_txt em {
-  font-size: var(--H3);
+  font-size: var(--T-H2);
   text-align: center;
   display: block;
   font-weight: 600;
 }
 .year_wrap .year_txt p {
-  font-size: var(--P);
+  font-size: var(--T-P);
   text-align: center;
   font-weight: 400;
   padding: 40px 0 80px 0;
@@ -165,14 +149,14 @@ transform: matrix();
 }
 .award_slide .slide_txt em {
   font-size: 30px;
-  font-weight: 500;
-  color: var(--blue);
+  font-weight: 600;
+  color: var(--C-blue);
   display: block;
   padding-bottom: 25px;
 }
 .award_slide .slide_txt>p {
-  font-size: 20px;
-  color: var(--black);
+  font-size: var(--T-subTitle);
+  color: var(--C-black);
 }
 
 /* --수상이력 - 송림  */
@@ -195,7 +179,6 @@ transform: matrix();
   /* padding-top: 176px; */
   position: relative;
   height: 100vh;
-  padding-top: 176px;
   font-weight: bold;
 }
 
@@ -215,8 +198,7 @@ transform: matrix();
 .data_content .right_data {
   gap: 144px;
 }
-.data_content .textbox {
-}
+
 
 .data_content span {
   font-size: calc(var(--T-base) * 2.25);
