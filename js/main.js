@@ -11,6 +11,12 @@
 // --경영철학 - 선진 
 
 // 수상이력 - 송림   
+$(".award_slide").bxSlider({
+    pager: false,
+    controls: false,
+    mode: 'vertical',
+    minSlides:4,
+});
 // --수상이력 - 송림 
 
 // 수치자료 - 준범 
@@ -24,3 +30,5 @@
 
 // 푸터 - 선진 
 // --푸터 - 선진
+// award 슬라이드 이벤트
+
