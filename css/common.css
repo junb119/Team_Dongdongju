@@ -6,6 +6,7 @@
   --C-orange : #F5821F;
   --C-black : #000;
   --C-white : #fff;
+
   /* 색상 */
   --T-base: 16px;  
   --T-H1 : calc(val(--T-base) * 4.375);
