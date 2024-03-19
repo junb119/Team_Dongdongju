@@ -3,10 +3,10 @@
 
 //header 이벤트들
 $(function(){
-  $('#header').load('./header.html')
+  $('#header').load('./header.html', setHeader)
   $('#footer').load('./footer.html')
 
-
+  function setHeader() {
     let header = $('#header'),
         headerLogo = header.find('.logo img'),
         mainMenu = $('.gnb_wrap .gnb>li>a'),
@@ -49,6 +49,7 @@ $(function(){
     .on('mouseleave',function(){
       header.stop().animate({height:headerHeight+'px'});
     })
+  }
     
 //header 이벤트들
 
