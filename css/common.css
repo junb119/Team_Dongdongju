@@ -23,6 +23,7 @@
 }
 * {
   font-family: var(--T-mainfont);
+  box-sizing: border-box;
 }
 /* ---------------레이아웃 */
 
