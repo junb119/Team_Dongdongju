@@ -118,7 +118,6 @@
   /* padding-top: 176px; */
   position: relative;
   height: 100vh;
-  padding-top: 176px;
   font-weight: bold;
 }
 
@@ -138,8 +137,7 @@
 .data_content .right_data {
   gap: 144px;
 }
-.data_content .textbox {
-}
+
 
 .data_content span {
   font-size: calc(var(--T-base) * 2.25);
