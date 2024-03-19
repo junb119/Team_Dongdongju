@@ -49,11 +49,7 @@ $(function(){
     .on('mouseleave',function(){
       header.stop().animate({height:headerHeight+'px'});
     })
-  }
-    
-
-
-    
+  }    
       var lastScrollTop = 0;
       $(window).scroll(function(event){
          var st2 = $(this).scrollTop();
