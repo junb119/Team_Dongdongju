@@ -46,6 +46,22 @@ $(function(){
       header.stop().animate({height:headerHeight+'px'});
     })
     
+
+
+    
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+         var st2 = $(this).scrollTop();
+         if (st2 > lastScrollTop){
+             // 스크롤 다운 시 실행할 코드
+             $('header').slideDown(); // header를 위로 사라지게 함
+         } else {
+            // 스크롤 업 시 실행할 코드
+            $('header').slideUp(); // header를 아래로 나타나게 함
+         }
+         lastScrollTop = st2;
+      });
+
 //header 이벤트들
 
 
