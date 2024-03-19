@@ -3,6 +3,10 @@
 
 //header 이벤트들
 $(function(){
+  $('#header').load('./header.html', setHeader)
+  $('#footer').load('./footer.html')
+
+  function setHeader() {
     let header = $('#header'),
         headerLogo = header.find('.logo img'),
         mainMenu = $('.gnb_wrap .gnb>li>a'),
@@ -15,7 +19,7 @@ $(function(){
         // header scroll,mouseenter 이벤트 효과 함수 생성
         function headerEvent(){
           header.addClass('fixed');
-          mainMenu.addClass('on');
+          mainMenu.addClass('on');  
           langMenu.addClass('on');
           headerLogo.attr('src','images/main_logo.png');
         }
@@ -45,6 +49,7 @@ $(function(){
     .on('mouseleave',function(){
       header.stop().animate({height:headerHeight+'px'});
     })
+<<<<<<< HEAD
       // scroll시 헤더 업 다운 이벤트
     var lastScrollTop = 0;
     $(window).scroll(function(){
@@ -59,6 +64,25 @@ $(function(){
         lastScrollTop = st;
     });
     // scroll시 헤더 업 다운 이벤트
+=======
+  }
+    
+
+
+    
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+         var st2 = $(this).scrollTop();
+         if (st2 > lastScrollTop){
+             // 스크롤 다운 시 실행할 코드
+             $('header').slideDown(); // header를 위로 사라지게 함
+         } else {
+            // 스크롤 업 시 실행할 코드
+            $('header').slideUp(); // header를 아래로 나타나게 함
+         }
+         lastScrollTop = st2;
+      });
+>>>>>>> e20f4d089718de8d785de44289599f843817cbe0g
 
 //header 이벤트들
 
