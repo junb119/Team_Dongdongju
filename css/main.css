@@ -51,46 +51,43 @@
 /* --메인영상 - 준범  */
 
 /* 경영철학 - 선진    */
-.vision_wrapper{
+.vision_wrapper {
   position: relative;
 }
 
-.main_vision .vision_wrapper .vision_title{
+.main_vision .vision_wrapper .vision_title {
   font-size: calc(var(--T-base) * 4);
-  color:var(--C-black);
+  color: var(--C-black);
   font-weight: bold;
-  margin :auto 9%;
+  margin: auto 9%;
   padding: auto 0;
   line-height: 100px;
 }
 
-.vision_inner_wrapper{
-  background:url(../images/main_vision/vision_bg.png);
+.vision_inner_wrapper {
+  background: url(../images/main_vision/vision_bg.png);
   object-fit: cover;
   width: 1920px;
   height: 100vh;
   position: relative;
-  animation: vision_scroll duration timing-function delay iteration-count direction fill-mode;
+  animation: vision_scroll duration timing-function delay iteration-count
+    direction fill-mode;
 }
 
-@keyframes vision_scroll{
-  0%{
-transform: matrix();
+@keyframes vision_scroll {
+  0% {
+    transform: matrix();
   }
-  25%{
-
+  25% {
   }
-  50%{
-
+  50% {
   }
-  75%{
-
+  75% {
   }
-  100%{
-
+  100% {
   }
 }
-.inner_contents{
+.inner_contents {
   position: absolute;
   color: var(--C-white);
   display: block;
@@ -100,22 +97,22 @@ transform: matrix();
   flex-direction: column;
   gap: 300px;
   opacity: 0.5;
-  h2{
-    font-size: 55px;  
+  h2 {
+    font-size: 55px;
     font-weight: bold;
     line-height: 80px;
-  }p{
-  font-size: 48px;
-  line-height: 58px;
+  }
+  p {
+    font-size: 48px;
+    line-height: 58px;
   }
 }
-.active{
+.active {
   opacity: 1;
 }
 /* --경영철학 - 선진  */
 
 /* 수상이력 - 송림    */
-
 
 .main_award .content {
   justify-content: space-between;
@@ -123,8 +120,8 @@ transform: matrix();
 }
 .year_wrap {
   width: 50%;
-
 }
+
 .year_wrap img {
   display: block;
   margin: 0 auto;
@@ -154,7 +151,7 @@ transform: matrix();
   display: block;
   padding-bottom: 25px;
 }
-.award_slide .slide_txt>p {
+.award_slide .slide_txt > p {
   font-size: var(--T-subTitle);
   color: var(--C-black);
 }
@@ -165,25 +162,38 @@ transform: matrix();
 .test {
   height: 100vh;
 }
+.testbg {
+  background: linear-gradient(#fff, #000);
+}
 .main_numerical_data {
   position: relative;
   width: 100%;
   /* height: 300vh; */
   padding-top: 200vh;
-  background: linear-gradient(#fff, #000 66%);
   color: var(--C-white);
 }
+.dataBG {
+  width: 100%;
+  height: 200vh;
+  background: linear-gradient(var(--C-white), var(--C-black));
+  text-indent: -9999em;
+}
+
+
 .increase_number {
-  /* position: absolute;
-  top: 200vh; */
-  /* padding-top: 176px; */
+  background: var(--C-black);
   position: relative;
-  height: 100vh;
+  height: 1000vh;
   font-weight: bold;
+}
+.data_sticky {
+  position: sticky;
+  top:0;
 }
 
 .title_content {
-  margin: 176px 0 143px;
+  padding-top: 176px;
+  margin-bottom: 143px;
 }
 .title_content h2 {
   margin-bottom: var(--T-P);
@@ -199,7 +209,6 @@ transform: matrix();
   gap: 144px;
 }
 
-
 .data_content span {
   font-size: calc(var(--T-base) * 2.25);
   margin-right: 21px;
@@ -212,63 +221,70 @@ transform: matrix();
   margin-top: var(--T-base);
 }
 
-.increase_number img {
+.increase_number .numberBG {
   position: absolute;
-  top: calc(50% + 88px);
+  top: 50%;
   right: 8%;
-  /* right: 8%; */
   transform: translateY(-50%);
 }
+
+.increase_number .nextNumber {
+  position: absolute;
+  top:800vh;
+  left:50%;
+
+  
+}
+.nextNumber img {
+  max-width: 100%;
+  position: sticky;
+  top:0;
+  left:50%;
+  transform: translateX(-50%);
+  width: 390px;
+  
+}
+
+
+
+
 .profit_data {
   position: relative;
-  background-color: #000;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  background-color: #666;
+  /* overflow: hidden; */
 }
 .profit_data h2 {
   position: absolute;
   z-index: 10;
-}
-
-.profit_data h2 {
   top: 50%;
   left: 340px;
   transform: translateY(-50%);
   font-weight: normal;
 }
+
 .profit_scroll_wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
 }
-/* .profit_scroll_container{
-  width: 100%;
-  height: 300%;
-} */
 
 .profit_scroll_wrapper ul {
   position: absolute;
-  padding: 100vh 0;
+  top: 0;
+  /* padding: 100vh 0; */
   left: 1234px;
   display: flex;
   flex-direction: column;
   gap: 120px;
-
 }
 .profit_scroll_wrapper ul li {
   text-align: center;
   opacity: 0.5;
 }
-.profit_scroll_wrapper ul li:active {
+.profit_scroll_wrapper ul li.active {
   opacity: 1;
 }
-.profit_scroll_wrapper ul li span{
+.profit_scroll_wrapper ul li span {
   font-size: 72px;
   font-weight: bold;
 }
-
 
 .profit_data img {
   position: absolute;
@@ -277,41 +293,42 @@ transform: matrix();
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* opacity: 0; */
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.profit_data img:active {
+.profitBG img.active {
   opacity: 1;
 }
 /* --수치자료 - 준범  */
 
 /* 사회공헌 - 선진  */
-.social_wrapper{
+.social_wrapper {
   height: 100vh;
 }
-.social_title h2{
-font-size: var(--T-H2);
-color: var(--C-blue);
-font-weight: bold;
+.social_title h2 {
+  font-size: var(--T-H2);
+  color: var(--C-blue);
+  font-weight: bold;
 }
 
-.social_title hr{
-width: 1020px;
-height: 0px;
-left: 1194px;
-top: 206px;
-border: 5px solid #F5821F;
-transform: rotate(-180deg);
+.social_title hr {
+  width: 1020px;
+  height: 0px;
+  left: 1194px;
+  top: 206px;
+  border: 5px solid #f5821f;
+  transform: rotate(-180deg);
 }
 
-.social_boxes{
+.social_boxes {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 96px;
   text-decoration: none;
 }
-.social_subbox1{
+.social_subbox1 {
   background: url(../images/main/main_csr/csr_1.png);
   animation: csr_card_fade_in_1 2s;
   transition: transform 1.5s rotateY 0.2s;
@@ -320,14 +337,14 @@ transform: rotate(-180deg);
 }
 
 @keyframes csr_card_fade_in_1 {
-  0%{
-    transform:translateX(300%) rotateY(0deg);
+  0% {
+    transform: translateX(300%) rotateY(0deg);
   }
-  100%{
-    transform:translateX(0%) rotateY(360deg);
+  100% {
+    transform: translateX(0%) rotateY(360deg);
   }
 }
-.social_subbox2{
+.social_subbox2 {
   background: url(../images/main/main_csr/csr_2.png);
   animation: csr_card_fade_in_2 2s;
   animation-delay: 0.5s;
@@ -336,14 +353,14 @@ transform: rotate(-180deg);
   object-fit: cover;
 }
 @keyframes csr_card_fade_in_2 {
-  0%{
-    transform:translateX(300%) rotateY(0deg);
+  0% {
+    transform: translateX(300%) rotateY(0deg);
   }
-  100%{
-    transform:translateX(0%) rotateY(360deg);
+  100% {
+    transform: translateX(0%) rotateY(360deg);
   }
 }
-.social_subbox3{
+.social_subbox3 {
   background: url(../images/main/main_csr/csr_3.png);
   animation: csr_card_fade_in_3 2s;
   animation-delay: 1s;
@@ -352,63 +369,67 @@ transform: rotate(-180deg);
   object-fit: cover;
 }
 @keyframes csr_card_fade_in_3 {
-  0%{
-    transform:translateX(300%) rotateY(0deg);
+  0% {
+    transform: translateX(300%) rotateY(0deg);
   }
-  100%{
-    transform:translateX(0%) rotateY(360deg);
+  100% {
+    transform: translateX(0%) rotateY(360deg);
   }
-}
-
-.social_subbox1 ,
-.social_subbox2 ,
-.social_subbox3 {
-  display: flex;
-   display: block;
-   width :436px;
-   height: 541px;
-   border-radius : 50px;
-   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
-}
-
-.social_subbox1 :hover,
-.social_subbox2 :hover,
-.social_subbox3 :hover{
-   filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 }
 
 .social_subbox1,
 .social_subbox2,
-.social_subbox3{
+.social_subbox3 {
+  display: flex;
+  display: block;
+  width: 436px;
+  height: 541px;
+  border-radius: 50px;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.social_subbox1 :hover,
+.social_subbox2 :hover,
+.social_subbox3 :hover {
+  filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+}
+
+.social_subbox1,
+.social_subbox2,
+.social_subbox3 {
   font-size: 80px;
   font-weight: bold;
   text-decoration: none;
   color: var(--C-white);
 }
 
-
 .social_subbox1_img,
 .social_subbox2_img,
-.social_subbox3_img{
+.social_subbox3_img {
   padding: 36px;
   display: flex;
 }
 
 .social_subbox1_desc,
 .social_subbox2_desc,
-.social_subbox3_desc{
-font-size: var(--T-P);
-width: 500px;
-height: 541px;
-left: 472.12px;
-top: 412px;
-background: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-visibility: hidden;
+.social_subbox3_desc {
+  font-size: var(--T-P);
+  width: 500px;
+  height: 541px;
+  left: 472.12px;
+  top: 412px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  visibility: hidden;
 }
 /* --사회공헌 - 선진  */
 
 /* 뉴스 - 준범  */
 /* --뉴스 - 준범 */
 
+
+
+body {
+  background: #666;
+}

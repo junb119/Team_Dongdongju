@@ -3,6 +3,10 @@
 
 //header 이벤트들
 $(function(){
+  $('#header').load('./header.html', setHeader)
+  $('#footer').load('./footer.html')
+
+  function setHeader() {
     let header = $('#header'),
         headerLogo = header.find('.logo img'),
         mainMenu = $('.gnb_wrap .gnb>li>a'),
@@ -15,7 +19,7 @@ $(function(){
         // header scroll,mouseenter 이벤트 효과 함수 생성
         function headerEvent(){
           header.addClass('fixed');
-          mainMenu.addClass('on');
+          mainMenu.addClass('on');  
           langMenu.addClass('on');
           headerLogo.attr('src','images/main_logo.png');
         }
@@ -45,6 +49,7 @@ $(function(){
     .on('mouseleave',function(){
       header.stop().animate({height:headerHeight+'px'});
     })
+  }
     
 
 
