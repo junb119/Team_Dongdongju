@@ -47,14 +47,14 @@ $(function(){
     })
       // scroll시 헤더 업 다운 이벤트
     var lastScrollTop = 0;
-    $(window).scroll(function(event){
+    $(window).scroll(function(){
         var st = $(this).scrollTop();
         if (st > lastScrollTop){
-            // 스크롤 다운 시 실행할 코드
-            $('header').slideDown(); // header를 위로 사라지게 함
+            // 스크롤 다운 시 실행할 코드 
+            header.slideUp(); // header를 위로 사라지게 함
         } else {
           // 스크롤 업 시 실행할 코드
-          $('header').slideUp(); // header를 아래로 나타나게 함
+          header.slideDown(); // header를 아래로 나타나게 함
         }
         lastScrollTop = st;
     });
