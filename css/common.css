@@ -72,6 +72,13 @@ p {
   font-size: var(--T-P);
 }
 
+.fw-n {
+  font-weight: normal;
+}
+.fw-b {
+  font-weight: bold;
+}
+
 .hidden {
   position: relative;
   left: 0;

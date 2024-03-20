@@ -1,4 +1,5 @@
 @import url("./common.css");
+@import url('./pr_common.css');
 
 #header {
   display: none !important;
@@ -8,15 +9,4 @@
   display: none;
 }
 
-.news_title {
-  background: url(../images/pr/newsTitleBG.jpg) no-repeat 50% 50% / cover;
-  width: 100%;
-  height: calc(100vh / 3);
-  padding-top: calc(var(--T-base) * 6);
-  box-sizing: border-box;
-}
-.news_title h2 {
-  margin: 0 8%;
-  color: var(--C-white);
-}
 
