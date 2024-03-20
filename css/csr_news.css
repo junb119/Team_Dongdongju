@@ -1,0 +1,15 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 8%;
+}
+.article{
+  width: calc(25% - 40px);
+  height: 452px;
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
+  margin: 20px;
+}
+.article_title{
+  font-size: large;
+}
