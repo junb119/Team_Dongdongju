@@ -69,13 +69,17 @@ $(function () {
 
   //header 이벤트들
 
-  // ----backToTop
   function setFooter() {
+    // -----footer 이벤트들
+
+    // -----//footer 이벤트들
+
+    // ----backToTop
     const btt = $(".backToTop");
     const $window = $(window);
     $window.scroll(() => {
       let scrollAmt = $window.scrollTop();
-      scrollAmt > 1000 ? btt.addClass("active") : btt.removeClass("active");      
+      scrollAmt > 1000 ? btt.addClass("active") : btt.removeClass("active");
     });
 
     btt.click((e) => {
@@ -88,6 +92,6 @@ $(function () {
         behavior: "smooth",
       });
     });
+    // ----//backToTop
   }
-  // ----//backToTop
 });
