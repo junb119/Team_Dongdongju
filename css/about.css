@@ -1,3 +1,28 @@
 #header {
   display: none !important;
 }
+.sub_about {
+  overflow: hidden;
+}
+.sub_common_tit {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+.sub_common_tit h2 {
+  font-size: var(--T-H2);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.sub_about img {
+  /* padding-top: 500px; */
+}
+
+
+
+.breadcrumb {
+  justify-content: right;
+  padding-top: 57px;
+}
