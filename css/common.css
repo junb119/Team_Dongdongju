@@ -80,6 +80,21 @@ p {
 
 /* ---------------타이포그래피 */
 
+/* --------------브레드크럼 */
+.breadcrumb {
+  gap: 15px;
+}
+.breadcrumb a {
+  font-size: var(--T-breadCrumb);
+  display: block;
+  text-transform: capitalize;
+}
+/* 흰색 버전 클래스명 추가*/
+.white {
+  color: var(--C-white);
+}
+ 
+/* --------------// 브레드크럼 */
 /* 헤더 - 송림    */
 #header {
   position: fixed;
