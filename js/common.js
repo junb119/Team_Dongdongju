@@ -21,7 +21,7 @@ $(function(){
           header.addClass('fixed');
           mainMenu.addClass('on');  
           langMenu.addClass('on');
-          headerLogo.attr('src','images/main_logo.png');
+          headerLogo.attr('src','images/main/main_header/main_logo.png');
         }
         // header scroll,mouseenter 이벤트 효과 함수 생성
 
@@ -33,7 +33,7 @@ $(function(){
         header.removeClass('fixed');
         mainMenu.removeClass('on'); 
         langMenu.removeClass('on'); 
-        headerLogo.attr('src','images/main_logo_white.png');
+        headerLogo.attr('src','images/main/main_header/main_logo_white.png');
       }
     });
   
