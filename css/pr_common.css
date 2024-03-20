@@ -1,3 +1,7 @@
+#header {
+  display: none !important;
+}
+
 .pr_title_bg {
   position: relative;
   width: 100%;
