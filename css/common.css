@@ -206,7 +206,7 @@ p {
   align-items: center;
 }
 .f_logo {
-  background: url("../images/mirae_logo.png") no-repeat center center;
+  background: url("../images/main/main_header/mirae_logo.png") no-repeat center center;
   width: 230px;
   height: 95px;
   margin: 0 auto;
