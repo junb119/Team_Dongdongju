@@ -113,7 +113,9 @@
 /* --경영철학 - 선진  */
 
 /* 수상이력 - 송림    */
-
+.main_award {
+  background: var(--C-white);
+}
 .main_award .content {
   justify-content: space-between;
   gap: 200px;

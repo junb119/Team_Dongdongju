@@ -1,22 +1,17 @@
 @import url("./common.css");
 
-#header {
-  display: none !important;
-}
-
-.news_list .kebab {
-  display: none;
-}
-
-.news_title {
+.adv_title {
+  position: relative;
   background: url(../images/pr/newsTitleBG.jpg) no-repeat 50% 50% / cover;
   width: 100%;
   height: calc(100vh / 3);
-  padding-top: calc(var(--T-base) * 6);
+  /* padding-top: 152.5px; */
   box-sizing: border-box;
 }
-.news_title h2 {
+.adv_title h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   margin: 0 8%;
   color: var(--C-white);
 }
-
