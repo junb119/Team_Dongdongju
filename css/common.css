@@ -112,12 +112,10 @@ p {
   width: 100%;
   z-index: 1000;
   height: 120px;
-  transition: 0.3s;
   overflow: hidden;
   background: transparent;
 }
 #header.fixed {
-  transition: 0.3s;
   background: var(--C-white);
 }
 .header_wrapper {
