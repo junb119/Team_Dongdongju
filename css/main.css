@@ -1,8 +1,8 @@
 @import url("./common.css");
 /* 팝업 - 송림 */
 .popup {
-  width: 750px;
-  height: 720px;
+  width: 650px;
+  height: 710px;
   padding: 40px 30px;
   position: fixed;
   left: 100px;
@@ -15,10 +15,10 @@
 }
 .popup img {
   display: block;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
 }
 .pophd {
-  padding-bottom: 11px;
+  padding-bottom: 5px;
 }
 .popct_wrap {
   padding: 10px 0;
@@ -41,7 +41,7 @@
 }
 .popup p {
   font-size: var(--T-base);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .popup .link {
   gap: 20px;
