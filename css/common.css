@@ -19,8 +19,12 @@
   --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
 
+  --T-lh : 1.46;
+  --T-lh-large : 1.618; 
+  /*  */
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
+
 * {
   font-family: var(--T-mainfont);
   box-sizing: border-box;
@@ -63,9 +67,14 @@ section {
 /* ---------------// 정렬 */
 
 /* ---------------타이포그래피 */
+
+
 h2 {
   font-size: var(--T-H2);
   font-weight: bold;
+}
+h3 {
+  font-size: var(--T-H3);
 }
 
 p {
