@@ -1,3 +1,117 @@
-body {
-  background: #666 !important;
+/* 글로벌 미래에셋 메인 */
+
+.global_main {
+  width: 100%;
+  height: 100vh;
+  background: var(--C-blue);
 }
+.global_main .gm_main_title,
+.mainBg_container .main_m{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mainBg_container .main_m {
+  left: 50%;
+  transform: translate(-50% ,-50%);
+}
+
+.global_main .gm_main_title {
+  color:var(--C-white);
+  right:304px;
+  gap: 16px; 
+}
+.gm_main_title h2{
+  order : 2
+}
+.mainBg_container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.global_main .large_m{ 
+  position: absolute;
+  bottom:-48px;
+  right: 736px;
+}
+
+.scroll_icon {
+  
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  color:var(--C-white);
+  text-transform: capitalize;
+}
+.scroll_icon span {
+  font-size: var(--T-P) ;
+  line-height: calc(var(--T-P) * 1.618);
+
+}
+.scroll_icon div{
+  background: var(--C-white);
+  text-indent: -9999em;
+}
+
+.scroll_icon div:first-of-type {
+  width: 3px;
+  height: 40px;
+}
+.scroll_icon div:last-child {
+  width: 1px;
+  height: 30px;
+}
+
+/* //글로벌 미래에셋 메인 */
+
+
+/* 글로벌 미래에셋 컨텐츠 : 타이틀*/
+
+.gm_sub_title {
+  position: relative;
+  width: 86% ;
+  height: calc(100vh / 2);
+}
+.gm_sub_title h2{
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  color: var(--C-white);
+  font-size: calc(var(--T-base) * 6);
+}
+.gm_sub_title img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gm_sub_title.left {
+  margin-right: 14%;
+}
+.gm_sub_title.left h2{
+  right: 30px;
+  top: 30px;
+}
+.gm_sub_title.right {
+  margin-left: 14%;
+}
+.gm_sub_title.right h2{
+  left: 30px;
+  bottom: 30px;
+}
+
+/* //글로벌 미래에셋 컨텐츠 : 타이틀*/
+
+
+/*  글로벌 미래에셋 컨텐츠 : 내용*/
+.gm_content {
+  color: var(--C-blue);
+}
+
+.gm_content h3{
+  font-weight: 500;
+
+}
+/* //글로벌 미래에셋 컨텐츠 : 내용*/
+
