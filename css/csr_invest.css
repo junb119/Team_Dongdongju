@@ -1,0 +1,146 @@
+:root {
+  --C-blue: #00427a;
+  --C-orange: #f5821f;
+  --C-black: #000;
+  --C-white: #fff;
+  /* 색상 */
+  --T-base: 16px;
+  --T-H1: calc(var(--T-base) * 4.375);
+  /*70px*/
+  --T-H2: calc(var(--T-base) * 3.4375);
+  /*55px*/
+  --T-H3: calc(var(--T-base) * 3);
+  /*48px*/
+  --T-H4: calc(var(--T-base) * 2.375);
+  /*38px*/
+  --T-P: calc(var(--T-base) * 1.5);
+  /*24px*/
+  --T-subTitle: calc(var(--T-base) * 1.25);
+  /*20px*/
+  --T-breadCrumb: calc(var(--T-base) * 1.25);
+  /*20px*/
+  --T-mobileH2: calc(var(--T-base) * 2.5);
+  /*40px*/
+  --T-mobileP: var(--T-base);
+  /*16px*/
+  /* 폰트 사이즈 */
+
+  --T-mainfont: "Noto Sans KR", sans-serif;
+}
+
+* {
+  font-family: var(--T-mainfont);
+  box-sizing: border-box;
+}
+
+#header {
+  visibility: hidden !important;
+}
+
+section {
+  margin: 12% auto;
+}
+
+.invest_sub {
+  height: 100vh;
+}
+
+h2 {
+  margin-top: 125px;
+  line-height: 80px;
+}
+h3{
+  font-size: var(--T-H3);
+}
+.subtitle {
+  .breadcrumb {
+    display: flex;
+    justify-content: end;
+    font-size: var(--T-breadCrumb);
+    margin-right: 153px;
+    margin-bottom: 58px;
+  }
+
+  .breadcrumb li:nth-child(n+2):before {
+    content: ' > ';
+  }
+
+  p {
+    line-height: 35px;
+    margin-bottom: 112px;
+    display: flex;
+  }
+}
+
+.channel_banner{
+  width: 1614px;
+  height: 216px;
+  background:#f5821f;
+  margin: 0 auto;
+  
+}
+
+.magazine_sage,
+.magazine_invest {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sage,
+.invest {
+  width: 316px;
+  height: 432px;
+  background-color: green;
+}
+
+.sage.s1 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.sage.s2 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.sage.s3 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.sage.s4 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.sage.s5 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.invest.s1 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.invest.s2 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.invest.s3 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.invest.s4 {
+  background-image: url();
+  object-fit: cover;
+}
+
+.invest.s5 {
+  background-image: url();
+  object-fit: cover;
+}

@@ -189,13 +189,13 @@ p {
 /* 푸터 - 선진  */
 #footer {
   display: grid;
-  height: 200px;
+  /* height: 200px; */
   grid-template-areas:
     "footer_l center_1 footer_r"
     "footer_l center_2 footer_r";
   grid-template-columns: 0.3fr 1fr 0.2fr;
   grid-template-rows: 1fr 1fr;
-  margin: 27.5% 8% 27.5% 8%;
+  /* margin: 27.5% 8% 27.5% 8%; */
 }
 
 .footer_left {
@@ -215,7 +215,7 @@ p {
 }
 
 .footer_center_1 * {
-  font-size: var(--T-subTitle);
+  font-size: calc(var(--T-subTitle) - 2);
   font-weight: bold;
   margin-top: 5%;
   grid-area: center_1;
@@ -225,7 +225,7 @@ p {
 }
 
 .footer_center_2 {
-  font-size: var(--T-subTitle);
+  font-size:calc(var(--T-subTitle) - 2);
   font-weight: bold;
   line-height: 27px;
   color: var(--C-black);
@@ -279,7 +279,7 @@ p {
       "footer_r";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 27.5% 8% 27.5% 8%;
+    /* margin: 27.5% 8% 27.5% 8%; */
   }
 
   .footer_left {
@@ -291,7 +291,7 @@ p {
 
   .footer_center_1 * {
     grid-area: center_1;
-    font-size: var(--T-mobileP);
+    font-size: calc ( var(--T-mobileP) - 2)px;
     font-weight: bold;
     margin-top: 5%;
     word-spacing: 40px;
@@ -302,7 +302,7 @@ p {
 
   .footer_center_2 {
     grid-area: center_2;
-    font-size: var(--T-subTitle);
+    font-size: var(--T-mobileP);
     font-weight: bold;
     line-height: 27px;
     color: var(--C-black);
