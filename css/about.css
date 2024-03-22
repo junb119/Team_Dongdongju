@@ -1,28 +1,66 @@
 #header {
-  /* display: none !important; */
+  display: none !important;
 }
-.sub_about {
-  overflow: hidden;
-}
-.sub_common_tit {
-  padding-top: 125px;
-  padding-bottom: 125px;
+.sub_tit_wrap {
+  padding: 125px;
   position: sticky;
   width: 100%;
   top: 0;
 }
-.sub_common_tit h2 {
+.sub_tit_wrap h2 {
   font-size: var(--T-H2);
   font-weight: 500;
   line-height: 1.2;
 }
-.sub_about img {
-  /* padding-top: 500px; */
-}
-
-
 
 .breadcrumb {
   justify-content: right;
   padding-top: 57px;
+}
+body {
+  line-height: 1.3;
+}
+.white {
+  color: var(--C-white);
+}
+.orange {
+  color: var(--C-orange);
+}
+
+/* about cicle */
+.sub_vision {
+  padding: 160px 0;
+}
+.sub_vision>p{
+  text-align: center;
+  font-size: var(--T-H4);
+  padding-bottom: 260px;
+}
+.sub_vision>p>strong {
+  font-weight: bold;
+}
+.circle_wrap h3 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.circle_wrap p {
+  font-size: var(--T-P);
+  text-align: center;
+}
+
+.manage_circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: var(--C-orange);
+}
+.manage_txt {
+  padding-top: 66px;
+}
+.circle_wrap img {
+  display: block;
+  margin: 0 auto;
 }
