@@ -19,8 +19,12 @@
   --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
 
+  --T-lh : 1.46;
+  --T-lh-large : 1.618; 
+  /*  */
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
+
 * {
   font-family: var(--T-mainfont);
   box-sizing: border-box;
@@ -63,9 +67,14 @@ section {
 /* ---------------// 정렬 */
 
 /* ---------------타이포그래피 */
+
+
 h2 {
   font-size: var(--T-H2);
   font-weight: bold;
+}
+h3 {
+  font-size: var(--T-H3);
 }
 
 p {
@@ -189,13 +198,13 @@ p {
 /* 푸터 - 선진  */
 #footer {
   display: grid;
-  height: 200px;
+  /* height: 200px; */
   grid-template-areas:
     "footer_l center_1 footer_r"
     "footer_l center_2 footer_r";
   grid-template-columns: 0.3fr 1fr 0.2fr;
   grid-template-rows: 1fr 1fr;
-  margin: 27.5% 8% 27.5% 8%;
+  /* margin: 27.5% 8% 27.5% 8%; */
 }
 
 .footer_left {
@@ -215,7 +224,7 @@ p {
 }
 
 .footer_center_1 * {
-  font-size: var(--T-subTitle);
+  font-size: calc(var(--T-subTitle) - 2);
   font-weight: bold;
   margin-top: 5%;
   grid-area: center_1;
@@ -225,7 +234,7 @@ p {
 }
 
 .footer_center_2 {
-  font-size: var(--T-subTitle);
+  font-size:calc(var(--T-subTitle) - 2);
   font-weight: bold;
   line-height: 27px;
   color: var(--C-black);
@@ -279,7 +288,7 @@ p {
       "footer_r";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 27.5% 8% 27.5% 8%;
+    /* margin: 27.5% 8% 27.5% 8%; */
   }
 
   .footer_left {
@@ -291,7 +300,7 @@ p {
 
   .footer_center_1 * {
     grid-area: center_1;
-    font-size: var(--T-mobileP);
+    font-size: calc ( var(--T-mobileP) - 2)px;
     font-weight: bold;
     margin-top: 5%;
     word-spacing: 40px;
@@ -302,7 +311,7 @@ p {
 
   .footer_center_2 {
     grid-area: center_2;
-    font-size: var(--T-subTitle);
+    font-size: var(--T-mobileP);
     font-weight: bold;
     line-height: 27px;
     color: var(--C-black);

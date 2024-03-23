@@ -26,10 +26,32 @@
   visibility: hidden !important;
 }
 
+h2{
+  margin-top: 125px;
+  line-height: 80px;
+}
+.subtitle{
+p{
+  line-height: 35px;
+  margin-bottom:112px;
+}
+.breadcrumb {
+  display: flex;
+  justify-content: end;
+  font-size: var(--T-breadCrumb);
+  margin-right:153px;
+  margin-bottom:58px;
+}
+.breadcrumb li:nth-child(n+2):before{
+  content:' > ';
+}
+}
+
+
 .scholar,
 .csr,
 .sharing{
-  width: 100%;
+  width: 100vw;
   height: 220px;
 }
 
@@ -37,15 +59,31 @@
 .csr_img,
 .sharing_img{
   font-size: 2.5em;
+  font-weight: bold;
+  color:#fff
 }
+
+
 .scholar_img{
-background-image: url(../images/sub/);
+background: url(../images/sub/sub_csr/scholar.jpg) no-repeat;
+width: 100vw;
+background-attachment: fixed;
+object-fit: cover;
+height: 220px;
 }
 .csr_img{
-background-image: url(../images/sub/);
+background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
+background-attachment: fixed;
+width: 100vw;
+object-fit: cover;
+height: 220px;
 }
 .sharing_img{
-background-image: url(../images/sub/);
+background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
+background-attachment: fixed;
+width: 100vw;
+object-fit: cover;
+height: 220px;
 }
 
 .csr{
@@ -53,6 +91,7 @@ background-image: url(../images/sub/);
 }
 .desc{
   border-radius: 20px;
+  background-color: blue;
 }
 #cta{
   text-align: right;
