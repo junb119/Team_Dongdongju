@@ -1,0 +1,28 @@
+.sub_tit_wrap {
+    padding: 125px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+  }
+  .sub_tit_wrap h2 {
+    font-size: var(--T-H2);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .breadcrumb {
+    justify-content: right;
+    padding-top: 57px;
+  }
+  body {
+    line-height: 1.3;
+  }
+  .white {
+    color: var(--C-white);
+  }
+  .orange {
+    color: var(--C-orange);
+  }
+  .blue {
+    color: var(--C-blue);
+  }
