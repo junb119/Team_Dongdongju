@@ -37,10 +37,6 @@
   visibility: hidden !important;
 }
 
-section {
-  margin: 12% auto;
-}
-
 .invest_sub {
   height: 100vh;
 }
@@ -48,10 +44,21 @@ section {
 h2 {
   margin-top: 125px;
   line-height: 80px;
+  font-size: calc(var(--T-base) * 3.4375);
+  font-weight: medium;
 }
-h3{
-  font-size: var(--T-H3);
+
+h3 {
+  font-size: calc(var(--T-base) * 3);
 }
+
+h4 {
+  font-size: var(--T-H4);
+  line-height: 52px;
+  margin-top: var(--T-P);
+  margin-bottom: calc(var(--T-base) * 4.25);
+}
+
 .subtitle {
   .breadcrumb {
     display: flex;
@@ -66,81 +73,186 @@ h3{
   }
 
   p {
+    font-size: 12px;
     line-height: 35px;
     margin-bottom: 112px;
     display: flex;
   }
 }
 
-.channel_banner{
+.invest_contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  position: relative;
+  width: 450px;
+  margin:0 auto;
+}
+
+.s_contents {
+  width: 130px;
+  height: 150px;
+  /* position: absolute; */
+}
+
+.invest_desc .iv_dsc {
+  width: 290px;
+  height: 98px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: none;
+}
+
+.invest_desc:hover .iv_dsc {
+  display: block;
+}
+
+h5 {
+  text-align: right;
+  position: sticky;
+  /* height: calc(100vh + 500px); */
+}
+
+.channel_banner {
   width: 1614px;
   height: 216px;
-  background:#f5821f;
+  background: #f5821f;
   margin: 0 auto;
-  
+  background: url(../images/sub/sub_csr/channels_banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .magazine_sage,
 .magazine_invest {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  gap: 30px;
+}
+
+.magazine_sage .sage,
+.magazine_invest .invest {
   align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  width: 300px;
+  height: 400px;
+  justify-content: center;
+  margin: 2rem 10px;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: background-color 0.5 ease,
+    color 0.5s ease,
+    transform 0.5s ease;
 }
 
-.sage,
-.invest {
-  width: 316px;
-  height: 432px;
-  background-color: green;
+.magazine_sage:hover .sage,
+.magazine_sage:focus .sage,
+.magazine_sage:active .sage,
+.magazine_invest:hover .invest,
+.magazine_invest:focus .invest,
+.magazine_invest:active .invest {
+  transform: perspective(500px) rotateY(30deg);
+  transition: 0.3s;
 }
 
-.sage.s1 {
-  background-image: url();
+.magazine_sage .sage:hover,
+.magazine_sage .sage:focus,
+.magazine_sage .sage:active,
+.magazine_invest .invest:hover,
+.magazine_invest .invest:focus,
+.magazine_invest .invest:active {
+  transform: perspective(500px) rotateY(0);
+}
+
+.magazine_sage .sage:hover~.sage,
+.magazine_sage .sage:focus~.sage,
+.magazine_sage .sage:active~.sage,
+.magazine_invest .invest:hover~.invest,
+.magazine_invest .invest:focus~.invest,
+.magazine_invest .invest:active~.invest {
+  transform: perspective(500px) rotateY(-30deg);
+  transition: 0.3s;
+}
+
+.magazine_sage .sage p,
+.magazine_invest .invest p {
+  background: #2196f3;
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+  transition: box-shadow 0.5s ease;
+  visibility: hidden;
+
+}
+
+.magazine_sage .sage:hover p,
+.magazine_sage .sage:focus p,
+.magazine_sage .sage:active p,
+.magazine_invest .invest:hover p,
+.magazine_invest .invest:focus p,
+.magazine_invest .invest:active p {
+  background-color: #fff;
+  box-shadow: 0 0 0 200px #000;
+  color: #2196f3;
+  opacity: 0.8;
+  transition: 0.5s ease;
+  visibility: inherit;
+}
+
+
+.sage:nth-child(1) {
+  background: url(../images/sub/sub_csr/sage_1.png) no-repeat;
   object-fit: cover;
 }
 
-.sage.s2 {
-  background-image: url();
+.sage:nth-child(2) {
+  background: url(../images/sub/sub_csr/sage_2.png) no-repeat;
   object-fit: cover;
 }
 
-.sage.s3 {
-  background-image: url();
+.sage:nth-child(3) {
+  background: url(../images/sub/sub_csr/sage_3.png) no-repeat;
   object-fit: cover;
 }
 
-.sage.s4 {
-  background-image: url();
+.sage:nth-child(4) {
+  background: url(../images/sub/sub_csr/sage_4.png) no-repeat;
   object-fit: cover;
 }
 
-.sage.s5 {
-  background-image: url();
+.sage:nth-child(5) {
+  background: url(../images/sub/sub_csr/sage_5.png) no-repeat;
   object-fit: cover;
 }
 
-.invest.s1 {
-  background-image: url();
+.invest:nth-child(1) {
+  background: url(../images/sub/sub_csr/invest_1.png) no-repeat;
   object-fit: cover;
 }
 
-.invest.s2 {
-  background-image: url();
+.invest:nth-child(2) {
+  background: url(../images/sub/sub_csr/invest_2.png) no-repeat;
   object-fit: cover;
 }
 
-.invest.s3 {
-  background-image: url();
+.invest:nth-child(3) {
+  background: url(../images/sub/sub_csr/invest_3.png) no-repeat;
   object-fit: cover;
 }
 
-.invest.s4 {
-  background-image: url();
+.invest:nth-child(4) {
+  background: url(../images/sub/sub_csr/invest_4.png) no-repeat;
   object-fit: cover;
 }
 
-.invest.s5 {
-  background-image: url();
+.invest:nth-child(5) {
+  background: url(../images/sub/sub_csr/invest_5.png) no-repeat;
   object-fit: cover;
 }
