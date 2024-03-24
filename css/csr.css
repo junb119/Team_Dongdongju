@@ -46,16 +46,19 @@ p{
   content:' > ';
 }
 }
-
-
-.scholar,
-.csr,
-.sharing{
+.panel{
   width: 100vw;
   height: 220px;
 }
-
-.scholar_img,
+    .panel-body{
+      padding:15px;
+      display: none;
+      color: var(--C-white);
+    }
+    .active .panel-body{
+      display: block;
+    }
+    .scholar_img,
 .csr_img,
 .sharing_img{
   font-size: 2.5em;
@@ -64,34 +67,40 @@ p{
 }
 
 
-.scholar_img{
+.panel:nth-child(1){
 background: url(../images/sub/sub_csr/scholar.jpg) no-repeat;
-width: 100vw;
-background-attachment: fixed;
-object-fit: cover;
-height: 220px;
-}
-.csr_img{
-background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
-background-attachment: fixed;
-width: 100vw;
-object-fit: cover;
-height: 220px;
-}
-.sharing_img{
-background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
-background-attachment: fixed;
 width: 100vw;
 object-fit: cover;
 height: 220px;
 }
 
-.csr{
+  .panel:nth-child(2){
+background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
+width: 100vw;
+object-fit: cover;
+height: 220px;
+}
+
+.panel:nth-child(3){
+background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
+width: 100vw;
+object-fit: cover;
+height: 220px;
+}
+.panel.active {
+  height: 100vh;
+}
+.panel:nth-child(n*2){
   text-align: right;
 }
 .desc{
-  border-radius: 20px;
-  background-color: blue;
+width: 972.3px;
+left: 136px;
+top: 309.67px;
+
+background: rgba(217, 217, 217, 0.2);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
 }
 #cta{
   text-align: right;

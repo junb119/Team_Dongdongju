@@ -73,43 +73,192 @@ h4 {
   }
 
   p {
-    font-size: 12px;
+    font-size: var(--T-subTitle);
     line-height: 35px;
     margin-bottom: 112px;
     display: flex;
   }
 }
-
+p {
+  font-size: var(--T-subTitle);
+}
 .invest_contents {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  position: relative;
-  width: 450px;
-  margin:0 auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 28%;
+text-align: center;
 }
+.s_contents{
+  width: calc(33.33% - 60px); /* 각각의 박스는 33.33%의 너비를 가집니다. 여백을 고려하여 계산합니다. */
+  margin: 10px auto;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+.s_contents:nth-child(2){
+  animation: slide1 5s ease infinite;
+  cursor: pointer;
+  &:hover {
+    animation-play-state: paused;}
+}
+@keyframes slide1 {
+  0% {
+   left: 0;
+   top: 0;
+  }
+  25% {
+    left: 0;
+    top: 5px;
+   }
+  50% {
+   left: 5px;
+   top: 0px;
+  }
+  75% {
+    left: 0px;
+    bottom: 5px;
+   }
+  100% {
+   left: 0;
+   top: 0;
+  }}
 
-.s_contents {
+  .s_contents:nth-child(4){
+    animation: slide2 5s ease infinite;
+    cursor: pointer;
+    &:hover {
+      animation-play-state: paused;}
+  }
+  @keyframes slide2 {
+    0% {
+     left: 0;
+     top: 0;
+    }
+    25% {
+      left: 0px;
+      bottom: 5px;
+     }
+    50% {
+     left: 5px;
+     top: 0px;
+    }
+    75% {
+      left: 0;
+      top: 5px;
+     }
+    100% {
+     left: 0;
+     top: 0;
+    }}
+
+    .s_contents:nth-child(6){
+      animation: slide3 5s ease infinite;
+      cursor: pointer;
+      &:hover {
+        animation-play-state: paused;}
+    }
+    @keyframes slide3 {
+      0% {
+       left: 0;
+       top: 0;
+      }
+      25% {
+        left: 0px;
+        top: 5px;
+       }
+      50% {
+       right: 5px;
+       top: 0px;
+      }
+      75% {
+        left: 5px;
+        top: 5px;
+       }
+      100% {
+       left: 0;
+       top: 0;
+      }}
+
+      .s_contents:nth-child(8){
+        animation: slide4 5s ease infinite;
+        cursor: pointer;
+        &:hover {
+          animation-play-state: paused;}
+      }
+      @keyframes slide4 {
+        0% {
+         left: 0;
+         top: 0;
+        }
+        10%{
+          left: 0px;
+          bottom: 5px;
+        }
+        25% {
+          left: 0px;
+          bottom: 10px;
+         }
+        50% {
+         left: 5px;
+         top: 0px;
+        }
+        75% {
+          left: 0;
+          top: 5px;
+         }
+        100% {
+         right: 5px;
+         top: 0;
+        }}
+.s_contents img{
   width: 130px;
-  height: 150px;
+  text-align: center;
+  display: inline-block;
   /* position: absolute; */
 }
 
-.invest_desc .iv_dsc {
-  width: 290px;
-  height: 98px;
+.iv_dsc {
+  position: absolute;
+  width: 180px;
+  background: rgba(217, 217, 217, 0.5);
+  border-radius: 20px;
+  padding: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  display: none;
 }
 
-.invest_desc:hover .iv_dsc {
-  display: block;
+.iv_dsc:nth-child(1){
+  left: 980px;
+  top: 350px;
+}
+.iv_dsc:nth-child(2){
+  left: 285px;
+  top: 560px;
+
+}
+
+.iv_dsc:nth-child(3){
+  left: 1245px;
+  top: 563px;
+
+}
+
+.iv_dsc:nth-child(4){
+  left: 982px;
+  top: 840px;
 }
 
 h5 {
   text-align: right;
   position: sticky;
-  /* height: calc(100vh + 500px); */
+  top: 80px;
+  padding: 10px 0;
+}
+h5 a{
+  display: inline-block;
+  border-radius: 50%;
+  background:gray;
 }
 
 .channel_banner {
@@ -130,6 +279,7 @@ h5 {
   position: relative;
   transform-style: preserve-3d;
   gap: 30px;
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 .magazine_sage .sage,
