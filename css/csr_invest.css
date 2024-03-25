@@ -226,28 +226,27 @@ text-align: center;
   border-radius: 20px;
   padding: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  left: 110%;
+  top: 0; 
 }
 
-.iv_dsc:nth-child(1){
-  left: 980px;
-  top: 350px;
-}
-.iv_dsc:nth-child(2){
+
+/* .iv_dsc:nth-child(2){
   left: 285px;
   top: 560px;
 
 }
-
-.iv_dsc:nth-child(3){
+*/
+/* .iv_dsc:nth-child(3){
   left: 1245px;
   top: 563px;
 
-}
+} 
 
 .iv_dsc:nth-child(4){
   left: 982px;
   top: 840px;
-}
+} */
 
 h5 {
   text-align: right;
