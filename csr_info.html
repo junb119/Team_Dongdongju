@@ -12,9 +12,9 @@
 <body>
   <header id="header"></header>
   <main>
-    <h2>미래에셋 사회공헌</h2>
-    <div class="subtitle">
 
+    <div class="subtitle">
+    <h2>미래에셋 사회공헌</h2>
       <p>미래에셋의 사회공헌 활동은 배려가 있는 따뜻한 자본주의 정신에서 시작됩니다</p>
       <ul class="breadcrumb">
         <li><a href="index.html">home</a></li>
@@ -97,12 +97,13 @@
   <footer id="footer"></footer>
   <script>
     const panel = document.querySelectorAll('.panel'),
-      btnCollapse = document.getElementById('btn-collapse');
+      btnCollapse = document.querySelector('.subtitle');
 
     for (let p of panel) {
       p.addEventListener('click', function () {
         hideAll();
         this.classList.add('active');
+        btnCollapse.classList.remove();
       });
     }
 
