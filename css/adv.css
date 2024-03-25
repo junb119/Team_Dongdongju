@@ -1,2 +1,52 @@
 @import url("./common.css");
 @import url('./pr_common.css');
+
+.adv_wrapper {
+  padding-top: 45px;
+  gap: 45px;
+}
+.display_adv{
+  width: 60%;
+}
+.display_adv video,
+.display_adv img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+.list_container{
+  width: 100%;
+  overflow: scroll;
+}
+.list_container .list_adv li{
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.list_adv li figure img{
+  width: calc(100vh / 6);
+  border-radius: 15px;
+
+}
+.list_adv li figcaption{
+  width: calc(100vh / 6);
+  
+}
+
+.pagination {
+  position: relative;
+  
+}
+.pagination .page_button .prev,
+.pagination .page_button .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pagination .page_button .prev{
+  right:100%
+}
+.pagination .page_button .next{
+  left:100%
+}
