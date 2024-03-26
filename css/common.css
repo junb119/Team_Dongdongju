@@ -89,6 +89,7 @@ h5 {
 
 p {
   font-size: var(--T-P);
+  line-height: var(--T-lh);
 }
 
 .fw-n {
