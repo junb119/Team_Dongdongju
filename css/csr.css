@@ -33,13 +33,13 @@
   box-sizing: border-box;
 }
 
-#header {
+/* #header {
   visibility: hidden !important;
-}
-
-main {
+} */
+/* 
+.accordion {
   overflow: hidden;
-}
+} */
 
 h2 {
   margin-top: 125px;
@@ -81,6 +81,7 @@ h3 {
   display: none;
   color: var(--C-white);
   position: relative;
+  margin-top: -50px;
 }
 
 .active .panel-body {
@@ -115,7 +116,6 @@ h3 {
   background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
   width: 100vw;
   object-fit: none;
-  height: 10vh;
 }
 
 .panel.active:nth-child(2) {
@@ -147,7 +147,7 @@ h3 {
 
 
 .desc {
-  width: 700px;
+  width: 800px;
   left: 8%;
   top: 70%;
   background: rgba(217, 217, 217, 0.2);
@@ -156,9 +156,13 @@ h3 {
   padding: 20px;
   line-height: 35px;
   position: absolute;
-  padding-top:-58px;
+  margin-top:-50px;
 }
-
+.cta{
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 8%;
+}
 #cta {
   text-align: right;
   margin-top: 20px;
