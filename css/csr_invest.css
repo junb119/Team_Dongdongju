@@ -5,24 +5,15 @@
   --C-white: #fff;
   /* 색상 */
   --T-base: 16px;
-  --T-H1: calc(var(--T-base) * 4.375);
-  /*70px*/
-  --T-H2: calc(var(--T-base) * 3.4375);
-  /*55px*/
-  --T-H3: calc(var(--T-base) * 3);
-  /*48px*/
-  --T-H4: calc(var(--T-base) * 2.375);
-  /*38px*/
-  --T-P: calc(var(--T-base) * 1.5);
-  /*24px*/
-  --T-subTitle: calc(var(--T-base) * 1.25);
-  /*20px*/
-  --T-breadCrumb: calc(var(--T-base) * 1.25);
-  /*20px*/
-  --T-mobileH2: calc(var(--T-base) * 2.5);
-  /*40px*/
-  --T-mobileP: var(--T-base);
-  /*16px*/
+  --T-H1: calc(var(--T-base) * 4.375);  /*70px*/
+  --T-H2: calc(var(--T-base) * 3.4375);  /*55px*/
+  --T-H3: calc(var(--T-base) * 3);  /*48px*/
+  --T-H4: calc(var(--T-base) * 2.375);  /*38px*/
+  --T-P: calc(var(--T-base) * 1.5);  /*24px*/
+  --T-subTitle: calc(var(--T-base) * 1.25);  /*20px*/
+  --T-breadCrumb: calc(var(--T-base) * 1.25);  /*20px*/
+  --T-mobileH2: calc(var(--T-base) * 2.5);  /*40px*/
+  --T-mobileP: var(--T-base);  /*16px*/
   /* 폰트 사이즈 */
 
   --T-mainfont: "Noto Sans KR", sans-serif;
@@ -45,7 +36,7 @@ h2 {
   margin-top: 125px;
   line-height: 80px;
   font-size: calc(var(--T-base) * 3.4375);
-  font-weight: medium;
+  font-weight: 500;
 }
 
 h3 {
