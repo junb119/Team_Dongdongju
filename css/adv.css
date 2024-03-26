@@ -1,2 +1,97 @@
 @import url("./common.css");
-@import url('./pr_common.css');
+@import url("./pr_common.css");
+
+.adv_wrapper {
+  padding-top: 45px;
+  gap: 45px;
+}
+
+.adv_total {
+  text-transform: capitalize;
+  font-size: var(--T-breadCrumb);
+}
+
+.display_adv {
+  width: 60%;
+}
+.display_adv video,
+.display_adv img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.list_container {
+  width: 100%;
+  overflow: scroll;
+}
+.list_container .list_adv {
+  gap: 16px;
+}
+.list_container .list_adv li {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.list_adv li figure img {
+  width: calc(100vw / 10);
+  border-radius: 15px;
+}
+.list_adv li figcaption {
+  width: calc(100vw / 12);
+}
+
+.pagination {
+  position: relative;
+}
+.pagination .page_button .prev,
+.pagination .page_button .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--T-mobileH2);
+  height: var(--T-mobileH2);
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+
+.pagination .page_button .prev {
+  right: calc(100% + 50px);
+}
+.pagination .page_button .next {
+  left: calc(100% + 50px);
+}
+.pagination .page_number {
+  font-size: var(--T-breadCrumb);
+  gap: var(--T-base);
+  color: #888;
+}
+.pagination .page_number li.active {
+  color: var(--C-black);
+  font-weight: 500;
+}
+.go_to_page {
+  align-items: center;
+  gap: var(--T-base);
+}
+.go_to_page label{
+  text-indent: -9999em
+}
+
+.go_to_page input {
+  width: 75px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  /* input 아웃라인? 보더 삭제 */
+  border-color: #888;
+}
+.go_to_page a {
+  width: 50px;
+  height: 50px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+  
+}
