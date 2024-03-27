@@ -202,20 +202,59 @@
 /* --경영철학 - 선진  */
 
 /* 수상이력 - 송림    */
+:root{
+  --scale:3.5;
+}
+
+
 .main_award {
   background: var(--C-white);
+  padding: 290px 0 350px 0;
 }
 .main_award .content {
   justify-content: space-between;
   gap: 200px;
+  position: relative;
+  align-items: flex-start;
+  z-index: 10;
+}
+.main_award .content img:first-of-type{
+  width: 500px;
+  transform-origin:14% 100%;
+  transform:scale(var(--scale));  
+}
+.main_award .content:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: #ccc;
+  z-index: -1;
 }
 .year_wrap {
   width: 50%;
+  height: 592px;
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 
 .year_wrap img {
   display: block;
   margin: 0 auto;
+}
+.year_wrap .year_txt {
+  position: absolute;
+  left: 180px;
+  top: 200px;
+  transition: 0.5s;
+  /* opacity: 0; */
+}
+.year_wrap .year_txt.on {
+  opacity: 1;
 }
 .year_wrap .year_txt em {
   font-size: var(--T-H2);
@@ -231,8 +270,12 @@
 }
 .main_award .slidewrapper {
   width: 760px;
+  padding-top: 2800px;
 }
-.award_slide .slide_txt {
+.award_slide {
+  padding-bottom: 150px;
+}
+.award_slide li {
   padding-bottom: 75px;
 }
 .award_slide .slide_txt em {
