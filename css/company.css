@@ -73,8 +73,8 @@
       filter:blur(0);
     }
   }
-
-  .sub_company_slide a {
+  
+  nav {
     position: absolute;
     left: 0;
     right: 0;
@@ -82,10 +82,30 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-
-    span {
-        font-size: var(--T-H2);
+    .btn {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, .5);
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
     }
-
   }
-  
+
+   /* .btn_left span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: var(--T-H3);
+    color: var(--C-white);
+    
+  }
+  .btn_right span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: var(--T-H3);
+    color: var(--C-white);
+  }
+   */
