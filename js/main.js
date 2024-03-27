@@ -95,13 +95,13 @@ $window.scroll(function () {
   // profit_scroll 이미지 크기조절
   let $windowHeight = $(window).outerHeight();
   if (sct + $windowHeight >= profitDataOST) {
-    let scrollAmt = sct + $windowHeight - profitDataOST;
+    let scrollAmt = sct + ($windowHeight - profitDataOST);
 
     // if (scrollAmt >= profitDataHeight){
     //   scrollAmt = profitDataHeight
     // }
 
-    let leftValue = 30 - (scrollAmt / $windowHeight) * 30;
+    let leftValue = 30 - (scrollAmt / $windowHeight ) * 30;
     let rightValue = 70 + (scrollAmt / $windowHeight) * 30;
 
     document.documentElement.style.setProperty("--clip-left", `${leftValue}%`);
