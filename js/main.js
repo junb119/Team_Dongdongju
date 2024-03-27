@@ -42,6 +42,7 @@ function setCookie(name, val, day){
     }
   }
   checkCookie('MiraeAsset');
+
 // --팝업 - 송림 
 
 // 헤더 - 송림   
@@ -56,11 +57,37 @@ function setCookie(name, val, day){
 // --경영철학 - 선진 
 
 // 수상이력 - 송림   
-$(".award_slide").bxSlider({
-    pager: false,
-    controls: false,
-    mode: 'vertical',
-    minSlides:4,
+
+
+let targetSection = $('.main_award');
+let sectionStart = targetSection.offset().top;
+
+$(window).scroll(function() {
+  // 현재 스크롤 위치
+  var scrollTop = window.scrollY;  
+
+  // 섹션 시작 지점보다 400px 높은 위치에서 스크롤이 시작되도록 설정
+  if (scrollTop > sectionStart - 1500) {
+      // 스크롤 양에 따라 value를 0.1씩 차감. 최소값은 0으로 설정
+      // 여기서는 섹션 시작 지점보다 400px 높은 위치에서부터 스크롤된 양을 기준으로 계산
+      var scrolledAmount = scrollTop - (sectionStart - 400);
+      var value = Math.max(1, 3 - scrolledAmount * 0.08 / 100); // 0.1씩 차감하도록 조정. 100으로 나누는 이유는 scrolledAmount를 픽셀 단위로 측정하기 때문
+
+      document.documentElement.style.setProperty("--scale", value); 
+  }
+});
+
+let content = $('.year_wrap .year_txt');
+let awardSlide = $('.award_slide');
+
+$(window).scroll(function(){
+  //스크롤 영역에 닿으면 해당부분의 txt 나오게하기
+  // var distanceTop = awardSlide.offset().top - $(window).scrollTop() - 200;
+  // if(distanceTop <= 0){
+  //     content.addClass('on');
+  // } else {
+  //     content.removeClass('on');
+  // }
 });
 // --수상이력 - 송림 
 
