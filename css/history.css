@@ -1,0 +1,25 @@
+.lf {
+  text-align: left;
+  transform: translateX(400px);
+}
+.rg {
+  text-align: right;
+  transform: translateX(-400px);
+}
+.sub_history {
+  padding: 250px 0;
+}
+.history_wrap {
+  flex-direction: column;
+  justify-content: center;
+}
+.history_txt {
+  text-align: center;
+}
+.history_txt strong {
+  font-size: var(--T-H3);
+  font-weight: bold;
+}
+.history_txt p {
+  font-size: var(--T-P);
+}
