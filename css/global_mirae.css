@@ -68,33 +68,6 @@
   right: 736px;
 }
 
-.scroll_icon {
-  
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  color:var(--C-white);
-  text-transform: capitalize;
-}
-.scroll_icon span {
-  font-size: var(--T-P) ;
-  line-height: calc(var(--T-P) * 1.618);
-
-}
-.scroll_icon div{
-  background: var(--C-white);
-  text-indent: -9999em;
-}
-
-.scroll_icon div:first-of-type {
-  width: 3px;
-  height: 40px;
-}
-.scroll_icon div:last-child {
-  width: 1px;
-  height: 30px;
-}
 
 /* //글로벌 미래에셋 메인 */
 

@@ -12,6 +12,7 @@
   --T-H2: calc(var(--T-base) * 3.4375); /*55px*/
   --T-H3: calc(var(--T-base) * 3); /*48px*/
   --T-H4: calc(var(--T-base) * 2.375); /*38px*/
+  --T-H5: calc(var(--T-base) * 2); /*32*/
   --T-P: calc(var(--T-base) * 1.5); /*24px*/
   --T-subTitle: calc(var(--T-base) * 1.25); /*20px*/
   --T-breadCrumb: calc(var(--T-base) * 1.25); /*20px*/
@@ -19,8 +20,8 @@
   --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
 
-  --T-lh : 1.46;
-  --T-lh-large : 1.618; 
+  --T-lh: 1.46; /*line-height 기본값*/
+  --T-lh-large: 1.618; /* 큰 폰트 line-height*/
   /*  */
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
@@ -64,10 +65,11 @@ section {
 .aic {
   align-items: center;
 }
+
+
 /* ---------------// 정렬 */
 
 /* ---------------타이포그래피 */
-
 
 h2 {
   font-size: var(--T-H2);
@@ -75,6 +77,12 @@ h2 {
 }
 h3 {
   font-size: var(--T-H3);
+}
+h4 {
+  font-size: var(--T-H4);
+}
+h5 {
+  font-size: var(--T-H5);
 }
 
 p {
@@ -109,6 +117,16 @@ p {
 /* 흰색 버전 클래스명 추가*/
 .white {
   color: var(--C-white);
+}
+.w_bg {
+  background-color: var(--C-white);
+}
+/* 검은색 버전 클래스명 추가*/
+.black {
+  color: var(--C-black);
+}
+.b_bg {
+  background: var(--C-black);
 }
 
 /* --------------// 브레드크럼 */
@@ -213,7 +231,8 @@ p {
   align-items: center;
 }
 .f_logo {
-  background: url("../images/main/main_header/mirae_logo.png") no-repeat center center;
+  background: url("../images/main/main_header/mirae_logo.png") no-repeat center
+    center;
   width: 230px;
   height: 95px;
   margin: 0 auto;
@@ -414,7 +433,7 @@ p {
   /* visibility: hidden; */
   pointer-events: none;
   transition: 0.5s;
-  z-index :1000;
+  z-index: 1000;
 }
 .backToTop.active {
   opacity: 0.9;
@@ -422,5 +441,36 @@ p {
   pointer-events: auto;
 }
 
-
 /* --backToTop - 준범*/
+
+
+/* --Scroll down 아이콘 */
+
+.scroll_icon {
+  
+  position: absolute;
+  left: 50%;
+  /* bottom: 0; */
+  transform: translateX(-50%);
+  color:var(--C-white);
+  text-transform: capitalize;
+}
+.scroll_icon span {
+  font-size: var(--T-P) ;
+  line-height: calc(var(--T-P) * 1.618);
+
+}
+.scroll_icon div{
+  background: var(--C-white);
+  text-indent: -9999em;
+}
+
+.scroll_icon div:first-of-type {
+  width: 3px;
+  height: 40px;
+}
+.scroll_icon div:last-child {
+  width: 1px;
+  height: 30px;
+}
+/* --//Scroll down 아이콘 */
