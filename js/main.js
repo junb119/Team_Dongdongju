@@ -81,19 +81,29 @@ $(window).scroll(function() {
 let content = $('.year_wrap .year_txt');
 let awardSlide = $('.award_slide');
 
-$(window).scroll(function(){
-  //스크롤 영역에 닿으면 해당 인덱스에 on추가
-  // var distanceTop = awardSlide.offset().top - $(window).scrollTop() - 200;
-  let sct = $(window).scrollTop();
+// $(window).scroll(function(){
+//   //스크롤 영역에 닿으면 해당 인덱스에 on추가
+//   // let sct = $(window).scrollTop();
+  
+//   awardSlide.each(function(idx){
+//     var distanceTop = awardSlide.offset().top - $(window).scrollTop() - 200;
+//     if(distanceTop < 0){
+//       // content.removeClass('on');
+//       content.eq(idx).addClass('on');
+//     } else {
+//         content.removeClass('on');
+//     }
+//   })
+// });
 
+$(window).scroll(()=>{
+  let sct = $(window).scrollTop();
   awardSlide.each(function(idx){
-    if($(this).offset().top <= sct){
-      // content.removeClass('on');
+    if($(this).offset().top - 250 <= sct){
+      content.removeClass('on');
       content.eq(idx).addClass('on');
-    } else {
-        content.removeClass('on');
     }
-  })
+  });
 });
 
 
