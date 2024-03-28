@@ -3,6 +3,7 @@
 @import url("normalize.css");
 @import url("reset.css");
 
+
 :root {
   --C-blue: #00427a;
   --C-orange: #f5821f;
@@ -104,6 +105,12 @@ p {
   left: 0;
   top: -9999px;
   overflow: hidden;
+}
+html.hidden {
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: auto;
 }
 
 /* ---------------타이포그래피 */
