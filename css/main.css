@@ -155,8 +155,9 @@
   color: var(--C-black);
   font-weight: bold;
   margin: auto 9%;
-  padding: auto 0;
+  padding: 5% 0;
   line-height: 100px;
+  height: 80vh;
 }
 
 .vision_inner_wrapper {
@@ -431,19 +432,18 @@
   height: 100vh;
 }
 .social_title h2 {
+  margin: 124px 8%;
   font-size: var(--T-H2);
-  color: var(--C-blue);
-  font-weight: bold;
 }
 
-.social_title hr {
+/* .social_title hr {
   width: 1020px;
   height: 0px;
   left: 1194px;
   top: 206px;
   border: 5px solid #f5821f;
   transform: rotate(-180deg);
-}
+} */
 
 .social_boxes {
   display: flex;
@@ -451,15 +451,21 @@
   align-items: center;
   gap: 96px;
   text-decoration: none;
+  margin: 50px auto;
 }
 .social_subbox1 {
-  background: url(../images/main/main_csr/csr_1.png);
-  animation: csr_card_fade_in_1 2s;
+  background: url(../images/main/main_csr/csr_1.png) no-repeat;}
+
+.social_subbox1.animate,
+.social_subbox2.animate,
+.social_subbox3.animate{
   transition: transform 1.5s rotateY 0.2s;
   transform-style: preserve-3d;
   object-fit: cover;
 }
-
+.social_subbox1.animate{
+  animation: csr_card_fade_in_1 2s;
+}
 @keyframes csr_card_fade_in_1 {
   0% {
     transform: translateX(300%) rotateY(0deg);
@@ -469,12 +475,11 @@
   }
 }
 .social_subbox2 {
-  background: url(../images/main/main_csr/csr_2.png);
+  background: url(../images/main/main_csr/csr_2.png) no-repeat;
+}
+.social_subbox2.animate{
   animation: csr_card_fade_in_2 2s;
   animation-delay: 0.5s;
-  transition: transform 1.5s rotateY 0.2s;
-  transform-style: preserve-3d;
-  object-fit: cover;
 }
 @keyframes csr_card_fade_in_2 {
   0% {
@@ -485,12 +490,11 @@
   }
 }
 .social_subbox3 {
-  background: url(../images/main/main_csr/csr_3.png);
+  background: url(../images/main/main_csr/csr_3.png) no-repeat;
+}
+.social_subbox3.animate{
   animation: csr_card_fade_in_3 2s;
   animation-delay: 1s;
-  transition: transform 1.5s rotateY 0.2s;
-  transform-style: preserve-3d;
-  object-fit: cover;
 }
 @keyframes csr_card_fade_in_3 {
   0% {
@@ -505,16 +509,16 @@
 .social_subbox2,
 .social_subbox3 {
   display: flex;
-  display: block;
   width: 436px;
   height: 541px;
+  gap:46px;
   border-radius: 50px;
   filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 }
 
-.social_subbox1 :hover,
-.social_subbox2 :hover,
-.social_subbox3 :hover {
+.social_subbox1:hover,
+.social_subbox2:hover,
+.social_subbox3:hover {
   filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -522,7 +526,6 @@
 .social_subbox2,
 .social_subbox3 {
   font-size: 80px;
-  font-weight: bold;
   text-decoration: none;
   color: var(--C-white);
 }
@@ -531,23 +534,22 @@
 .social_subbox2_img,
 .social_subbox3_img {
   padding: 36px;
-  display: flex;
 }
 
-.social_subbox1_desc,
-.social_subbox2_desc,
-.social_subbox3_desc {
+.subdesc.active{
   font-size: var(--T-P);
   width: 500px;
   height: 541px;
-  left: 472.12px;
-  top: 412px;
+  /* left: 472.12px;
+  top: 412px; */
   background: #ffffff;
+  color: #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 /* --사회공헌 - 선진  */
+
 
 /* 뉴스 - 준범  */
 .main_news {
