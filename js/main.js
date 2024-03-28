@@ -56,6 +56,7 @@ function setCookie(name, val, day){
 // 경영철학 - 선진   
 // --경영철학 - 선진 
 
+
 // 수상이력 - 송림   
 
 
@@ -81,14 +82,21 @@ let content = $('.year_wrap .year_txt');
 let awardSlide = $('.award_slide');
 
 $(window).scroll(function(){
-  //스크롤 영역에 닿으면 해당부분의 txt 나오게하기
+  //스크롤 영역에 닿으면 해당 인덱스에 on추가
   // var distanceTop = awardSlide.offset().top - $(window).scrollTop() - 200;
-  // if(distanceTop <= 0){
-  //     content.addClass('on');
-  // } else {
-  //     content.removeClass('on');
-  // }
+  let sct = $(window).scrollTop();
+
+  awardSlide.each(function(idx){
+    if($(this).offset().top <= sct){
+      // content.removeClass('on');
+      content.eq(idx).addClass('on');
+    } else {
+        content.removeClass('on');
+    }
+  })
 });
+
+
 // --수상이력 - 송림 
 
 // 수치자료 - 준범 
