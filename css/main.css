@@ -213,7 +213,6 @@
 }
 .main_award .content {
   justify-content: space-between;
-  gap: 200px;
   position: relative;
   align-items: flex-start;
   z-index: 10;
@@ -250,8 +249,9 @@
   position: absolute;
   left: 180px;
   top: 200px;
-  transition: 0.5s;
   opacity: 0;
+  transition: all 0.5s;
+  line-height: var(--T-lh);
 }
 .year_wrap .year_txt.on {
   opacity: 1;
@@ -269,11 +269,11 @@
   padding: 40px 0 80px 0;
 }
 .main_award .slidewrapper {
-  width: 760px;
+  width: 566px;
   padding-top: 2800px;
 }
-.award_slide {
-  padding-bottom: 150px;
+.award_slide + .award_slide{
+  padding-top: 150px;
 }
 .award_slide li {
   padding-bottom: 75px;
@@ -290,6 +290,55 @@
   color: var(--C-black);
 }
 
+.pagination {
+  position: sticky;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pagination ul {
+  position: relative;
+}
+.pagination ul li + li {
+  padding-top: 15px;
+}
+.pagination ul:after {
+  content: '';
+  width: 34px;
+  height: 150px;
+  position: fixed;
+  top: 50%;
+  right: -50%;
+  background: #ebebeb;
+  transform: translateY(-50%);
+  border-radius: 20px;
+}
+.pagination ul a {
+  color: #ebebeb;
+}
+.pagination ul a span {
+  position: relative;
+  font-size: var(--T-mobileP);
+  font-weight: bold;
+}
+.pagination ul a.show {
+  color: var(--C-blue);
+}
+.pagination ul a.show span:after {
+  background: var(--C-blue);
+}
+.pagination ul a span:after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 24px);
+  transform: translateY(-50%);
+  background: #9B9B9B;
+  border-radius: 50%;
+  z-index: 10;
+}
 /* --수상이력 - 송림  */
 
 /* 수치자료 - 준범  */
