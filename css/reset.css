@@ -51,3 +51,11 @@ a {
 	text-decoration: none;
 	color: inherit
 }
+
+input {
+	-webkit-appearance: none;
+		 -moz-appearance: none;
+					appearance: none;
+					outline: none;
+					
+}
