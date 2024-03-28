@@ -1,8 +1,89 @@
 @import url("./common.css");
-@import url('./pr_common.css');
+@import url("./pr_common.css");
 
 .news_list .kebab {
   display: none;
 }
 
+.search_news select,
+.search_news input {
+  height: 40px;
+}
 
+.search_news select {
+  text-align: center;
+  width: 60px;
+}
+
+.search_news label {
+  text-indent: -9999em;
+}
+
+.search_news input {
+  width: 365px;
+}
+
+.handle_news .handle_container {
+  justify-content: space-between;
+}
+
+.pagination {
+  position: relative;
+  display: inline;
+  
+}
+.pagination .page_button .prev,
+.pagination .page_button .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--T-mobileH2);
+  height: var(--T-mobileH2);
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+
+.pagination .page_button .prev {
+  right: calc(100% + 50px);
+}
+.pagination .page_button .next {
+  left: calc(100% + 50px);
+}
+.pagination .page_number {
+  font-size: var(--T-breadCrumb);
+  gap: var(--T-base);
+  color: #888;
+  display: inline-flex;
+}
+.pagination .page_number li {
+  flex-grow: 0;
+}
+.pagination .page_number li.active {
+  color: var(--C-black);
+  font-weight: 500;
+}
+.go_to_page {
+  align-items: center;
+  gap: var(--T-base);
+}
+.go_to_page label {
+  text-indent: -9999em;
+}
+
+.go_to_page input {
+  width: 75px;
+  height: 50px;
+  border-radius: 25px;
+  text-align: center;
+  /* input 아웃라인? 보더 삭제 */
+  border-color: #888;
+}
+.go_to_page a {
+  width: 50px;
+  height: 50px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 50px;
+}

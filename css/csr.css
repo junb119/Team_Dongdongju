@@ -5,108 +5,174 @@
   --C-white: #fff;
   /* 색상 */
   --T-base: 16px;
-  --T-H1: calc(var(--T-base) * 4.375); /*70px*/
-  --T-H2: calc(var(--T-base) * 3.4375); /*55px*/
-  --T-H3: calc(var(--T-base) * 3); /*48px*/
-  --T-H4: calc(var(--T-base) * 2.375); /*38px*/
-  --T-P: calc(var(--T-base) * 1.5); /*24px*/
-  --T-subTitle: calc(var(--T-base) * 1.25); /*20px*/
-  --T-breadCrumb: calc(var(--T-base) * 1.25); /*20px*/
-  --T-mobileH2: calc(var(--T-base) * 2.5); /*40px*/
-  --T-mobileP: var(--T-base); /*16px*/
+  --T-H1: calc(var(--T-base) * 4.375);
+  /*70px*/
+  --T-H2: calc(var(--T-base) * 3.4375);
+  /*55px*/
+  --T-H3: calc(var(--T-base) * 3);
+  /*48px*/
+  --T-H4: calc(var(--T-base) * 2.375);
+  /*38px*/
+  --T-P: calc(var(--T-base) * 1.5);
+  /*24px*/
+  --T-subTitle: calc(var(--T-base) * 1.25);
+  /*20px*/
+  --T-breadCrumb: calc(var(--T-base) * 1.25);
+  /*20px*/
+  --T-mobileH2: calc(var(--T-base) * 2.5);
+  /*40px*/
+  --T-mobileP: var(--T-base);
+  /*16px*/
   /* 폰트 사이즈 */
 
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
+
 * {
   font-family: var(--T-mainfont);
   box-sizing: border-box;
 }
-#header{
-  visibility: hidden !important;
-}
 
-h2{
+/* #header {
+  visibility: hidden !important;
+} */
+/* 
+.accordion {
+  overflow: hidden;
+} */
+
+h2 {
   margin-top: 125px;
   line-height: 80px;
+  margin-left: 8%;
 }
-.subtitle{
-p{
-  line-height: 35px;
-  margin-bottom:112px;
+
+.subtitle {
+  position: relative;
+
+  p {
+    line-height: 35px;
+    margin-bottom: 112px;
+    margin-left: 8%;
+  }
 }
+
 .breadcrumb {
   display: flex;
   justify-content: end;
   font-size: var(--T-breadCrumb);
-  margin-right:153px;
-  margin-bottom:58px;
+  margin-right: 153px;
+  margin-bottom: 58px;
 }
-.breadcrumb li:nth-child(n+2):before{
-  content:' > ';
+
+.breadcrumb li:nth-child(n+2):before {
+  content: ' > ';
 }
-}
-h3{
+
+h3 {
   margin: 0 8%;
   padding: 20px;
   font-weight: medium;
 }
-.panel{
-  width: 100vw;
-  height: 220px;
+
+
+.panel-body {
+  padding: 15px;
+  display: none;
+  color: var(--C-white);
+  position: relative;
+  margin-top: -50px;
 }
-    .panel-body{
-      padding:15px;
-      display: none;
-      color: var(--C-white);
-    }
-    .active .panel-body{
-      display: block;
-    }
-    .scholar_img,
+
+.active .panel-body {
+  display: block;
+}
+
+.scholar_img,
 .csr_img,
-.sharing_img{
+.sharing_img {
   font-size: 2.5em;
   font-weight: bold;
-  color:#fff
+  color: #fff
 }
 
 
-.panel:nth-child(1){
-background: url(../images/sub/sub_csr/scholar.jpg) no-repeat;
-width: 100vw;
-object-fit: none;
-height: 10vh;
+.panel:nth-child(1) {
+  background: url(../images/sub/sub_csr/scholar.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
+  height: 10vh;
 }
 
-  .panel:nth-child(2){
-background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
-width: 100vw;
-object-fit: none;
-height: 10vh;
+.panel.active:nth-child(1) {
+  background: url(../images/sub/sub_csr/scholar.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
+  position: relative;
+  order : -1;
 }
 
-.panel:nth-child(3){
-background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
-width: 100vw;
-object-fit: none;
-height: 10vh;
+.panel:nth-child(2) {
+  background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
 }
+
+.panel.active:nth-child(2) {
+  background: url(../images/sub/sub_csr/scholar_img.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
+  position: relative;
+  order : -1;
+}
+
+.panel:nth-child(3) {
+  background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
+  height: 10vh;
+}
+
+.panel.active:nth-child(3) {
+  background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
+  width: 100vw;
+  object-fit: none;
+  order : -1;
+}
+
 .panel.active {
-  height: 80vh;
+  height: 70vh;
+  padding-top:124px;
 }
 
-.desc{
-width: 700px;
-left: 8%;
-top: 80%;
-background: rgba(217, 217, 217, 0.2);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-border-radius: 30px;
-padding:20px;
-line-height: 35px;
-position: absolute;
+
+.desc {
+  width: 800px;
+  left: 8%;
+  top: 70%;
+  background: rgba(217, 217, 217, 0.2);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  padding: 20px;
+  line-height: 35px;
+  position: absolute;
+  margin-top:-50px;
 }
-#cta{
+.cta{
   text-align: right;
+  margin-top: 20px;
+  margin-right: 8%;
+}
+#cta {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 8%;
+}
+
+.csrIndex {
+  display: block;
+}
+#accordion{
+  display: flex;
+  flex-direction: column;
 }
