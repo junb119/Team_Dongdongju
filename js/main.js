@@ -133,7 +133,6 @@ $window.scroll(function () {
   // 스크롤 문구 활성화
   $profitItems.each(function () {
     let $profitItem = $(this).offset().top;
-
     if (
       sct >= $profitItem - ($windowHeight * 5) / 7 &&
       sct <= $profitItem - $windowHeight / 5
