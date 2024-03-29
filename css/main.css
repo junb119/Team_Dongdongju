@@ -233,20 +233,20 @@
   height: 100vh;
 }
 .visionBG img {
-  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
+  /* clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%); */
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: clip-path 0.1s, opacity 0.5s;
+  /* transition: clip-path 0.1s, opacity 0.5s; */
   background: #000;
 }
 .visionBG img.active {
   opacity: 1;
 }
 
-.vision_inner_wrapper ul {
+.vision_inner_wrapper {
   position: absolute;
   top: 100vh;
   /* padding: 100vh 0; */
