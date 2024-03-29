@@ -227,7 +227,6 @@ html.hidden {
   color: var(--C-blue);
 }
 .lang_wrap {
-  display: flex;
   gap: 15px;
 }
 .lang_wrap a {
@@ -242,7 +241,8 @@ html.hidden {
   color: var(--C-black);
 }
 .m_menu_wrap {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 .m_menu_btn {
   position: relative;
@@ -277,30 +277,12 @@ html.hidden {
   top:16px;
 }
 
-@media (max-width: 1260px){
-  .gnb_wrap .gnb{
-    gap: 0;
-  }
-  .gnb_wrap .gnb li {
-    width: 130px;
-  }
-}
-@media (max-width: 1000px){
-  #header {
-    height: 72px;
 
-    .gnb_wrap,
-    .lang_wrap{
-      display: none;
-    }
-    .logo img{
-      width: 120px;
-    }
-    .mobileToggle {
-      display: block;
-    }
-
-
+@media (max-width: 500px){
+ 
+    .m_menu_wrap {
+      visibility: visible;
+      opacity: 1;
   }
 }
 
