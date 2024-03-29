@@ -13,6 +13,7 @@ $(function () {
       subMenu = $(".gnb_wrap .depth02"),
       subMenuHeight = 0,
       headerHeight = header.height(),
+      mobileToggle = $('.mobileToggle span')
       langMenu = $(".lang_wrap a");
 
     // header scroll,mouseenter 이벤트 효과 함수 생성
@@ -20,6 +21,7 @@ $(function () {
       header.addClass("fixed");
       mainMenu.addClass("on");
       langMenu.addClass("on");
+      mobileToggle.addClass("on");
       headerLogo.attr("src", "images/main/main_header/main_logo.png");
     }
     // --header scroll,mouseenter 이벤트 효과 함수 생성
@@ -34,6 +36,7 @@ $(function () {
         header.removeClass("fixed");
         mainMenu.removeClass("on");
         langMenu.removeClass("on");
+        mobileToggle.removeClass("on");
         headerLogo.attr("src", "images/main/main_header/main_logo_white.png");
       }
     

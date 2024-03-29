@@ -15,7 +15,7 @@
   padding: 40px 30px;
   position: fixed;
   left: 100px;
-  top: 130px;
+  top: 68px;
   background: var(--C-white);
   z-index: 100;
   border: 4px solid var(--subcol);
@@ -74,9 +74,13 @@
   bottom: 30px;
 }
 .cookie input {
-  width: 15px;
-  height: 15px;
-  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #9B9B9B;
+  vertical-align: top; 
+  margin-left: 6px;
+  -webkit-appearance: button;
+  appearance: button;
 }
 .popup button {
   background: var(--C-blue);
@@ -362,7 +366,7 @@
   height: 10px;
   position: absolute;
   top: 50%;
-  left: calc(100% + 24px);
+  left: calc(100% + 22px);
   transform: translateY(-50%);
   background: #9b9b9b;
   border-radius: 50%;
