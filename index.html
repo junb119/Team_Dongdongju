@@ -36,11 +36,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- 팝업창 - 송림 -->
     <div class="popup">
       <div class="pophd">
         <img src="images/main/main_header/mirae_logo.png" alt="팝업창 로고" />
@@ -89,12 +89,13 @@
       </div>
       <button>닫기</button>
     </div>
+    <!-- 팝업창 - 송림 -->
     <!-- //팝업창 - 송림 -->
     <!-- 헤더 - 송림 -->
     <header id="header"></header>
 
     <!-- //헤더 - 송림 -->
-
+    
     <main>
       <!-- 메인영상 - 준범 -->
       <section class="main_video">
@@ -209,7 +210,7 @@
             </div>
           </div>
           <div class="slidewrapper">
-            <ul class="award_slide">
+            <ul class="award_slide" id="aw01">
               <li>
                 <div class="slide_txt">
                   <em>2002</em>
@@ -241,7 +242,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="award_slide">
+            <ul class="award_slide" id="aw02">
               <li>
                 <div class="slide_txt">
                   <em>2007</em>
@@ -279,7 +280,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="award_slide">
+            <ul class="award_slide" id="aw03">
               <li>
                 <div class="slide_txt">
                   <em>2013</em>
@@ -311,7 +312,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="award_slide">
+            <ul class="award_slide" id="aw04">
               <li>
                 <div class="slide_txt">
                   <em>2017</em>
@@ -360,6 +361,14 @@
                   <p>‘2005 올해의 증권선물인상’, '코스닥IPO 우수주간사</p>
                 </div>
               </li>
+            </ul>
+          </div>
+          <div class="pagination">
+            <ul>
+              <li><a href="#aw01" class="show"><span>2002 - 2006</span></a></li>
+              <li><a href="#aw02"><span>2007 - 2012</span></a></li>
+              <li><a href="#aw03"><span>2013 - 2017</span></a></li>
+              <li><a href="#aw04"><span>2018 - 2024</span></a></li>
             </ul>
           </div>
         </div>

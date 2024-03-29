@@ -58,53 +58,54 @@ checkCookie('MiraeAsset');
 // --경영철학 - 선진 
 
 
-// 수상이력 - 송림
+// 수상이력 - 송림   
+
 
 let targetSection = $('.main_award');
 let sectionStart = targetSection.offset().top;
 
-$(window).scroll(function () {
-  // 현재 스크롤 위치
-  var scrollTop = window.scrollY;
-
-  // 섹션 시작 지점보다 400px 높은 위치에서 스크롤이 시작되도록 설정
-  if (scrollTop > sectionStart - 1500) {
-    // 스크롤 양에 따라 value를 0.1씩 차감. 최소값은 0으로 설정
-    // 여기서는 섹션 시작 지점보다 400px 높은 위치에서부터 스크롤된 양을 기준으로 계산
-    var scrolledAmount = scrollTop - (sectionStart - 400);
-    var value = Math.max(1, 3 - (scrolledAmount * 0.08) / 100); // 0.1씩 차감하도록 조정. 100으로 나누는 이유는 scrolledAmount를 픽셀 단위로 측정하기 때문
-
-    document.documentElement.style.setProperty('--scale', value);
-  }
-});
-
 let content = $('.year_wrap .year_txt');
 let awardSlide = $('.award_slide');
+let slideBtn = $('.pagination li a');
 
-// $(window).scroll(function () {
-//   //스크롤 영역에 닿으면 해당 인덱스에 on추가
-//   // let sct = $(window).scrollTop();
-  
-//   awardSlide.each(function(idx){
-//     var distanceTop = awardSlide.offset().top - $(window).scrollTop() - 200;
-//     if(distanceTop < 0){
-//       // content.removeClass('on');
-//       content.eq(idx).addClass('on');
-//     } else {
-//         content.removeClass('on');
-//     }
-//   })
-// });
-
-$(window).scroll(()=>{
-  let sct = $(window).scrollTop();
-  awardSlide.each(function(idx){
-    if($(this).offset().top - 250 <= sct){
-      content.removeClass('on');
-      content.eq(idx).addClass('on');
+$(window).scroll(()=> {
+  //최초 이미지 커졌다 작아지는 이벤트
+  let scrollTop = $(window).scrollTop();  
+  if (scrollTop > sectionStart - 1500) {
+      let scrolledAmount = scrollTop - (sectionStart - 400);
+      let value = Math.max(1, 3 - scrolledAmount * 0.08 / 100);
+      document.documentElement.style.setProperty("--scale", value); 
     }
+  //--최초 이미지 커졌다 작아지는 이벤트
+
+  // 해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
+    let sct = $(window).scrollTop();
+    awardSlide.each(function(idx){
+      if($(this).offset().top - 250 <= sct){
+        content.removeClass('on');
+        content.eq(idx).addClass('on');
+
+        slideBtn.removeClass('show');
+        slideBtn.eq(idx).addClass('show');
+      }
+    });
+   // --해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
+
+   
   });
+  // pagination a를 클릭했을 때 해당되는 위치로 이동 + class명 추가
+  slideBtn.click(function(e){
+     e.preventDefault();
+     
+     let slideOst = awardSlide.eq($(this).parent().index()).offset().top;
+     console.log(slideOst);
+     $('html,body').stop().animate({scrollTop:slideOst}, 500,'easeOutCubic'); 
+    //  slideBtn.removeClass('show');
+    //  slideBtn.eq(e).addClass('show');
 });
+// --같은 버튼을 다시 클릭하면 클래스명이 사라지지 않도록
+
+
 
 
 // --수상이력 - 송림

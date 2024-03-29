@@ -28,7 +28,7 @@
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
 
-* {
+body {
   font-family: var(--T-mainfont);
   box-sizing: border-box;
 }
@@ -147,6 +147,7 @@ p {
 }
 #header.fixed {
   background: var(--C-white);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
 }
 .header_wrapper {
   display: flex;
@@ -169,6 +170,23 @@ p {
   text-decoration: none;
   transition: 0.5s;
   font-weight: 500;
+  padding: 45px 0;
+  position: relative;
+}
+.gnb_wrap .gnb > li > a:after {
+  content: '';
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  background: var(--C-blue);
+  transition: all 0.3s;
+}
+.gnb_wrap .gnb > li > a:hover:after {
+  width: 152px;
 }
 .gnb_wrap .gnb > li > a.on {
   transition: 0.5s;
@@ -177,7 +195,7 @@ p {
 .gnb_wrap .depth02 {
   position: absolute;
   left: 0;
-  top: 75px;
+  top: 95px;
   display: flex;
   flex-direction: column;
   gap: 20px;
