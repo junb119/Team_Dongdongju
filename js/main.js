@@ -267,31 +267,25 @@ let mainNewsOST = mainNews.offset().top;
 let noticeWrapper = mainNews.find('.notice_slide_container');
 let newsTitle = noticeWrapper.find('.news_title');
 let advTitle = noticeWrapper.find('.adv_title');
+let activeTitle = $('.titleContainer > div');
+let activeSlide = $('.notice_slide_container > ul');
+let slide1Width= activeSlide.eq(0).outerWidth()
+// console.log(advTitle.offset().top)
 
 mainNews.mouseenter(function () {
-  console.log(window.scrollY);
   $(window).scroll(function () {
     let sct = $(window).scrollTop();
     // console.log(sct)
-    if (sct >= mainNewsOST) {
-      let verScrollAmt = sct - mainNewsOST;
-      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
-      // console.log(verScrollAmt)
-
-      if (verScrollAmt <= noticeWrapper.outerWidth() - mainNews.outerHeight() * 0.08) {
-        newsTitle.css({ transform: `translateX(${verScrollAmt}px)` });
-      }
-
-      if (sct >= noticeWrapper.offset().top - $(window).outerHeight()) {
-        verScrollAmt = sct - noticeWrapper.offset().top;
-        // console.log(advTitle)
-        advTitle.css({ transform: `translateX(${-verScrollAmt}px)` });
-      }
-      // if (verScrollAmt <= vScroll.outerWidth() - newsWrapper.outerWidth()) {
-      //   let newScrollAmt =
-
-      // }
+    if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
+      activeTitle.removeClass('active')
+      activeTitle.eq(0).addClass('active')
+      
+    } else if (sct >= mainNewsOST + slide1Width){
+      activeTitle.removeClass('active')
+      activeTitle.eq(1).addClass('active')
     }
+    let verScrollAmt = sct - mainNewsOST;
+      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });      
   });
 });
 // --뉴스2

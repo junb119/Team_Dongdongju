@@ -4,7 +4,7 @@
 }
 
 #header {
-  /* display: none !important; */
+  display: none !important;
 }
 
 @import url('./common.css');
@@ -98,10 +98,46 @@
 /* 메인영상 - 준범  */
 .main_video {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  /* height: 100vh; */
+  /* overflow: hidden; */
   background-color: #4d4e51;
 }
+
+.first_main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.first_main .first_down_bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 auto;
+  gap: 30px;
+  transform: translate(-50%, -100%);
+  animation: imgDown;
+}
+@keyframes imgDown {
+  to {
+  }
+  to {
+  }
+}
+
+.first_main .first_down_bg img {
+  width: 200px;
+}
+
+.first_main h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--C-white);
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
 .video_content {
   position: relative;
   color: var(--C-white);
@@ -129,19 +165,6 @@
   width: 100%;
   height: 100vh;
   object-fit: cover;
-}
-.first_main {
-  position: relative;
-}
-
-.first_main h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--C-white);
-  text-transform: capitalize;
-  font-weight: normal;
 }
 
 /* --메인영상 - 준범  */
@@ -656,8 +679,8 @@
 
 /* 뉴스2 */
 .main_notice {
-  border: 3px solid #000;
-  height: 5100px;
+  /* border: 3px solid #000; */
+  height: 6500px;
 }
 
 .vertical_scroll {
@@ -668,13 +691,22 @@
   position: sticky;
   top: 204px;
 }
+.titleContainer {
+  position: relative;
+  height: 55px;
+  margin-bottom: 83px;
+}
+
 .news_title,
 .adv_title {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-left: 8%;
   opacity: 0;
+  transition: 0.3s;
 }
-.news_title.active,
-.adv_title.active {
+.titleContainer > div.active {
   opacity: 1;
 }
 
