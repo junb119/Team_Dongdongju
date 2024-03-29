@@ -120,9 +120,7 @@ const profitData = $('.profit_data');
 const profitDataOST = profitData.offset().top;
 const profitDataHeight = profitData.find('.profitBG').outerHeight();
 
-console.log(profitDataHeight);
-$window.scroll(function () {
-  // console.log('위치',profitData.offset().top + ($window.outerHeight() * 3 / 4))
+$window.scroll(function () {  
   // 스크롤시 숫자 증가 함수
   let sct = $window.scrollTop();
   // console.log('스크롤',sct)
@@ -140,11 +138,6 @@ $window.scroll(function () {
   let $windowHeight = $(window).outerHeight();
   if (sct + $windowHeight >= profitDataOST) {
     let scrollAmt = sct + ($windowHeight - profitDataOST);
-
-    // if (scrollAmt >= profitDataHeight){
-    //   scrollAmt = profitDataHeight
-    // }
-
     let leftValue = 30 - (scrollAmt / $windowHeight) * 30;
     let rightValue = 70 + (scrollAmt / $windowHeight) * 30;
 
@@ -209,7 +202,93 @@ function animateInit(target) {
 // --사회공헌 - 선진
 
 // 뉴스 - 준범
+// let mainNews = $('.main_news')
+// let vScroll = $('.vertical_scroll')
+// let mainNewsOST = mainNews.offset().top
+// let newsWrapper = mainNews.find('.news_wrapper')
+// let newsTitle = newsWrapper.find('.news_title')
+// let advTitle = newsWrapper.find('.adv_title')
+
+// let advWrapper = mainNews.find('.adv_wrapper')
+
+// console.log('adw',advWrapper.offset().top)
+
+// mainNews.mouseenter(function() {
+//   console.log(window.scrollY)
+//   $(window).scroll(function () {
+//     let sct = $(window).scrollTop()
+//     // console.log(sct)
+//     if (sct >= mainNewsOST) {
+//       let verScrollAmt = sct - mainNewsOST
+//       vScroll.css({transform: `translateX(${-verScrollAmt}px)`})
+//       // console.log(verScrollAmt)
+
+//       if (verScrollAmt <= newsWrapper.outerWidth() - (mainNews.outerHeight() * 0.08)){
+//         newsTitle.css({transform: `translateX(${verScrollAmt}px)`})
+//       }
+
+//       if (sct >= advWrapper.offset().top - $(window).outerHeight()) {
+//         verScrollAmt = sct - advWrapper.offset().top
+//         // console.log(advTitle)
+//         advTitle.css({transform: `translateX(${-verScrollAmt}px)`})
+
+
+//       }
+//       // if (verScrollAmt <= vScroll.outerWidth() - newsWrapper.outerWidth()) {
+//       //   let newScrollAmt = 
+
+//       // }
+//     }
+    
+//   })
+// })
+
 // --뉴스 - 준범
+
+// 뉴스2
+let mainNews = $('.main_notice')
+let vScroll = $('.vertical_scroll')
+let mainNewsOST = mainNews.offset().top
+let noticeWrapper = mainNews.find('.notice_slide_container')
+let newsTitle = noticeWrapper.find('.news_title')
+let advTitle = noticeWrapper.find('.adv_title')
+
+
+
+mainNews.mouseenter(function() {
+  console.log(window.scrollY)
+  $(window).scroll(function () {
+    let sct = $(window).scrollTop()
+    // console.log(sct)
+    if (sct >= mainNewsOST) {
+      let verScrollAmt = sct - mainNewsOST
+      noticeWrapper.css({transform: `translateX(${-verScrollAmt}px)`})
+      // console.log(verScrollAmt)
+
+      if (verScrollAmt <= noticeWrapper.outerWidth() - (mainNews.outerHeight() * 0.08)){
+        newsTitle.css({transform: `translateX(${verScrollAmt}px)`})
+      }
+
+      if (sct >= noticeWrapper.offset().top - $(window).outerHeight()) {
+        verScrollAmt = sct - noticeWrapper.offset().top
+        // console.log(advTitle)
+        advTitle.css({transform: `translateX(${-verScrollAmt}px)`})
+
+
+      }
+      // if (verScrollAmt <= vScroll.outerWidth() - newsWrapper.outerWidth()) {
+      //   let newScrollAmt = 
+
+      // }
+    }
+    
+  })
+})
+// --뉴스2
+
+
+
+
 
 // 푸터 - 선진
 // --푸터 - 선진
