@@ -199,6 +199,25 @@ function animateInit(target) {
 // --수치자료 - 준범
 
 // 사회공헌 - 선진
+
+let csrwrapper = $('.social_wrapper');
+console.log(csrwrapper.scrollTop());
+subbox1 = $('.social_subbox1');
+
+$(window).scroll(function(){
+  if ($(window).scrollTop() > 805) {
+    subbox1.addClass('animate');
+  } else {
+    subbox1.removeClass('animate');
+  }
+  console.log(csrwrapper.scrollTop());
+});
+let subboxDesc = $('.subdesc');
+
+subbox1.click(function(e){
+  e.preventDefault();
+  subboxDesc.css({"right":"500px"})
+})
 // --사회공헌 - 선진
 
 // 뉴스 - 준범
