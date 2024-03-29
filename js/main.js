@@ -202,22 +202,26 @@ function animateInit(target) {
 
 let csrwrapper = $('.social_wrapper');
 console.log(csrwrapper.scrollTop());
-subbox1 = $('.social_subbox1');
+
+subbox = $('.social_subbox');
 
 $(window).scroll(function(){
   if ($(window).scrollTop() > 805) {
-    subbox1.addClass('animate');
+    subbox.addClass('animate');
   } else {
-    subbox1.removeClass('animate');
+    subbox.removeClass('animate');
   }
   console.log(csrwrapper.scrollTop());
 });
+
 let subboxDesc = $('.subdesc');
 
-subbox1.click(function(e){
-  e.preventDefault();
-  subboxDesc.css({"right":"500px"})
+subbox.click(function(){
+  $('.subdesc').removeClass('active');
+  $(this).find('.subdesc').toggleClass('active');
+
 })
+
 // --사회공헌 - 선진
 
 // 뉴스 - 준범
