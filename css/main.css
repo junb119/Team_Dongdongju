@@ -4,7 +4,7 @@
 }
 
 #header {
-  display: none !important;
+  /* display: none !important; */
 }
 
 @import url('./common.css');
@@ -115,17 +115,6 @@
   margin: 0 auto;
   gap: 30px;
   transform: translate(-50%, -100%);
-  animation: imgDown 4s ease-out forwards;
-}
-@keyframes imgDown {
-  from {
-    top: 0;
-    transform: translate(-50%, -100%);
-  }
-  to {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
 }
 
 .first_main .first_down_bg img {
