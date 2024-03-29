@@ -193,26 +193,30 @@ function animateInit(target) {
 
 // 사회공헌 - 선진
 
-let csrwrapper = $('.social_wrapper');
-console.log(csrwrapper.scrollTop());
+let csrwrapper = $('.social_wrapper'),
+    subbox = $('.social_subbox');
 
-subbox = $('.social_subbox');
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 805) {
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 16800) {
     subbox.addClass('animate');
   } else {
     subbox.removeClass('animate');
   }
-  // console.log(csrwrapper.scrollTop());
+  console.log($(window).scrollTop())
 });
 
 let subboxDesc = $('.subdesc');
 
 subbox.click(function(){
-  $('.subdesc').removeClass('active');
-  $(this).find('.subdesc').toggleClass('active');
-
+  $(this).siblings().find('.subdesc').removeClass('active')
+  let targetDesc = $(this).find('.subdesc')
+  if( targetDesc.hasClass('active')) {
+    targetDesc.removeClass('active');
+  } else {
+    targetDesc.addClass('active');
+    
+  }
 })
 
 // --사회공헌 - 선진

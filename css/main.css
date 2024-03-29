@@ -119,12 +119,16 @@
   margin: 0 auto;
   gap: 30px;
   transform: translate(-50%, -100%);
-  animation: imgDown;
+  animation: imgDown 4s ease-out forwards;
 }
 @keyframes imgDown {
-  to {
+  from {
+    top: 0;
+    transform: translate(-50%, -100%);
   }
   to {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -176,6 +180,8 @@
 /* 경영철학 - 선진    */
 .vision_wrapper {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main_vision .vision_wrapper .vision_title {
@@ -189,26 +195,10 @@
 }
 
 .vision_inner_wrapper {
-  background: url(../images/main/main_vision/vision_bg.png);
   object-fit: cover;
   width: 100%;
   height: 100vh;
   position: relative;
-  animation: vision_scroll duration timing-function delay iteration-count direction fill-mode;
-}
-
-@keyframes vision_scroll {
-  0% {
-    transform: matrix();
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-  }
-  100% {
-  }
 }
 .inner_contents {
   position: absolute;
@@ -232,6 +222,50 @@
 }
 .active {
   opacity: 1;
+}
+
+
+
+.visionBG {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+.visionBG img {
+  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: clip-path 0.1s, opacity 0.5s;
+  background: #000;
+}
+.visionBG img.active {
+  opacity: 1;
+}
+
+.vision_inner_wrapper ul {
+  position: absolute;
+  top: 100vh;
+  /* padding: 100vh 0; */
+  left: 1234px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.vision_inner_wrapper ul li {
+  text-align: center;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.vision_inner_wrapper ul li.active {
+  opacity: 1;
+}
+.vision_inner_wrapper ul li h2 {
+  font-size: 72px;
+  font-weight: bold;
 }
 /* --경영철학 - 선진  */
 
@@ -501,6 +535,7 @@
 .social_wrapper {
   height: 100vh;
   overflow: hidden;
+  position:sticky;
 }
 .social_title h2 {
   margin: 124px 8%;
@@ -516,15 +551,14 @@
 }
 .social_subbox1_img {
   background: url(../images/main/main_csr/csr_1.png) no-repeat;
-  }
+}
 
-
-.social_boxes ul.animate{
+.social_boxes ul.animate {
   transition: transform 1.5s rotateY 0.2s;
   transform-style: preserve-3d;
   object-fit: cover;
 }
-.social_subbox:nth-child(1).animate{
+.social_subbox:nth-child(1).animate {
   animation: csr_card_fade_in_1 2s;
 }
 @keyframes csr_card_fade_in_1 {
@@ -538,7 +572,7 @@
 .social_subbox2_img {
   background: url(../images/main/main_csr/csr_2.png) no-repeat;
 }
-.social_subbox:nth-child(2).animate{
+.social_subbox:nth-child(2).animate {
   animation: csr_card_fade_in_2 2s;
   animation-delay: 0.5s;
 }
@@ -553,7 +587,7 @@
 .social_subbox3_img {
   background: url(../images/main/main_csr/csr_3.png) no-repeat;
 }
-.social_subbox:nth-child(3).animate{
+.social_subbox:nth-child(3).animate {
   animation: csr_card_fade_in_3 2s;
   animation-delay: 1s;
 }
@@ -569,16 +603,16 @@
 .social_subbox1_img h3,
 .social_subbox2_img h3,
 .social_subbox3_img h3,
-.subdesc{
-  padding:24px;
+.subdesc {
+  padding: 24px;
 }
 
-.social_boxes{
+.social_boxes {
   display: flex;
   filter: drop-shadow(0px 2px 4px #00000040);
-  gap:36px;
+  gap: 36px;
 }
-.social_boxes ul li{
+.social_boxes ul li {
   width: 436px;
   height: 541px;
   border-radius: 50px;
@@ -595,10 +629,10 @@
   color: var(--C-white);
 }
 
-.subdesc{
+.subdesc {
   display: none;
 }
-.subdesc.active{
+.subdesc.active {
   font-size: var(--T-P);
   width: 500px;
   height: 493px;
