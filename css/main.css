@@ -531,6 +531,7 @@
 .social_wrapper {
   height: 100vh;
   overflow: hidden;
+  position:sticky;
 }
 .social_title h2 {
   margin: 124px 8%;
