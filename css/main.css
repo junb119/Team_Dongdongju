@@ -473,41 +473,31 @@
 /* 사회공헌 - 선진  */
 .social_wrapper {
   height: 100vh;
+  overflow: hidden;
 }
 .social_title h2 {
   margin: 124px 8%;
   font-size: var(--T-H2);
 }
 
-/* .social_title hr {
-  width: 1020px;
-  height: 0px;
-  left: 1194px;
-  top: 206px;
-  border: 5px solid #f5821f;
-  transform: rotate(-180deg);
-} */
-
 .social_boxes {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 96px;
   text-decoration: none;
   margin: 50px auto;
 }
-.social_subbox1 {
+.social_subbox1_img {
   background: url(../images/main/main_csr/csr_1.png) no-repeat;
-}
+  }
 
-.social_subbox1.animate,
-.social_subbox2.animate,
-.social_subbox3.animate {
+
+.social_boxes ul.animate{
   transition: transform 1.5s rotateY 0.2s;
   transform-style: preserve-3d;
   object-fit: cover;
 }
-.social_subbox1.animate {
+.social_subbox:nth-child(1).animate{
   animation: csr_card_fade_in_1 2s;
 }
 @keyframes csr_card_fade_in_1 {
@@ -518,10 +508,10 @@
     transform: translateX(0%) rotateY(360deg);
   }
 }
-.social_subbox2 {
+.social_subbox2_img {
   background: url(../images/main/main_csr/csr_2.png) no-repeat;
 }
-.social_subbox2.animate {
+.social_subbox:nth-child(2).animate{
   animation: csr_card_fade_in_2 2s;
   animation-delay: 0.5s;
 }
@@ -533,10 +523,10 @@
     transform: translateX(0%) rotateY(360deg);
   }
 }
-.social_subbox3 {
+.social_subbox3_img {
   background: url(../images/main/main_csr/csr_3.png) no-repeat;
 }
-.social_subbox3.animate {
+.social_subbox:nth-child(3).animate{
   animation: csr_card_fade_in_3 2s;
   animation-delay: 1s;
 }
@@ -549,47 +539,49 @@
   }
 }
 
-.social_subbox1,
-.social_subbox2,
-.social_subbox3 {
-  display: flex;
-  width: 436px;
-  height: 541px;
-  gap: 46px;
-  border-radius: 50px;
-  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+.social_subbox1_img h3,
+.social_subbox2_img h3,
+.social_subbox3_img h3,
+.subdesc{
+  padding:24px;
 }
 
-.social_subbox1:hover,
-.social_subbox2:hover,
-.social_subbox3:hover {
+.social_boxes{
+  display: flex;
+  filter: drop-shadow(0px 2px 4px #00000040);
+  gap:36px;
+}
+.social_boxes ul li{
+  width: 436px;
+  height: 541px;
+  border-radius: 50px;
+}
+
+.social_subbox:hover {
   filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 }
 
-.social_subbox1,
-.social_subbox2,
-.social_subbox3 {
+.social_subbox {
+  display: flex;
   font-size: 80px;
   text-decoration: none;
   color: var(--C-white);
 }
 
-.social_subbox1_img,
-.social_subbox2_img,
-.social_subbox3_img {
-  padding: 36px;
+.subdesc{
+  display: none;
 }
-
-.subdesc.active {
+.subdesc.active{
   font-size: var(--T-P);
   width: 500px;
-  height: 541px;
+  height: 493px;
   /* left: 472.12px;
   top: 412px; */
   background: #ffffff;
   color: #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50px;
+  display: block;
   /* visibility: hidden; */
 }
 /* --사회공헌 - 선진  */
