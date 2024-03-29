@@ -193,18 +193,16 @@ function animateInit(target) {
 
 // 사회공헌 - 선진
 
-let csrwrapper = $('.social_wrapper');
-console.log(csrwrapper.scrollTop());
+let csrwrapper = $('.social_wrapper'),
+    subbox = $('.social_subbox');
 
-subbox = $('.social_subbox');
 
-$(window).scroll(function () {
-  if ($(window).scrollTop() > 805) {
+$(window).scroll(function(){
+  if ($(window).scrollTop() > 16800) {
     subbox.addClass('animate');
   } else {
     subbox.removeClass('animate');
   }
-  // console.log(csrwrapper.scrollTop());
 });
 
 let subboxDesc = $('.subdesc');

@@ -149,6 +149,8 @@
 /* 경영철학 - 선진    */
 .vision_wrapper {
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main_vision .vision_wrapper .vision_title {
@@ -162,26 +164,10 @@
 }
 
 .vision_inner_wrapper {
-  background: url(../images/main/main_vision/vision_bg.png);
   object-fit: cover;
   width: 100%;
   height: 100vh;
   position: relative;
-  animation: vision_scroll duration timing-function delay iteration-count direction fill-mode;
-}
-
-@keyframes vision_scroll {
-  0% {
-    transform: matrix();
-  }
-  25% {
-  }
-  50% {
-  }
-  75% {
-  }
-  100% {
-  }
 }
 .inner_contents {
   position: absolute;
@@ -205,6 +191,50 @@
 }
 .active {
   opacity: 1;
+}
+
+
+
+.visionBG {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+.visionBG img {
+  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: clip-path 0.1s, opacity 0.5s;
+  background: #000;
+}
+.visionBG img.active {
+  opacity: 1;
+}
+
+.vision_inner_wrapper ul {
+  position: absolute;
+  top: 100vh;
+  /* padding: 100vh 0; */
+  left: 1234px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+.vision_inner_wrapper ul li {
+  text-align: center;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.vision_inner_wrapper ul li.active {
+  opacity: 1;
+}
+.vision_inner_wrapper ul li h2 {
+  font-size: 72px;
+  font-weight: bold;
 }
 /* --경영철학 - 선진  */
 
