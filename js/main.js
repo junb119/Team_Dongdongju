@@ -1,5 +1,4 @@
 // common
-$('#header').slideUp()
 let $window = $(window);
 
 // 팝업 - 송림
@@ -59,7 +58,6 @@ checkCookie("MiraeAsset");
 
 // 메인영상 애니메이션
 function playVideoAnimation(visited) {
-  const $videoWrapper = $(".video_wrapper");
   const $videoContent = $(".video_content");
   const $videoFirst = $(".first_main");
 
@@ -68,6 +66,9 @@ function playVideoAnimation(visited) {
     $videoContent.eq(1).addClass("active");
     popup.classList.add("hide");
   } else {
+    $("#header").hide();
+    
+    scrollDisable()
     $videoFirst
       .find("h2")
       .delay(500)
@@ -109,7 +110,8 @@ function playVideoAnimation(visited) {
                           .find("video")
                           .attr("autoplay", "autoplay");
                         popup.classList.remove("hide");
-                        $('#header').slideDown()
+                        $("#header").slideDown();
+                        scrollAble()
                       },
                     }
                   );
@@ -430,3 +432,15 @@ class Scrooth {
 //   acceleration: 1.1,
 //   deceleration: 0.975,
 // });
+
+// 스크롤 차단
+
+
+function scrollDisable() {
+  $("html, body").addClass("no_scroll").on('scroll touchmove mousewheel', function(e){
+    e.preventDefault();
+});
+}
+function scrollAble() {
+  $("html, body").removeClass("no_scroll").off('scroll touchmove mousewheel');
+}

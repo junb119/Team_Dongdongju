@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..600&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("normalize.css");
 @import url("reset.css");
-
 
 :root {
   --C-blue: #00427a;
@@ -27,6 +26,12 @@
   --T-lh-large: 1.618; /* 큰 폰트 line-height*/
   /*  */
   --T-mainfont: "Noto Sans KR", sans-serif;
+}
+.no_scroll {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 body {
@@ -68,7 +73,6 @@ section {
 .aic {
   align-items: center;
 }
-
 
 /* ---------------// 정렬 */
 
@@ -154,7 +158,7 @@ html.hidden {
 }
 #header.fixed {
   background: var(--C-white);
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 .header_wrapper {
   display: flex;
@@ -181,7 +185,7 @@ html.hidden {
   position: relative;
 }
 .gnb_wrap .gnb > li > a:after {
-  content: '';
+  content: "";
   width: 0;
   height: 4px;
   position: absolute;
@@ -281,7 +285,7 @@ html.hidden {
 }
 
 .footer_center_2 {
-  font-size:calc(var(--T-subTitle) - 2);
+  font-size: calc(var(--T-subTitle) - 2);
   font-weight: bold;
   line-height: 27px;
   color: var(--C-black);
@@ -347,7 +351,7 @@ html.hidden {
 
   .footer_center_1 * {
     grid-area: center_1;
-    font-size: calc ( var(--T-mobileP) - 2)px;
+    font-size: calc (var(--T-mobileP) - 2) px;
     font-weight: bold;
     margin-top: 5%;
     word-spacing: 40px;
@@ -471,24 +475,21 @@ html.hidden {
 
 /* --backToTop - 준범*/
 
-
 /* --Scroll down 아이콘 */
 
 .scroll_icon {
-  
   position: absolute;
   left: 50%;
   /* bottom: 0; */
   transform: translateX(-50%);
-  color:var(--C-white);
+  color: var(--C-white);
   text-transform: capitalize;
 }
 .scroll_icon span {
-  font-size: var(--T-P) ;
+  font-size: var(--T-P);
   line-height: calc(var(--T-P) * 1.618);
-
 }
-.scroll_icon div{
+.scroll_icon div {
   background: var(--C-white);
   text-indent: -9999em;
 }
