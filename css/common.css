@@ -241,8 +241,7 @@ html.hidden {
   color: var(--C-black);
 }
 .m_menu_wrap {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 .m_menu_btn {
   position: relative;
@@ -281,8 +280,7 @@ html.hidden {
 @media (max-width: 500px){
  
     .m_menu_wrap {
-      visibility: visible;
-      opacity: 1;
+     display: block;
   }
 }
 
