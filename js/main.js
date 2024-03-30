@@ -245,8 +245,8 @@ $window.scroll(function () {
   $profitItems.each(function () {
     let $profitItem = $(this).offset().top;
     if (
-      sct >= $profitItem - ($windowHeight * 5) / 7 &&
-      sct <= $profitItem - $windowHeight / 5
+      sct >= $profitItem - ($windowHeight * 5) / 6 &&
+      sct <= $profitItem - $windowHeight / 3
     ) {
       $(this).addClass("active");
     } else {
@@ -304,49 +304,6 @@ subbox.click(function () {
 // --사회공헌 - 선진
 
 // 뉴스 - 준범
-// let mainNews = $('.main_news')
-// let vScroll = $('.vertical_scroll')
-// let mainNewsOST = mainNews.offset().top
-// let newsWrapper = mainNews.find('.news_wrapper')
-// let newsTitle = newsWrapper.find('.news_title')
-// let advTitle = newsWrapper.find('.adv_title')
-
-// let advWrapper = mainNews.find('.adv_wrapper')
-
-// console.log('adw',advWrapper.offset().top)
-
-// mainNews.mouseenter(function() {
-//   console.log(window.scrollY)
-//   $(window).scroll(function () {
-//     let sct = $(window).scrollTop()
-//     // console.log(sct)
-//     if (sct >= mainNewsOST) {
-//       let verScrollAmt = sct - mainNewsOST
-//       vScroll.css({transform: `translateX(${-verScrollAmt}px)`})
-//       // console.log(verScrollAmt)
-
-//       if (verScrollAmt <= newsWrapper.outerWidth() - (mainNews.outerHeight() * 0.08)){
-//         newsTitle.css({transform: `translateX(${verScrollAmt}px)`})
-//       }
-
-//       if (sct >= advWrapper.offset().top - $(window).outerHeight()) {
-//         verScrollAmt = sct - advWrapper.offset().top
-//         // console.log(advTitle)
-//         advTitle.css({transform: `translateX(${-verScrollAmt}px)`})
-
-//       }
-//       // if (verScrollAmt <= vScroll.outerWidth() - newsWrapper.outerWidth()) {
-//       //   let newScrollAmt =
-
-//       // }
-//     }
-
-//   })
-// })
-
-// --뉴스 - 준범
-
-// 뉴스2
 let mainNews = $(".main_notice");
 let vScroll = $(".vertical_scroll");
 let mainNewsOST = mainNews.offset().top;
@@ -354,96 +311,107 @@ let noticeWrapper = mainNews.find(".notice_slide_container");
 let newsTitle = noticeWrapper.find(".news_title");
 let advTitle = noticeWrapper.find(".adv_title");
 let activeTitle = $(".titleContainer > div");
+let noticeSlideContainer = $(".notice_slide_container");
 let activeSlide = $(".notice_slide_container > ul");
 let slide1Width = activeSlide.eq(0).outerWidth();
-// console.log(advTitle.offset().top)
+// console.log(advTitle.offset().top)  
+function getNoticeSlideWidth() {
+  slide1Width = activeSlide.eq(0).outerWidth();
+  let noticeSlideWidth = activeSlide.eq(0).outerWidth() + activeSlide.eq(1).outerWidth() + $window.outerHeight()
+  console.log('width : ',noticeSlideWidth)
+  mainNews.css({height : noticeSlideWidth})
+}
+getNoticeSlideWidth()
 
 mainNews.mouseenter(function () {
   $(window).scroll(function () {
     let sct = $(window).scrollTop();
     // console.log(sct)
+    let verScrollAmt = sct - mainNewsOST;
     if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
       activeTitle.removeClass("active");
       activeTitle.eq(0).addClass("active");
+
+      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     } else if (sct >= mainNewsOST + slide1Width) {
       activeTitle.removeClass("active");
       activeTitle.eq(1).addClass("active");
+      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     }
-    let verScrollAmt = sct - mainNewsOST;
-    noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
   });
 });
-// --뉴스2
+// --뉴스 - 준범
 
 // 푸터 - 선진
 // --푸터 - 선진
 // award 슬라이드 이벤트
 
-class Scrooth {
-  constructor({
-    element = window,
-    strength = 10,
-    acceleration = 1.2,
-    deceleration = 0.975,
-  } = {}) {
-    this.element = element;
-    this.distance = strength;
-    this.acceleration = acceleration;
-    this.deceleration = deceleration;
-    this.running = false;
+// 부드러운 슬라이드
+// class Scrooth {
+//   constructor({
+//     element = window,
+//     strength = 10,
+//     acceleration = 1.2,
+//     deceleration = 0.975,
+//   } = {}) {
+//     this.element = element;
+//     this.distance = strength;
+//     this.acceleration = acceleration;
+//     this.deceleration = deceleration;
+//     this.running = false;
 
-    this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.scroll = this.scroll.bind(this);
-  }
+//     this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.scroll = this.scroll.bind(this);
+//   }
 
-  scrollHandler(e) {
-    e.preventDefault();
+//   scrollHandler(e) {
+//     e.preventDefault();
 
-    if (!this.running) {
-      this.top = this.element.pageYOffset || this.element.scrollTop || 0;
-      this.running = true;
-      this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
-      this.isDistanceAsc = true;
-      this.scroll();
-    } else {
-      this.isDistanceAsc = false;
-      this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
-    }
-  }
+//     if (!this.running) {
+//       this.top = this.element.pageYOffset || this.element.scrollTop || 0;
+//       this.running = true;
+//       this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
+//       this.isDistanceAsc = true;
+//       this.scroll();
+//     } else {
+//       this.isDistanceAsc = false;
+//       this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
+//     }
+//   }
 
-  scroll() {
-    if (this.running) {
-      this.currentDistance *=
-        this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
-        ? (this.running = false)
-        : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance)
-        ? (this.isDistanceAsc = false)
-        : 1;
+//   scroll() {
+//     if (this.running) {
+//       this.currentDistance *=
+//         this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+//       Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
+//         ? (this.running = false)
+//         : 1;
+//       Math.abs(this.currentDistance) >= Math.abs(this.distance)
+//         ? (this.isDistanceAsc = false)
+//         : 1;
 
-      this.top += this.currentDistance;
-      this.element.scrollTo(0, this.top);
+//       this.top += this.currentDistance;
+//       this.element.scrollTo(0, this.top);
 
-      requestAnimationFrame(this.scroll);
-    }
-  }
-}
+//       requestAnimationFrame(this.scroll);
+//     }
+//   }
+// }
 
-const scroll = new Scrooth({
-  element: window,
-  strength: 40,
-  acceleration: 1.1,
-  deceleration: 0.9,
-});
+// const scroll = new Scrooth({
+//   element: window,
+//   strength: 40,
+//   acceleration: 1.1,
+//   deceleration: 0.9,
+// });
+// --부드러운 슬라이드
 
 // 스크롤 차단
-
 function scrollDisable() {
   $("html, body")
     .addClass("no_scroll")
@@ -454,3 +422,19 @@ function scrollDisable() {
 function scrollAble() {
   $("html, body").removeClass("no_scroll").off("scroll touchmove mousewheel");
 }
+// --스크롤 차단
+
+const mw_768 = window.matchMedia("screen and (max-width: 768px)");
+
+function responsive() {
+  if (mw_768.matches) {
+    getNoticeSlideWidth()
+  } else {
+    console.log("no");
+  }
+}
+
+$window.resize(function () {
+  responsive();
+});
+responsive();
