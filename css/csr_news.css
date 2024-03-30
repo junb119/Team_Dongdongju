@@ -99,6 +99,14 @@ font-weight: Semi Bold;
     justify-content: space-between;
     padding: 20px;
   }
+
+input{
+  border-style: #000 1px solid ;
+  border-color: #000;
+}
+
+
+
   /* .pagination{
     display: flex;
     justify-content: center;
