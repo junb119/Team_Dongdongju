@@ -28,8 +28,8 @@
   visibility: hidden !important;
 }
 
-.invest_sub {
-  height: 100vh;
+.invest_sub{
+  margin-top:124px;
 }
 
 h2 {
@@ -37,6 +37,7 @@ h2 {
   line-height: 80px;
   font-size: calc(var(--T-base) * 3.4375);
   font-weight: 500;
+  margin-left: 8%;
 }
 
 h3 {
@@ -48,8 +49,13 @@ h4 {
   line-height: 52px;
   margin-top: var(--T-P);
   margin-bottom: calc(var(--T-base) * 4.25);
+  margin-left: 8%;
 }
 
+.cta{
+    text-align: right;
+    margin-right: 8%;
+}
 .subtitle {
   .breadcrumb {
     display: flex;
@@ -66,8 +72,8 @@ h4 {
   p {
     font-size: var(--T-subTitle);
     line-height: 35px;
-    margin-bottom: 112px;
-    display: flex;
+    margin-bottom: 50px;
+    margin-left: 8%;
   }
 }
 p {
@@ -81,6 +87,7 @@ p {
   align-items: center;
   margin: 0 28%;
 text-align: center;
+margin-bottom: 300px;
 }
 .s_contents{
   width: calc(33.33% - 60px); /* 각각의 박스는 33.33%의 너비를 가집니다. 여백을 고려하여 계산합니다. */
@@ -219,25 +226,13 @@ text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   left: 110%;
   top: 0; 
+  display: none;
 }
 
-
-/* .iv_dsc:nth-child(2){
-  left: 285px;
-  top: 560px;
-
+.s_contents:hover .iv_dsc{
+  display: block;
 }
-*/
-/* .iv_dsc:nth-child(3){
-  left: 1245px;
-  top: 563px;
 
-} 
-
-.iv_dsc:nth-child(4){
-  left: 982px;
-  top: 840px;
-} */
 
 h5 {
   text-align: right;

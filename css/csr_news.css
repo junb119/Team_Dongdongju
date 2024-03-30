@@ -22,18 +22,18 @@
   font-family: var(--T-mainfont);
   box-sizing: border-box;
 }
-#header{
-  visibility: hidden !important;
-}
+
 
 h2{
   margin-top: 125px;
   line-height: 80px;
+  margin-left: 8%;
 }
 .subtitle{
 p{
   line-height: 35px;
   margin-bottom:112px;
+  margin-left: 8%;
 }
 .breadcrumb {
   display: flex;
