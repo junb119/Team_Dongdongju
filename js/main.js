@@ -230,7 +230,7 @@ let csrwrapper = $('.social_wrapper'),
 
 
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 16800) {
+  if ($(window).scrollTop() + $(window).outerHeight() >= csrwrapper.offset().top) {
     subbox.addClass('animate');
   } else {
     subbox.removeClass('animate');
