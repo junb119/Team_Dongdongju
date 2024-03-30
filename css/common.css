@@ -480,7 +480,7 @@ html.hidden {
 .scroll_icon {
   position: absolute;
   left: 50%;
-  /* bottom: 0; */
+  
   transform: translateX(-50%);
   color: var(--C-white);
   text-transform: capitalize;
