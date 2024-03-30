@@ -13,7 +13,9 @@ $(function () {
       subMenu = $(".gnb_wrap .depth02"),
       subMenuHeight = 0,
       headerHeight = header.height(),
-      mobileToggle = $('.mobileToggle span')
+      mobileBtn = $('.m_menu_btn'),
+      mobileToggle = $('.m_menu_btn span'),
+      mobileMenu = $('.m_gnb_wrap .m_gnb > li'),
       langMenu = $(".lang_wrap a");
 
     // header scroll,mouseenter 이벤트 효과 함수 생성
@@ -26,6 +28,7 @@ $(function () {
     }
     // --header scroll,mouseenter 이벤트 효과 함수 생성
     
+
     //header scroll 이벤트
     $(window).on("scroll", function () {
       var st = $(this).scrollTop();
@@ -42,30 +45,24 @@ $(function () {
     
     });
     
+    //--header scroll 이벤트
+    
+    //header mouseenter,leave 이벤트
     subMenu.each(function () {
       if (subMenuHeight < $(this).height()) {
         subMenuHeight = $(this).height();
       }
     });
-    //--header scroll 이벤트
     
-    //header mouseenter,leave 이벤트
     header
     .on("mouseenter", function () {
-      header.stop().animate({ height: headerHeight + subMenuHeight + 75 + "px" });
-      headerEvent();
-
+      if($(window).width() > 500) {
+        header.stop().animate({ height: headerHeight + subMenuHeight + 75 + "px" });
+        headerEvent();
+      }
     })
     .on("mouseleave", function () {
       header.stop().animate({ height: headerHeight + "px" });
-      
-      // if($(window).scrollTop() = 0){
-        
-      //   header.removeClass("fixed");
-      //   mainMenu.removeClass("on");
-      //   langMenu.removeClass("on");
-      //   headerLogo.attr("src", "images/main/main_header/main_logo_white.png");
-      // }
     });
     // --header mouseenter,leave 이벤트
     
@@ -83,9 +80,30 @@ $(function () {
       lastScrollTop = st;
     });
     // --scroll시 헤더 업 다운 이벤트
-  }
 
-  //header 이벤트들
+
+    
+    //모바일 메뉴 이벤트
+    mobileBtn.click(function(){
+      $(this).toggleClass('open');
+      $('.m_menu_wrap').toggleClass('open');
+    })
+    
+    mobileMenu.click(function(){
+        $(this).find('ul').slideToggle();
+        $(this).siblings().find('ul').slideUp();
+        $('.m_gnb em').toggleClass('open');
+        $(this).siblings().find('em').removeClass('open');
+    })
+  
+    //--모바일 메뉴 이벤트
+  }
+  
+
+
+
+
+  //------------------------------------header 이벤트들
 
   function setFooter() {
     // -----footer 이벤트들
