@@ -62,6 +62,10 @@ function playVideoAnimation(visited) {
   const $videoFirst = $(".first_main");
 
   if (visited) {
+    $videoContent
+      .eq(1)
+      .find("video")
+      .attr("src", "./images/main/main_video/main_video_bg1.mp4");
     $videoContent.removeClass("active");
     $videoContent.eq(1).addClass("active");
     popup.classList.add("hide");
@@ -108,7 +112,10 @@ function playVideoAnimation(visited) {
                         $videoContent
                           .eq(1)
                           .find("video")
-                          .attr("autoplay", "autoplay");
+                          .attr(
+                            "src",
+                            "./images/main/main_video/main_video_bg1.mp4"
+                          );
                         $("#header").slideDown();
                         scrollAble();
                         setTimeout(() => {
@@ -428,12 +435,12 @@ class Scrooth {
   }
 }
 
-// const scroll = new Scrooth({
-//   element: window,
-//   strength: 40,
-//   acceleration: 1.1,
-//   deceleration: 0.975,
-// });
+const scroll = new Scrooth({
+  element: window,
+  strength: 40,
+  acceleration: 1.1,
+  deceleration: 0.9,
+});
 
 // 스크롤 차단
 
