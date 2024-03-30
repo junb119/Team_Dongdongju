@@ -67,8 +67,8 @@ function playVideoAnimation(visited) {
     popup.classList.add("hide");
   } else {
     $("#header").hide();
-    
-    scrollDisable()
+
+    scrollDisable();
     $videoFirst
       .find("h2")
       .delay(500)
@@ -109,9 +109,11 @@ function playVideoAnimation(visited) {
                           .eq(1)
                           .find("video")
                           .attr("autoplay", "autoplay");
-                        popup.classList.remove("hide");
                         $("#header").slideDown();
-                        scrollAble()
+                        scrollAble();
+                        setTimeout(() => {
+                          popup.classList.remove("hide");
+                        }, 2000);
                       },
                     }
                   );
@@ -435,12 +437,13 @@ class Scrooth {
 
 // 스크롤 차단
 
-
 function scrollDisable() {
-  $("html, body").addClass("no_scroll").on('scroll touchmove mousewheel', function(e){
-    e.preventDefault();
-});
+  $("html, body")
+    .addClass("no_scroll")
+    .on("scroll touchmove mousewheel", function (e) {
+      e.preventDefault();
+    });
 }
 function scrollAble() {
-  $("html, body").removeClass("no_scroll").off('scroll touchmove mousewheel');
+  $("html, body").removeClass("no_scroll").off("scroll touchmove mousewheel");
 }
