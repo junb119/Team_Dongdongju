@@ -55,6 +55,38 @@ checkCookie('MiraeAsset');
 // --메인영상 - 준범
 
 // 경영철학 - 선진
+let visionScr = $('.vision_scroll'),
+ visionScrOST = visionScr.offset().top,
+  visionHeight = visionScr.find('.visionBG').outerHeight(),
+  visiondesc = $('.vision_scroll_wrapper ul li');
+
+// vision_scroll 이미지 크기조절
+$(window).scroll(function () {
+  let  scrollPosition = $(window).scrollTop();
+  let $windowHeight = $(window).outerHeight();
+  if (scrollPosition + $windowHeight >= visionScrOST) {
+    let scrollAmt = scrollPosition + ($windowHeight - visionScrOST);
+    let leftValue = 30 - (scrollAmt / $windowHeight) * 30;
+    let rightValue = 70 + (scrollAmt / $windowHeight) * 30;
+
+    document.documentElement.style.setProperty('--clip-left', `${leftValue}%`);
+    document.documentElement.style.setProperty('--clip-right', `${rightValue}%`);
+  }
+  // //vision_scroll 이미지 크기조절
+
+
+  // 스크롤 문구 활성화
+  visiondesc.each(function () {
+    let offset = $(this).offset().top;
+    let distanceFromTop = offset - scrollPosition;
+    if (distanceFromTop >= $windowHeight / 3 && distanceFromTop <= ($windowHeight / 3) * 2) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+  })
+  // //스크롤 문구 활성화
 // --경영철학 - 선진
 
 // 수상이력 - 송림

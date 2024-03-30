@@ -409,7 +409,7 @@ html.hidden {
   grid-template-areas:
     "footer_l center_1 footer_r"
     "footer_l center_2 footer_r";
-  grid-template-columns: 0.3fr 1fr 0.2fr;
+  grid-template-columns: 0.3fr 0.5fr 0.2fr;
   grid-template-rows: 1fr 1fr;
   /* margin: 27.5% 8% 27.5% 8%; */
 }
@@ -432,9 +432,8 @@ html.hidden {
 }
 
 .footer_center_1 * {
-  font-size: calc(var(--T-subTitle) - 2);
-  font-weight: bold;
-  margin-top: 5%;
+  font-size: calc(var(--T-mobileP) - 2);
+  margin-top: 5% auto 1%;
   grid-area: center_1;
   word-spacing: 40px;
   text-decoration: none;
@@ -442,8 +441,7 @@ html.hidden {
 }
 
 .footer_center_2 {
-  font-size:calc(var(--T-subTitle) - 2);
-  font-weight: bold;
+  font-size:calc(var(--T-mobileP) - 2);
   line-height: 27px;
   color: var(--C-black);
 
@@ -501,6 +499,7 @@ html.hidden {
 
   .footer_left {
     grid-area: footer_l;
+    margin-left:5%;
   }
   .f_logo {
     margin: 0 0;
@@ -508,9 +507,8 @@ html.hidden {
 
   .footer_center_1 * {
     grid-area: center_1;
-    font-size: calc ( var(--T-mobileP) - 2)px;
-    font-weight: bold;
-    margin-top: 5%;
+    font-size: calc ( var(--T-mobileP))px;
+    margin-top: 8%;
     word-spacing: 40px;
     text-decoration: none;
     color: var(--C-black);
@@ -520,7 +518,6 @@ html.hidden {
   .footer_center_2 {
     grid-area: center_2;
     font-size: var(--T-mobileP);
-    font-weight: bold;
     line-height: 27px;
     color: var(--C-black);
     text-align: center;
