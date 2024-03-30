@@ -445,7 +445,6 @@ html.hidden {
   font-size:calc(var(--T-P) - 2px);
   line-height: 27px;
   color: var(--C-black);
-
   grid-area: center_2;
 }
 
