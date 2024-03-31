@@ -1,12 +1,3 @@
-const perPage = 8;
-const rows = document.querySelectorAll('.article');
-const rowsCount = rows.length; //40
-const pageCount = Math.ceil(rowsCount/perPage); //5
-const numbers = document.querySelector('#numbers');
-const prevBtn = document.querySelector('.pagination .fa-arrow-left');
-const nextBtn = document.querySelector('.pagination .fa-arrow-right');
-
-
 //json 데이터 연결//
 let targetUl = $('.container');
 let listHtml = '';
@@ -41,18 +32,26 @@ $(document).ready(function() {
       }
   });
 });
-}
+
 
 const maxPageNum = 5;
 let pageGroupIdx = 0; //현재 페이지 그룹의 번호
 
 //페이지네이션 생성하기
+const perPage = 8;
+const rows = document.querySelectorAll('.article');
+const rowsCount = rows.length; //40
+const pageCount = Math.ceil(rowsCount/perPage); //5
+const numbers = document.querySelector('#numbers');
+const prevBtn = document.querySelector('.pagination .fa-arrow-left');
+const nextBtn = document.querySelector('.pagination .fa-arrow-right');
+
 for(let i = 1;i<=pageCount;i++){
   numbers.innerHTML += `<li><a href="#">${i}</a></li>`;
 }
 
 let pagenationList = numbers.querySelectorAll('#number li');
-let numberBtn = numbers.querySelectorAll('a');
+let numberBtn = numbers.querySelectorAll('#number li a');
 let pageGroupCount = Math.ceil(pagenationList.length/maxPageNum); 
 
 
@@ -76,9 +75,9 @@ function displayRow(idx){
     nw.style.display = '';
   }
   for(let nb of numberBtn){
-    nb.removeClass('active');
+    nb.classList.remove('active');
   }
-  numberBtn[idx].addClass('active');  
+  numberBtn[idx].classList.add('active');  
 }
 displayRow(0);
 
@@ -122,3 +121,4 @@ nextBtn.addEventListener('click',()=>{
 prevBtn.addEventListener('click',()=>{
   displayPage(--pageGroupIdx);
 });
+}

@@ -432,7 +432,7 @@ html.hidden {
 }
 
 .footer_center_1 * {
-  font-size: calc(var(--T-P) - 2px);
+  font-size: calc(var(--T-P) - 6px);
   margin-top: 5%;
   grid-area: center_1;
   word-spacing: 40px;
@@ -442,7 +442,7 @@ html.hidden {
 }
 
 .footer_center_2 *{
-  font-size:calc(var(--T-P) - 2px);
+  font-size:calc(var(--T-P) - 6px);
   line-height: 27px;
   color: var(--C-black);
   grid-area: center_2;
