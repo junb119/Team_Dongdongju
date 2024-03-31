@@ -53,6 +53,7 @@ section {
 .grid {
   /*컨텐츠가 그리드 안에 위치한다면 추가*/
   padding: 0 8%;
+  box-sizing: border-box;
 }
 
 /* ---------------//레이아웃 */
