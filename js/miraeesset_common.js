@@ -22,3 +22,6 @@ window.addEventListener('scroll',()=>{
   let value = scrollFraction * 100;
   document.documentElement.style.setProperty('--crop',`${value}%`);
 })
+
+
+AOS.init();

@@ -1,14 +1,14 @@
 .sub_company_slide {
     position: relative;
     height: 1000px;
-    padding-top: 220px;
+    /* padding-top: 220px; */
   }
 .company {
     width: 150px;
     height: 250px;
     list-style: none;
     position: absolute;
-    bottom: 120px;
+    bottom: 0;
     transform: translateY(-50%);
     border-radius: 10px;
     overflow: hidden;
@@ -33,17 +33,17 @@
       border-radius: 0;
       box-shadow: none;
     }
-    &:nth-child(3) {left: 50%;}
-    &:nth-child(4) {left: calc(50% + 200px);}
-    &:nth-child(5) {left: calc(50% + 400px);}
-    &:nth-child(6) {left: calc(50% + 600px);}
-    &:nth-child(7) {left: calc(50% + 800px); opacity: 0;}
-    &:nth-child(8) {left: calc(50% + 1000px); opacity: 0;}
+    &:nth-child(3) {left: 31%;}
+    &:nth-child(4) {left: calc(31% + 200px);}
+    &:nth-child(5) {left: calc(31% + 400px);}
+    &:nth-child(6) {left: calc(31% + 600px);}
+    &:nth-child(7) {left: calc(31% + 800px); opacity: 0;}
+    &:nth-child(8) {left: calc(31% + 1000px); opacity: 0;}
   }
   figcaption {
     width: 100%;
     position: absolute;
-    left: 156px;
+    left: 153px;
     top: 244px;
     color: #fff;
     text-shadow: 0 3px 8px rgba(0, 0, 0, .5);
@@ -78,13 +78,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 2rem;
+    bottom: 14rem;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
     .btn {
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
       cursor: pointer;
       color: rgba(255, 255, 255, .5);
       &:hover {
@@ -93,19 +92,19 @@
     }
   }
 
-   /* .btn_left span{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    font-size: var(--T-H3);
-    color: var(--C-white);
-    
+  div {
+    position: relative;
   }
-  .btn_right span{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: var(--T-H3);
-    color: var(--C-white);
+  .back_area img {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
   }
-   */
+  .back_tit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: var(--T-lh-large);
+  }

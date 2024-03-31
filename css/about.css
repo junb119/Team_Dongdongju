@@ -104,11 +104,14 @@
 .sub_slogan {
   position: relative;
 }
+.sub_slogan img {
+  padding-top: 160px;
+}
 .slogan_tit {
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 62%;
   transform: translate(-50%, -50%);
   width: 100%;
 }
@@ -133,7 +136,7 @@
 }
 iframe {
   width: 100%;
-  height: 1000px;
+  height: 900px;
 }
 
 .sub_brochure  {
