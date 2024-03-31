@@ -21,6 +21,7 @@ colorTitle.click(function() {
     colors.addClass('blue')
     colorCircle.remove('orangeBG')
     colorCircle.addClass('blueBG')
+
     $('html, body , .ci_container').stop().animate({backgroundColor :'#00427a'},{
       duration:250,
       complete : function (){
@@ -76,7 +77,12 @@ colorTitle.click(function() {
       
     }, 450);
   }
-
+  $('.ci_title').stop().animate({opacity : 0},{
+    duration:250,
+    complete : function (){
+      $('.ci_title').stop().animate({opacity :1},250)
+    }
+  })
 
 })
 

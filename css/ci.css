@@ -60,8 +60,14 @@
   color: var(--C-white);
   text-align: center;
   line-height: var(--T-lh);
+  cursor: pointer;
+  box-sizing: border-box;
+  
 }
-
+.color_title .ci_orange,
+.color_title .ci_blue {
+  transition: 1s
+}
 .color_title .ci_orange {
   color: var(--C-orange);
 }
@@ -74,6 +80,7 @@
 }
 .color_title .ci_blue {
   color: var(--C-blue);
+  
 }
 .color_title .ci_blue.active {
   background: var(--C-blue);
@@ -151,9 +158,4 @@
 }
 body {
   background: #fff;
-}
-
-.color_name {
-  cursor: pointer;
-  box-sizing: border-box;
 }
