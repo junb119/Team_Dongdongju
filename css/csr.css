@@ -38,6 +38,7 @@ h2 {
   margin-top: 125px;
   line-height: 80px;
   margin-left: 8%;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -168,4 +169,5 @@ h3 {
 #accordion{
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }

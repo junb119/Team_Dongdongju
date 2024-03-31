@@ -22,14 +22,13 @@
   font-family: var(--T-mainfont);
   box-sizing: border-box;
 }
-#header{
-  visibility: hidden !important;
-}
+
 
 h2{
-  font-size:var(--T-H2);
   margin-top: 125px;
   line-height: 80px;
+  margin-left: 8%;
+  font-weight: 500;
 }
 .subtitle{
 p{
@@ -76,7 +75,7 @@ text-decoration: none;
   height: 60px;
   border: 1px solid #ebebeb;
   border-radius: 20px;
-  margin: 20px;
+  margin: 10px;
   border: 1px solid #000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -105,9 +104,11 @@ font-weight: Semi Bold;
 .source{
   font-weight: medium;
   }
+  .list{
+    height:60px;
+  }
   .article_title{
     font-size: 30px;
-    font-weight: 41px;
     padding: 20px;
   }
   .article_contents{
@@ -121,15 +122,39 @@ font-weight: Semi Bold;
     padding-left: 10px;
     padding-right: 10px;
   }
-  .pagination{
+
+  .pagination {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap:10px;
-    margin-top:50px;
   }
-  .pagination .pager.active{
-    display: block;
-background-color:#00427a;
-color:#ebebeb;
+  
+  #numbers {
+    padding: 0;
+    margin: 0 2rem;
+    list-style-type: none;
+    display: flex;
+  }
+  
+  #numbers li a {
+    color: #000;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    opacity: .7;
+  }
+  
+  #numbers li a:hover {
+    opacity: 1;
+  }
+  
+  #numbers li a.active {
+    opacity: 1;
+    background: navy;
+    color: #fff;
+  }
+  .pagination i{
+    color: #fff;
+    font-size: 1.5em;
   }
