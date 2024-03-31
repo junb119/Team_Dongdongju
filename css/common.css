@@ -398,50 +398,7 @@ html.hidden {
   .m_menu_wrap.open {
     transform: translateX(0);
   }
-
-  /* 모바일 슬라이드 */
-  .main_award .content:after {
-    display: none;
-  }
-  .main_award .year_wrap {
-    width: 0;
-  }
-  .main_award .year_wrap .year_txt {
-    left: 0;
-    top: 0;
-    background:var(--C-white);
-    padding-bottom: 80px;
-  }
-  .main_award .year_wrap .year_txt em {
-    font-size: var(--T-H5);
-  }
-  .main_award .year_wrap .year_txt p {
-    font-size: 18px;
-    padding: 15px 0 35px 0;
-  }
-  .pagination {
-    display: none;
-  }
-  main .main_award .content img:first-of-type {
-    transform: scale(1);
-  }
-
-  .award_slide {
-    text-align: center;
-  }
-  main .main_award .slidewrapper {
-    padding-top: 1000px;
-  }
-  .main_award .award_slide li {
-    padding-bottom: 40px
-  }
-  .main_award .award_slide .slide_txt em {
-    font-size: 22px;
-    padding-bottom: 10px;
-  }
-  .main_award .award_slide .slide_txt p {
-    font-size: 16px;
-  }
+  
 }
 
 /* --헤더 - 송림  */
