@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.css"
+      integrity="sha512-AIwt5sjXSKDo4t0KSQ/eAuy43kQMc1hYtIKLxaFrHd26nQFzMo1FJdBIickVyGXnhm2xB2OOYBqMBgu3dBU4KA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/ci.css" />
     <title>CI | PR | 미래에셋그룹</title>
@@ -19,10 +30,10 @@
           <img src="./images/pr/ciTitleBG.jpg" alt="" />
         </div>
       </section>
-      <section class="ci_wrapper grid">
-        <section class="ci_container">
+      <section id="fullpage" class="ci_wrapper grid">
+        <section class="ci_container section">
           <div class="content_title">
-            <h4>기업로고</h4>
+            <h4 class="color">기업로고</h4>
             <h5>미래지향적인 기업정신과 비전의 상징</h5>
           </div>
           <div class="ci_logo_content df fdc jcc aic">
@@ -36,23 +47,23 @@
             <div>thin line</div>
           </div>
         </section>
-        <section class="ci_container">
+        <section class="ci_container section">
           <div class="content_box">
             <div class="content_title">
-              <h4>컬러시스템</h4>
+              <h4 class="color">컬러시스템</h4>
             </div>
             <div class="color_content df fdc jcc aic">
               <div class="color_title df">
-                <div class="ci_orange color_name active">
+                <div class="ci_orange color_name ts active">
                   <h4>미래에셋 오렌지</h4>
                   <p>(Mirae Asset Orange)</p>
                 </div>
-                <div class="ci_blue color_name">
+                <div class="ci_blue ts color_name">
                   <h4>미래에셋 블루</h4>
                   <p>(Mirae Asset Blue)</p>
                 </div>
               </div>
-              <div class="color_circle orange df fdc jcc">
+              <div class="color_circle orangeBG df fdc jcc">
                 <span>Mirae Asset Orange</span>
                 <ul class="color_code">
                   <li><span>ㆍPANTONE : </span><span>158C</span></li>
@@ -60,7 +71,7 @@
                   <li><span>ㆍRGB : </span><span>245 / 130 / 32</span></li>
                   <li><span>ㆍHEX : </span><span>F58220</span></li>
                 </ul>
-                <ul class="tag">
+                <ul class="tag color">
                   <li># 인재 중시</li>
                   <li># 사회적 책임을 실천</li>
                   <li># 생동감</li>
@@ -70,11 +81,10 @@
             </div>
           </div>
         </section>
-
-        <section class="ci_container df">
+        <section class="ci_container section df">
           <div class="ci_content">
             <div class="content_title">
-              <h4>국문로고조합형</h4>
+              <h4 class="color">국문로고조합형</h4>
             </div>
             <div class="cop_logo">
               <img src="./images/pr/combi_logo1.png" alt="" />
@@ -88,7 +98,7 @@
           </div>
           <div class="ci_content">
             <div class="content_title">
-              <h4>기업로고조합형</h4>
+              <h4 class="color">기업로고조합형</h4>
             </div>
             <div class="cop_logo">
               <img src="./images/pr/combi_logo2.png" alt="" />
@@ -99,9 +109,9 @@
             </div>
           </div>
         </section>
-        <section class="ci_container df fdc aic slogun">
+        <section class="ci_container section df fdc aic slogun">
           <div class="content_title">
-            <h4>기업로고조합형</h4>
+            <h4 class="color">기업로고조합형 슬로건</h4>
           </div>
           <div class="slogun_content df">
             <div class="lang">
@@ -135,8 +145,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- jquery ui -->
+    <script
+      src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+      integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY="
+      crossorigin="anonymous"
+    ></script>
+    <!-- //jquery ui -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.min.js"
+      integrity="sha512-yHHLi2ZwgtW9QNVZd0asqMyWGJ6Kx73ijKlGWSi3MwYFB5ZzOJV8wPtopKr6muHk5SERgF3OB/2dZj3StlI34w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.22/fullpage.extensions.min.js"
+      integrity="sha512-fOlK0nmiY4Q7hrlnFMgmEiXBzCaDtIWFLCjPNwb5YN0PqcpburbfkSJ2UL+rcfdslRbNlDeml6t1Se9WLmRKjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/common.js"></script>
-    <script src="js/news.js"></script>
+    <script src="js/ci.js"></script>
   </body>
 </html>

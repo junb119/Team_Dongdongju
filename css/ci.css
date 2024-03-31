@@ -9,12 +9,12 @@
   top: 0;
   z-index: 10;
 }
-
 .ci_container {
   position: sticky;
-  height: calc(100vh * 1.5);
+  height: calc(100vh * 2);
   top: calc(100% * (1 / 3));
-  background: #fff;
+  background: var(--C-white);
+  /* transition : .3s */
 }
 .content_title {
   padding: var(--T-base) 0 calc(var(--T-base) * 1.33);
@@ -37,12 +37,14 @@
   top: calc(100vh * 2 / 3);
   transform: translateY(-100%);
   color: var(--C-black);
+  /* opacity: 0.5; */
 }
 
 .scroll_icon div {
   background: var(--C-black);
   flex-shrink: 0;
 }
+
 .color_content {
   gap: 40px;
 }
@@ -88,7 +90,7 @@
   font-size: 24px;
 }
 
-.color_circle.orange {
+.color_circle {
   background: var(--C-orange);
 }
 .color_circle .color_code li {
@@ -129,4 +131,29 @@
 }
 .slogun_content {
   gap: 50%;
+}
+.color,
+.ts {
+  transition: 0.3s;
+}
+
+.orange {
+  color: var(--C-orange) !important;
+}
+.blue {
+  color: var(--C-blue) !important;
+}
+.orangeBG {
+  background: var(--C-orange) !important;
+}
+.blueBG {
+  background: var(--C-blue) !important;
+}
+body {
+  background: #fff;
+}
+
+.color_name {
+  cursor: pointer;
+  box-sizing: border-box;
 }

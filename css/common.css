@@ -485,6 +485,18 @@ html.hidden {
   transform: translateX(-50%);
   color: var(--C-white);
   text-transform: capitalize;
+  animation: twinkle 2s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0% {
+    color: var(--C-blue);
+  }
+  50% {
+    color: var(--C-orange);
+  }
+  100% {
+    color: var(--C-blue);
+  }
 }
 .scroll_icon span {
   font-size: var(--T-P);
@@ -493,8 +505,20 @@ html.hidden {
 .scroll_icon div {
   background: var(--C-white);
   text-indent: -9999em;
+  animation: twinkle2 2s ease-in-out infinite;
 }
 
+@keyframes twinkle2 {
+  0% {
+    background: var(--C-blue);
+  }
+  50% {
+    background: var(--C-orange);
+  }
+  100% {
+    background: var(--C-blue);
+  }
+}
 .scroll_icon div:first-of-type {
   width: 3px;
   height: 40px;
