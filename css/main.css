@@ -412,6 +412,56 @@ height: 80vh;
   border-radius: 50%;
   z-index: 10;
 }
+
+/* 모바일 슬라이드 */
+@media (max-width: 500px) {
+
+  .main_award .content {
+    padding: 2% 8%;
+  }
+  .main_award .content:after {
+    display: none;
+  }
+  .main_award .year_wrap {
+    width: 0;
+  }
+  .main_award .year_wrap .year_txt {
+    left: 0;
+    top: 0;
+    background:var(--C-white);
+    padding: 100px 0 80px 0;
+  }
+  .main_award .year_wrap .year_txt em {
+    font-size: var(--T-H5);
+  }
+  .main_award .year_wrap .year_txt p {
+    font-size: 18px;
+    padding: 15px 0 35px 0;
+  }
+  .pagination {
+    display: none;
+  }
+  main .main_award .content img:first-of-type {
+    transform: scale(1);
+  }
+  
+  .award_slide {
+    text-align: center;
+  }
+  main .main_award .slidewrapper {
+    padding-top: 1000px;
+  }
+  .main_award .award_slide li {
+    padding-bottom: 40px
+  }
+  .main_award .award_slide .slide_txt em {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+  .main_award .award_slide .slide_txt p {
+    font-size: 16px;
+  }
+}
 /* --수상이력 - 송림  */
 
 /* 수치자료 - 준범  */

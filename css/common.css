@@ -398,6 +398,7 @@ html.hidden {
   .m_menu_wrap.open {
     transform: translateX(0);
   }
+  
 }
 
 /* --헤더 - 송림  */

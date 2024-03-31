@@ -100,13 +100,16 @@ let slideBtn = $('.pagination li a');
 
 $(window).scroll(() => {
   //최초 이미지 커졌다 작아지는 이벤트
-  let scrollTop = $(window).scrollTop();
-  if (scrollTop > sectionStart - 1500) {
-    let scrolledAmount = scrollTop - (sectionStart - 400);
-    let value = Math.max(1, 3 - (scrolledAmount * 0.08) / 100);
-    document.documentElement.style.setProperty('--scale', value);
+  if($(window).width() > 500) {
+    let scrollTop = $(window).scrollTop();
+    if (scrollTop > sectionStart - 1500) {
+      let scrolledAmount = scrollTop - (sectionStart - 400);
+      let value = Math.max(1, 3 - (scrolledAmount * 0.08) / 100);
+      document.documentElement.style.setProperty('--scale', value);
+    }
+    //--최초 이미지 커졌다 작아지는 이벤트
+
   }
-  //--최초 이미지 커졌다 작아지는 이벤트
 
   // 해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
   let sct = $(window).scrollTop();
