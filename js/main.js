@@ -2,20 +2,20 @@
 let $window = $(window);
 let sct = $window.scrollTop();
 // 팝업 - 송림
-const popup = document.querySelector(".popup");
-const input = popup.querySelector("input");
-const closeBtn = popup.querySelector("button");
+const popup = document.querySelector('.popup');
+const input = popup.querySelector('input');
+const closeBtn = popup.querySelector('button');
 
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener('click', () => {
   // console.log(in5660put.checked);
   if (input.checked) {
     //쿠키생성
-    setCookie("Portfolio", "MiraeAsset", 1);
+    setCookie('Portfolio', 'MiraeAsset', 1);
   } else {
     //쿠키삭제
-    delCookie("Portfolio");
+    delCookie('Portfolio');
   }
-  popup.classList.add("hide");
+  popup.classList.add('hide');
 });
 function setCookie(name, val, day) {
   let date = new Date();
@@ -29,7 +29,7 @@ function delCookie(name) {
 }
 
 function checkCookie(name) {
-  let cookieArr = document.cookie.split(";");
+  let cookieArr = document.cookie.split(';');
   let visited = false;
 
   for (let cookie of cookieArr) {
@@ -47,7 +47,7 @@ function checkCookie(name) {
 }
 
 // popup.classList.add("hide");
-checkCookie("MiraeAsset");
+checkCookie('MiraeAsset');
 // --팝업 - 송림
 
 // 헤더 - 송림
@@ -58,69 +58,57 @@ checkCookie("MiraeAsset");
 
 // 메인영상 애니메이션
 function playVideoAnimation(visited) {
-  const $videoContent = $(".video_content");
-  const $videoFirst = $(".first_main");
+  const $videoContent = $('.video_content');
+  const $videoFirst = $('.first_main');
 
   if (visited) {
-    $videoContent
-      .eq(1)
-      .find("video")
-      .attr("src", "./images/main/main_video/main_video_bg1.mp4");
-    $videoContent.removeClass("active");
-    $videoContent.eq(1).addClass("active");
-    popup.classList.add("hide");
+    $videoContent.eq(1).find('video').attr('src', './images/main/main_video/main_video_bg1.mp4');
+    $videoContent.removeClass('active');
+    $videoContent.eq(1).addClass('active');
+    popup.classList.add('hide');
   } else {
-    $("#header").hide();
+    $('#header').hide();
 
     scrollDisable();
     $videoFirst
-      .find("h2")
+      .find('h2')
       .delay(500)
       .animate(
-        { opacity: "1" },
+        { opacity: '1' },
         {
           duration: 1000,
           complete: function () {
-            $videoFirst.find(".first_down_bg").animate(
+            $videoFirst.find('.first_down_bg').animate(
               {
-                top: "50%",
-                transform: "translate(-100px,-56px)",
+                top: '50%',
+                transform: 'translate(-100px,-56px)',
               },
               {
                 duration: 2000,
-                easing: "easeInOutQuad",
+                easing: 'easeInOutQuad',
                 complete: function () {
-                  $videoFirst.find(".first_down_bg").animate(
+                  $videoFirst.find('.first_down_bg').animate(
                     {
                       top: 0,
                       left: 0,
                       bottom: 0,
                       right: 0,
-                      width: "100%",
-                      height: "100%",
-                      transform: "translate(0,0)",
+                      width: '100%',
+                      height: '100%',
+                      transform: 'translate(0,0)',
                     },
                     {
                       duration: 1000,
-                      easing: "easeInOutQuad",
+                      easing: 'easeInOutQuad',
                       complete: function () {
-                        $videoContent
-                          .removeClass("active")
-                          .eq(1)
-                          .addClass("active");
+                        $videoContent.removeClass('active').eq(1).addClass('active');
 
-                        $videoContent
-                          .eq(1)
-                          .find("video")
-                          .attr(
-                            "src",
-                            "./images/main/main_video/main_video_bg1.mp4"
-                          );
-                        $("#header").slideDown();
+                        $videoContent.eq(1).find('video').attr('src', './images/main/main_video/main_video_bg1.mp4');
+                        $('#header').slideDown();
                         scrollAble();
                         setTimeout(() => {
-                          popup.classList.remove("hide");
-                        }, 2000);
+                          popup.classList.remove('hide');
+                        }, 1000);
                       },
                     }
                   );
@@ -137,13 +125,13 @@ function playVideoAnimation(visited) {
 
 // 경영철학 - 선진
 let visionScr = $('.vision_scroll'),
- visionScrOST = visionScr.offset().top,
+  visionScrOST = visionScr.offset().top,
   visionHeight = visionScr.find('.visionBG').outerHeight(),
   visiondesc = $('.vision_scroll_wrapper ul li');
 
 // vision_scroll 이미지 크기조절
 $(window).scroll(function () {
-  let  scrollPosition = $(window).scrollTop();
+  let scrollPosition = $(window).scrollTop();
   let $windowHeight = $(window).outerHeight();
   if (scrollPosition + $windowHeight >= visionScrOST) {
     let scrollAmt = scrollPosition + ($windowHeight - visionScrOST);
@@ -155,7 +143,6 @@ $(window).scroll(function () {
   }
   // //vision_scroll 이미지 크기조절
 
-
   // 스크롤 문구 활성화
   visiondesc.each(function () {
     let offset = $(this).offset().top;
@@ -166,8 +153,8 @@ $(window).scroll(function () {
       $(this).removeClass('active');
     }
   });
-  })
-  // //스크롤 문구 활성화
+});
+// //스크롤 문구 활성화
 // --경영철학 - 선진
 
 // 수상이력 - 송림
@@ -181,7 +168,7 @@ let slideBtn = $('.pagination li a');
 
 $(window).scroll(() => {
   //최초 이미지 커졌다 작아지는 이벤트
-  if($(window).width() > 500) {
+  if ($(window).width() > 500) {
     let scrollTop = $(window).scrollTop();
     if (scrollTop > sectionStart - 1500) {
       let scrolledAmount = scrollTop - (sectionStart - 400);
@@ -189,7 +176,6 @@ $(window).scroll(() => {
       document.documentElement.style.setProperty('--scale', value);
     }
     //--최초 이미지 커졌다 작아지는 이벤트
-
   }
 
   // 해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
@@ -220,14 +206,14 @@ slideBtn.click(function (e) {
 // --수상이력 - 송림
 
 // 수치자료 - 준범
-const increaseData = $(".data_sticky");
-const increaseNumberOST = $(".increase_number .title_content h2").offset().top;
-const increaseTarget = $(".data_content .textbox .strong");
+const increaseData = $('.data_sticky');
+const increaseNumberOST = $('.increase_number .title_content h2').offset().top;
+const increaseTarget = $('.data_content .textbox .strong');
 let excuted = false;
 
-const profitData = $(".profit_data");
+const profitData = $('.profit_data');
 const profitDataOST = profitData.offset().top;
-const profitDataHeight = profitData.find(".profitBG").outerHeight();
+const profitDataHeight = profitData.find('.profitBG').outerHeight();
 
 $window.scroll(function () {
   // 스크롤시 숫자 증가 함수
@@ -250,28 +236,25 @@ $window.scroll(function () {
     let leftValue = 30 - (scrollAmt / $windowHeight) * 30;
     let rightValue = 70 + (scrollAmt / $windowHeight) * 30;
 
-    document.documentElement.style.setProperty("--clip-left", `${leftValue}%`);
-    document.documentElement.style.setProperty(
-      "--clip-right",
-      `${rightValue}%`
-    );
+    document.documentElement.style.setProperty('--clip-left', `${leftValue}%`);
+    document.documentElement.style.setProperty('--clip-right', `${rightValue}%`);
   }
   // //profit_scroll 이미지 크기조절
 
   // profit_scroll 이미지 전환
-  const $profitOST = $(".profit_data").offset().top;
-  let profigBG = $(".profitBG img");
-  let $profitItems = $(".profit_scroll_wrapper ul li");
+  const $profitOST = $('.profit_data').offset().top;
+  let profigBG = $('.profitBG img');
+  let $profitItems = $('.profit_scroll_wrapper ul li');
   if (sct >= $profitOST) {
-    increaseData.css({ opacity: "0" });
+    increaseData.css({ opacity: '0' });
   } else {
-    increaseData.css({ opacity: "1" });
+    increaseData.css({ opacity: '1' });
   }
   profigBG.each(function () {
     let itemloc = $profitOST + $(this).index() * $windowHeight;
     if (sct >= itemloc) {
-      profigBG.removeClass("active");
-      $(this).addClass("active");
+      profigBG.removeClass('active');
+      $(this).addClass('active');
     }
   });
   // profit_scroll 이미지 전환
@@ -279,13 +262,10 @@ $window.scroll(function () {
   // 스크롤 문구 활성화
   $profitItems.each(function () {
     let $profitItem = $(this).offset().top;
-    if (
-      sct >= $profitItem - ($windowHeight * 5) / 6 &&
-      sct <= $profitItem - $windowHeight / 3
-    ) {
-      $(this).addClass("active");
+    if (sct >= $profitItem - ($windowHeight * 5) / 6 && sct <= $profitItem - $windowHeight / 3) {
+      $(this).addClass('active');
     } else {
-      $(this).removeClass("active");
+      $(this).removeClass('active');
     }
   });
 
@@ -295,7 +275,7 @@ $window.scroll(function () {
 function animateInit(target) {
   // 수치자료 증가 함수
   let targetData = target;
-  let targetNumber = targetData.attr("data-numeric");
+  let targetNumber = targetData.attr('data-numeric');
 
   $({ num: 0 })
     .stop()
@@ -316,52 +296,49 @@ function animateInit(target) {
 // 사회공헌 - 선진
 
 let csrwrapper = $('.social_wrapper'),
-    subbox = $('.social_subbox');
+  subbox = $('.social_subbox');
 
-
-$(window).scroll(function(){
+$(window).scroll(function () {
   if ($(window).scrollTop() + $(window).outerHeight() >= csrwrapper.offset().top) {
     subbox.addClass('animate');
   } else {
-    subbox.removeClass("animate");
+    subbox.removeClass('animate');
   }
-  console.log($(window).scrollTop())
+  console.log($(window).scrollTop());
 });
 
-let subboxDesc = $(".subdesc");
+let subboxDesc = $('.subdesc');
 
-subbox.click(function(){
-  $(this).siblings().find('.subdesc').removeClass('active')
-  let targetDesc = $(this).find('.subdesc')
-  if( targetDesc.hasClass('active')) {
+subbox.click(function () {
+  $(this).siblings().find('.subdesc').removeClass('active');
+  let targetDesc = $(this).find('.subdesc');
+  if (targetDesc.hasClass('active')) {
     targetDesc.removeClass('active');
   } else {
     targetDesc.addClass('active');
-    
   }
-})
+});
 
 // --사회공헌 - 선진
 
 // 뉴스 - 준범
-let mainNews = $(".main_notice");
-let vScroll = $(".vertical_scroll");
+let mainNews = $('.main_notice');
+let vScroll = $('.vertical_scroll');
 let mainNewsOST = mainNews.offset().top;
-let noticeWrapper = mainNews.find(".notice_slide_container");
-let newsTitle = noticeWrapper.find(".news_title");
-let advTitle = noticeWrapper.find(".adv_title");
-let activeTitle = $(".titleContainer > div");
-let noticeSlideContainer = $(".notice_slide_container");
-let activeSlide = $(".notice_slide_container > ul");
+let noticeWrapper = mainNews.find('.notice_slide_container');
+let newsTitle = noticeWrapper.find('.news_title');
+let advTitle = noticeWrapper.find('.adv_title');
+let activeTitle = $('.titleContainer > div');
+let noticeSlideContainer = $('.notice_slide_container');
+let activeSlide = $('.notice_slide_container > ul');
 let slide1Width = activeSlide.eq(0).outerWidth();
-// console.log(advTitle.offset().top)  
+
 function getNoticeSlideWidth() {
   slide1Width = activeSlide.eq(0).outerWidth();
-  let noticeSlideWidth = activeSlide.eq(0).outerWidth() + activeSlide.eq(1).outerWidth() + $window.outerHeight()
-  console.log('width : ',noticeSlideWidth)
-  mainNews.css({height : noticeSlideWidth})
+  let noticeSlideWidth = activeSlide.eq(0).outerWidth() + activeSlide.eq(1).outerWidth() + $window.outerHeight();
+  mainNews.css({ height: noticeSlideWidth });
 }
-getNoticeSlideWidth()
+getNoticeSlideWidth();
 
 mainNews.mouseenter(function () {
   $(window).scroll(function () {
@@ -369,17 +346,76 @@ mainNews.mouseenter(function () {
     // console.log(sct)
     let verScrollAmt = sct - mainNewsOST;
     if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
-      activeTitle.removeClass("active");
-      activeTitle.eq(0).addClass("active");
+      activeTitle.removeClass('active');
+      activeTitle.eq(0).addClass('active');
 
       noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     } else if (sct >= mainNewsOST + slide1Width) {
-      activeTitle.removeClass("active");
-      activeTitle.eq(1).addClass("active");
+      activeTitle.removeClass('active');
+      activeTitle.eq(1).addClass('active');
       noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     }
   });
 });
+
+const fetchData = (path) => {
+  return fetch(path)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // 읽어온 JSON 데이터를 반환
+      return data;
+    })
+    .catch((error) => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+};
+let showNoticeCount = 6;
+fetchData('./data/news.json').then((datas) => {
+  html = '';
+  for (let i = 0; i < showNoticeCount; i++) {
+    let data = datas[i];
+    let title = data.title;
+    let link = data.link;
+    let img = data.img;
+
+    html += `<li>
+    <a href="${link}" target="_blank">
+      <div class="card_top df aic">
+        <p class="card_title">${title}</p>
+      </div>
+      <img src="${img}" alt="" />
+    </a>
+    </li>`;
+    $('.newsSlider').html(html);
+    getNoticeSlideWidth()
+  }
+});
+// fetchData('./data/adv.json').then((datas) => {
+//   html = '';
+//   for (let i = 0; i < showNoticeCount; i++) {
+//     let data = datas[1][i];
+//     console.log('w',data);
+//     // let title = data.title;
+//     // let link = data.link;
+//     // let img = data.img;
+
+//     // html += `<li>
+//     // <a href="${link}" target="_blank">
+//     //   <div class="card_top df aic">
+//     //     <p class="card_title">${title}</p>
+//     //   </div>
+//     //   <img src="${img}" alt="" />
+//     // </a>
+//     // </li>`;
+//     // $('.advSlider').html(html);
+//   }
+// });
+
 // --뉴스 - 준범
 
 // 푸터 - 선진
@@ -388,22 +424,17 @@ mainNews.mouseenter(function () {
 
 // 부드러운 슬라이드
 class Scrooth {
-  constructor({
-    element = window,
-    strength = 10,
-    acceleration = 1.2,
-    deceleration = 0.975,
-  } = {}) {
+  constructor({ element = window, strength = 10, acceleration = 1.2, deceleration = 0.975 } = {}) {
     this.element = element;
     this.distance = strength;
     this.acceleration = acceleration;
     this.deceleration = deceleration;
     this.running = false;
 
-    this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
+    this.element.addEventListener('wheel', this.scrollHandler.bind(this), {
       passive: false,
     });
-    this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
+    this.element.addEventListener('mousewheel', this.scrollHandler.bind(this), {
       passive: false,
     });
     this.scroll = this.scroll.bind(this);
@@ -426,14 +457,9 @@ class Scrooth {
 
   scroll() {
     if (this.running) {
-      this.currentDistance *=
-        this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
-        ? (this.running = false)
-        : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance)
-        ? (this.isDistanceAsc = false)
-        : 1;
+      this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? (this.running = false) : 1;
+      Math.abs(this.currentDistance) >= Math.abs(this.distance) ? (this.isDistanceAsc = false) : 1;
 
       this.top += this.currentDistance;
       this.element.scrollTo(0, this.top);
@@ -453,24 +479,24 @@ const scroll = new Scrooth({
 
 // 스크롤 차단
 function scrollDisable() {
-  $("html, body")
-    .addClass("no_scroll")
-    .on("scroll touchmove mousewheel", function (e) {
+  $('html, body')
+    .addClass('no_scroll')
+    .on('scroll touchmove mousewheel', function (e) {
       e.preventDefault();
     });
 }
 function scrollAble() {
-  $("html, body").removeClass("no_scroll").off("scroll touchmove mousewheel");
+  $('html, body').removeClass('no_scroll').off('scroll touchmove mousewheel');
 }
 // --스크롤 차단
 
-const mw_768 = window.matchMedia("screen and (max-width: 768px)");
+const mw_768 = window.matchMedia('screen and (max-width: 768px)');
 
 function responsive() {
   if (mw_768.matches) {
-    getNoticeSlideWidth()
+    getNoticeSlideWidth();
   } else {
-    console.log("no");
+    console.log('no');
   }
 }
 

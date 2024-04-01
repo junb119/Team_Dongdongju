@@ -19,7 +19,7 @@
   --T-subTitle: calc(var(--T-base) * 1.25); /*20px*/
   --T-breadCrumb: calc(var(--T-base) * 1.25); /*20px*/
   --T-mobileH2: calc(var(--T-base) * 2.5); /*40px*/
-  --T-mobileP: var(--T-base); /*16px*/
+  --T-mobileP: 16px; /*16px*/
   /* 폰트 사이즈 */
 
   --T-lh: 1.46; /*line-height 기본값*/
