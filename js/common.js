@@ -87,21 +87,21 @@ $(function () {
       $(this).toggleClass('open');
       $('.m_menu_wrap').toggleClass('open');
       // mobileToggle.toggleClass('on');
-      // if($(window).scrollTop() = 0){
-      //   if(mobileBtn.hasClass('open')){
-      //     mobileToggle.addClass('on')
-      //   } else {
-      //     mobileToggle.removeClass('on')
-      //   }
-      // }
-      // if($(window).scrollTop() > 0){
-      //   if(!mobileBtn.hasClass('open')){
-      //     mobileToggle.addClass('on')
-      //   } 
-      //   if(mobileBtn.hasClass('open')){
-      //     mobileToggle.addClass('on')
-      //   }
-      // }
+      if($(window).scrollTop() = 0){
+        if(mobileBtn.hasClass('open')){
+          mobileToggle.addClass('on')
+        } else {
+          mobileToggle.removeClass('on')
+        }
+      }
+      if($(window).scrollTop() > 0){
+        if(!mobileBtn.hasClass('open')){
+          mobileToggle.addClass('on')
+        } 
+        if(mobileBtn.hasClass('open')){
+          mobileToggle.addClass('on')
+        }
+      }
     });
     mobileMenu.click(function () {
       $(this).find('ul').slideToggle();
