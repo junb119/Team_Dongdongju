@@ -1,13 +1,13 @@
 :root {
-  --clip-left: 12.5%;
-  --clip-right: 87.5%;
+  --clip-left: 30%;
+  --clip-right: 70%;
 }
 
 #header {
   /* display: none !important; */
 }
 
-@import url('./common.css');
+@import url("./common.css");
 /* 팝업 - 송림 */
 .popup {
   width: 650px;
@@ -21,6 +21,9 @@
   border: 4px solid var(--subcol);
   box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.25);
   font-weight: 500;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
 }
 .popup img {
   display: block;
@@ -59,7 +62,7 @@
   position: relative;
 }
 .popup .link .git:after {
-  content: '';
+  content: "";
   position: absolute;
   right: -30px;
   top: -5px;
@@ -95,7 +98,9 @@
   cursor: pointer;
 }
 .popup.hide {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
 }
 /* //팝업 - 송림 */
 
@@ -106,23 +111,30 @@
   /* overflow: hidden; */
   background-color: #4d4e51;
 }
-
-.first_main {
+.video_wrapper {
   position: relative;
+  height: 100vh;
+}
+.first_main {
   width: 100%;
   height: 100vh;
 }
 .first_main .first_down_bg {
   position: absolute;
-  top: 0;
+  top: 0%;
   left: 50%;
   margin: 0 auto;
-  gap: 30px;
+  /* gap: 30px; */
   transform: translate(-50%, -100%);
+  z-index: 10;
+  width: 200px;
+  height: 112px;
 }
 
 .first_main .first_down_bg img {
-  width: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .first_main h2 {
@@ -130,21 +142,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--C-white);
   text-transform: capitalize;
   font-weight: normal;
+  opacity: 0;
 }
 
 .video_content {
-  position: relative;
+  position: absolute;
   color: var(--C-white);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s;
+  text-align: center;
 }
+.video_content.active {
+  opacity: 1;
+}
+
 .video_content .video_title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 .video_title h2 {
@@ -296,7 +318,7 @@ height: 80vh;
   transform: scale(var(--scale));
 }
 .main_award .content:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 1px;
   height: 100%;
@@ -376,7 +398,7 @@ height: 80vh;
   padding-top: 15px;
 }
 .pagination ul:after {
-  content: '';
+  content: "";
   width: 34px;
   height: 150px;
   position: fixed;
@@ -401,7 +423,7 @@ height: 80vh;
   background: var(--C-blue);
 }
 .pagination ul a span:after {
-  content: '';
+  content: "";
   width: 10px;
   height: 10px;
   position: absolute;
@@ -535,11 +557,24 @@ height: 80vh;
   height: 420vh;
   /* overflow: hidden; */
 }
+.profit_data .imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: clip-path 0.1s, opacity 0.5s;
+  clip-path: polygon(
+    var(--clip-left) 0,
+    var(--clip-right) 0,
+    var(--clip-right) 100%,
+    var(--clip-left) 100%
+  );
+}
+
 .profit_data h2 {
   position: absolute;
   z-index: 10;
   top: 50%;
-  left: 340px;
+  left: 18%;
   transform: translateY(-50%);
   font-weight: normal;
 }
@@ -551,14 +586,13 @@ height: 80vh;
   height: 100vh;
 }
 .profitBG img {
-  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: clip-path 0.1s, opacity 0.5s;
   background: #000;
+  transition: opacity 0.5s;
 }
 .profitBG img.active {
   opacity: 1;
@@ -568,7 +602,7 @@ height: 80vh;
   position: absolute;
   top: 100vh;
   /* padding: 100vh 0; */
-  left: 1234px;
+  left: 65%;
   display: flex;
   flex-direction: column;
   gap: 120px;
@@ -582,7 +616,7 @@ height: 80vh;
   opacity: 1;
 }
 .profit_scroll_wrapper ul li span {
-  font-size: 72px;
+  font-size: calc(var(--T-base) * 4.5);
   font-weight: bold;
 }
 /* --수치자료 - 준범  */
@@ -774,87 +808,11 @@ height: 80vh;
 }
 /* --사회공헌 - 선진  */
 
-/* 뉴스 - 준범  */
-/* .main_news {
-  border: 3px solid #000;
-  height: 5100px;
-  padding-left: 8%;
-  
-  
-}
-
-.vertical_scroll{
-  gap:300px;
-}
-
-.main_news .news_wrapper ,
-.main_news .adv_wrapper {
-  height: 100vh;
-  position: sticky;
-  top: 204px
-}
-.news_title,
-.adv_title{
-  position: sticky;
-  left: 0;
-}
-
-.main_news .news_wrapper {
-  
-}
-.news_wrapper .news_slide_container,
-.adv_slide_container {
-  margin-top: 83px;
-  overflow-x: hidden;
-}
-.news_slide_container .newsSlider,
-.advSlider {
-  gap: 50px;
-}
-.newsSlider li,
-.advSlider li {
-  width: calc(100vw / 5);
-  height: 50vh;
-  box-shadow: 4px 12px 30px rgba(0, 0, 0, 0.25);
-  top: 0;
-  transition: 0.3s;
-}
-.newsSlider li:hover,
-.advSlider li:hover {
-  position: relative;
-  top: -20px;
-  box-shadow: 4px 24px 30px rgba(0, 0, 0, 0.5);
-}
-
-.newsSlider li .card_top,
-.advSlider li .card_top {
-  width: 100%;
-  height: 40%;
-  padding: 16px;
-}
-
-.news_slide_container .newsSlider img,
-.advSlider img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-} */
-
-/* --뉴스 - 준범 */
-
-/* 뉴스2 */
-.main_notice {
-  /* border: 3px solid #000; */
-  height: 6500px;
-}
-
-.vertical_scroll {
-}
-
+/* 뉴스 - 준범*/
 .main_notice .notice_wrapper {
   height: 100vh;
   position: sticky;
-  top: 204px;
+  top: calc(100vh * 0.18);
 }
 .titleContainer {
   position: relative;
@@ -875,15 +833,12 @@ height: 80vh;
   opacity: 1;
 }
 
-.vertical_scroll {
-  /* overflow-x: hidden; */
-}
 .notice_slide_wrapper {
-  width: 1910px;
+  width: 100vw;
   overflow: hidden;
 }
 .notice_slide_wrapper .notice_slide_container {
-  gap: 200px;
+  gap: 100px;
 }
 .notice_slide_wrapper .newsSlider,
 .advSlider {
@@ -922,6 +877,57 @@ height: 80vh;
 }
 /* //뉴스2 */
 
-body {
-  /* background: #666; */
+@media screen and (max-width: 768px) {
+  :root {
+    --T-base: 12px;
+  }
+
+  /* 메인영상 */
+  .video_title h2 {
+    white-space: wrap;
+    text-align: center;
+    /* line-height: var(--T-lh); */
+  }
+  /* --메인영상 */
+  /* 수치자료 */
+  .title_content {
+    padding-top: 30%;
+    margin-bottom: 20%;
+  }
+  .data_content {
+    flex-direction: column;
+    gap: 30px;
+    .left_data,
+    .right_data {
+      gap: 30px;
+    }
+  }
+  .increase_number .numberBG {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+  }
+
+  .profit_data h2 {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    /* font-size: calc(var(--T-base) * 2); */
+    z-index: 1000;
+  }
+  .profit_scroll_wrapper ul {
+    left: 20%;
+    /* flex-direction: row; */
+  }
+  .profit_scroll_wrapper ul li {
+    opacity: 0;
+  }
+  /* --수치자료 */
+
+  /* 뉴스 */
+  .newsSlider li,
+  .advSlider li {
+    width: calc(100vw / 2);
+  }
 }

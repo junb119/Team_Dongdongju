@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..600&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400..600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
 @import url("normalize.css");
 @import url("reset.css");
-
 
 :root {
   --C-blue: #00427a;
@@ -28,6 +27,12 @@
   /*  */
   --T-mainfont: "Noto Sans KR", sans-serif;
 }
+.no_scroll {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
 
 body {
   font-family: var(--T-mainfont);
@@ -48,6 +53,7 @@ section {
 .grid {
   /*컨텐츠가 그리드 안에 위치한다면 추가*/
   padding: 0 8%;
+  box-sizing: border-box;
 }
 
 /* ---------------//레이아웃 */
@@ -68,7 +74,6 @@ section {
 .aic {
   align-items: center;
 }
-
 
 /* ---------------// 정렬 */
 
@@ -154,7 +159,7 @@ html.hidden {
 }
 #header.fixed {
   background: var(--C-white);
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 .header_wrapper {
   display: flex;
@@ -184,7 +189,7 @@ html.hidden {
   display: block;
 }
 .gnb_wrap .gnb > li > a:after {
-  content: '';
+  content: "";
   width: 0;
   height: 4px;
   position: absolute;
@@ -635,28 +640,49 @@ html.hidden {
 
 /* --backToTop - 준범*/
 
-
 /* --Scroll down 아이콘 */
 
 .scroll_icon {
-  
   position: absolute;
   left: 50%;
-  /* bottom: 0; */
+  
   transform: translateX(-50%);
-  color:var(--C-white);
+  color: var(--C-white);
   text-transform: capitalize;
+  animation: twinkle 2s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0% {
+    color: var(--C-blue);
+  }
+  50% {
+    color: var(--C-orange);
+  }
+  100% {
+    color: var(--C-blue);
+  }
 }
 .scroll_icon span {
-  font-size: var(--T-P) ;
+  font-size: var(--T-P);
   line-height: calc(var(--T-P) * 1.618);
-
 }
-.scroll_icon div{
+.scroll_icon div {
   background: var(--C-white);
   text-indent: -9999em;
+  animation: twinkle2 2s ease-in-out infinite;
 }
 
+@keyframes twinkle2 {
+  0% {
+    background: var(--C-blue);
+  }
+  50% {
+    background: var(--C-orange);
+  }
+  100% {
+    background: var(--C-blue);
+  }
+}
 .scroll_icon div:first-of-type {
   width: 3px;
   height: 40px;
