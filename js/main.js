@@ -316,8 +316,7 @@ let subboxDesc = $(".subdesc");
 
 subbox.click(function(){
   subbox.removeClass('active');
-  $(this).toggleClass('active');
-
+  $(this).addClass('active');
 })
 
 
