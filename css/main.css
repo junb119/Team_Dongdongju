@@ -437,9 +437,11 @@ height: 80vh;
 
 /* 모바일 슬라이드 */
 @media (max-width: 500px) {
-
+  .popup {
+    display: none;
+  }
   .main_award .content {
-    padding: 2% 8%;
+    /* padding: 2% 8%; */
   }
   .main_award .content:after {
     display: none;
