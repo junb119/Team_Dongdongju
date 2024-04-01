@@ -573,6 +573,7 @@ html.hidden {
 /*== tool tip ==*/
 .tool::before,
 .tool::after {
+  content: "";
   left: 50%;
   opacity: 0;
   position: absolute;
@@ -586,6 +587,7 @@ html.hidden {
   opacity: 1;
   transform: scale(1) translateY(0);
   z-index: 100;
+  content: "";
 }
 
 /*== pointer tip ==*/
@@ -605,6 +607,7 @@ html.hidden {
   color: #edeff0;
   content: attr(data-tip);
   padding: 1em;
+  content: "";
 }
   }}
 /* --푸터 - 선진 */

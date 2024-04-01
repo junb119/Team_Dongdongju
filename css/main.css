@@ -620,7 +620,8 @@
 /* 사회공헌 - 선진  */
 .main_social {
   position: relative;
-  height: 200vh;
+  height: 250vh;
+  margin-bottom:10%;
 }
 
 .social_wrapper {
@@ -727,7 +728,7 @@
 .active .social_subbox3_img
 {
   position: absolute;
-  right: 54%;
+  right: 49%;
 }
 .subdesc {
   position: absolute;
@@ -737,7 +738,7 @@
   transition:0.3s 0.2s;
   visibility: hidden;
   opacity: 0;
-  color:#000;
+  color:#fff;
   background: #fff;
   box-sizing: border-box;
   padding: 24px 24px 24px 40px;
@@ -758,9 +759,11 @@
 
 
 .active .subdesc{
-  left: 42%;
+  left: 49%;
   visibility: visible;
   opacity: 1;
+  color:#000;
+  
 }
 .subdesc h4{
   font-size: var(--T-H5);
