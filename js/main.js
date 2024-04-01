@@ -295,29 +295,52 @@ function animateInit(target) {
 
 // 사회공헌 - 선진
 
-let csrwrapper = $('.social_wrapper'),
-  subbox = $('.social_subbox');
 
-$(window).scroll(function () {
+let csrwrapper = $('.social_wrapper'),
+    subbox = $('.social_subbox');
+
+
+$(window).scroll(function(){
   if ($(window).scrollTop() + $(window).outerHeight() >= csrwrapper.offset().top) {
     subbox.addClass('animate');
   } else {
-    subbox.removeClass('animate');
+    subbox.removeClass("animate");
   }
-  console.log($(window).scrollTop());
+  console.log($(window).scrollTop())
 });
 
-let subboxDesc = $('.subdesc');
+let subboxDesc = $(".subdesc");
 
-subbox.click(function () {
-  $(this).siblings().find('.subdesc').removeClass('active');
-  let targetDesc = $(this).find('.subdesc');
-  if (targetDesc.hasClass('active')) {
-    targetDesc.removeClass('active');
-  } else {
-    targetDesc.addClass('active');
-  }
-});
+subbox.click(function(){
+  subbox.removeClass('active');
+  $(this).toggleClass('active');
+
+})
+
+
+// let csrwrapper = $('.social_wrapper'),
+//   subbox = $('.social_subbox');
+
+// $(window).scroll(function () {
+//   if ($(window).scrollTop() + $(window).outerHeight() >= csrwrapper.offset().top) {
+//     subbox.addClass('animate');
+//   } else {
+//     subbox.removeClass('animate');
+//   }
+//   console.log($(window).scrollTop());
+// });
+
+// let subboxDesc = $('.subdesc');
+
+// subbox.click(function () {
+//   $(this).siblings().find('.subdesc').removeClass('active');
+//   let targetDesc = $(this).find('.subdesc');
+//   if (targetDesc.hasClass('active')) {
+//     targetDesc.removeClass('active');
+//   } else {
+//     targetDesc.addClass('active');
+//   }
+// });
 
 // --사회공헌 - 선진
 
