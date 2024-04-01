@@ -1,9 +1,7 @@
 @import url("./common.css");
 @import url("./pr_common.css");
 
-#header {
-  display: none;
-}
+
 .ci_title {
   position: sticky;
   top: 0;

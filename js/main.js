@@ -349,8 +349,8 @@ let mainNews = $('.main_notice');
 let vScroll = $('.vertical_scroll');
 let mainNewsOST = mainNews.offset().top;
 let noticeWrapper = mainNews.find('.notice_slide_container');
-let newsTitle = noticeWrapper.find('.news_title');
-let advTitle = noticeWrapper.find('.adv_title');
+// let newsTitle = noticeWrapper.find('.news_title');
+// let advTitle = noticeWrapper.find('.adv_title');
 let activeTitle = $('.titleContainer > div');
 let noticeSlideContainer = $('.notice_slide_container');
 let activeSlide = $('.notice_slide_container > ul');
@@ -371,7 +371,6 @@ mainNews.mouseenter(function () {
     if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
       activeTitle.removeClass('active');
       activeTitle.eq(0).addClass('active');
-
       noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     } else if (sct >= mainNewsOST + slide1Width) {
       activeTitle.removeClass('active');
@@ -381,7 +380,7 @@ mainNews.mouseenter(function () {
   });
 });
 
-const fetchData = (path) => {
+function fetchData (path) {
   return fetch(path)
     .then((response) => {
       if (!response.ok) {
@@ -418,26 +417,29 @@ fetchData('./data/news.json').then((datas) => {
     getNoticeSlideWidth()
   }
 });
-// fetchData('./data/adv.json').then((datas) => {
-//   html = '';
-//   for (let i = 0; i < showNoticeCount; i++) {
-//     let data = datas[1][i];
-//     console.log('w',data);
-//     // let title = data.title;
-//     // let link = data.link;
-//     // let img = data.img;
+fetchData('./data/adv_video.json').then((datas) => {
+  html = '';
+  for (let i = 0; i < showNoticeCount; i++) {
+    console.log('datas',datas[i])
+    let data = datas[i];
+    let title = data.title;
+    let link = data.show_path;
+    let img = data.img_path;
 
-//     // html += `<li>
-//     // <a href="${link}" target="_blank">
-//     //   <div class="card_top df aic">
-//     //     <p class="card_title">${title}</p>
-//     //   </div>
-//     //   <img src="${img}" alt="" />
-//     // </a>
-//     // </li>`;
-//     // $('.advSlider').html(html);
-//   }
-// });
+    html += `<li>
+    <a href="${link}" target="_blank">
+      <div class="card_top df aic">
+        <p class="card_title">${title}</p>
+      </div>
+      <img src="${img}" alt="${title}" />
+    </a>
+    </li>`;
+    $('.advSlider').html(html);
+    getNoticeSlideWidth()
+  }
+});
+
+
 
 // --뉴스 - 준범
 
