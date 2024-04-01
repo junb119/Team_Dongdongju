@@ -1,3 +1,6 @@
+.root {
+  --line: 0px;
+}
 .lf {
   text-align: left;
   transform: translateX(400px);
@@ -7,34 +10,35 @@
   transform: translateX(-400px);
 }
 .sub_history {
-  padding: 250px 0;
+  padding: 500px 0 300px 0;
 }
 .history_wrap {
   flex-direction: column;
   justify-content: center;
   position: relative;
 }
-.history_wrap:after {
+.history_wrap .history_base_line {
   content: '';
   position: absolute;
   left: 50%;
-  top: -100px;
+  top: -155px;
   transform: translateX(-50%);
   width: 10px;
-  height: 4700px;
-  border: 2px solid var(--C-blue);
-  opacity: .6;
+  height: 4800px;
+  border: 2px solid var(--C-orange);
+  opacity: .5;
   border-radius: 30px;
+  padding: 3px;
 }
-.history_wrap:before {
+.history_wrap .history_hidden_line {
   content: '';
   position: absolute;
   left: 50%;
-  top: -100px;
+  top: -150px;
   transform: translateX(-50%);
   width: 10px;
-  height: 100px;
-  background: var(--C-blue);
+  height: var(--line);
+  background: var(--C-orange);
   border-radius: 30px;
 }
 
