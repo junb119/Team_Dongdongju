@@ -273,6 +273,9 @@ html.hidden {
 .m_menu_btn span.on{
   background: var(--C-black);
 }
+/* .m_menu_btn.open span {
+  background: var(--C-black);
+} */
 .m_menu_btn span:first-of-type{
   top:0;
 }

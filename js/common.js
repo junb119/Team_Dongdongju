@@ -86,8 +86,12 @@ $(function () {
     mobileBtn.click(function () {
       $(this).toggleClass('open');
       $('.m_menu_wrap').toggleClass('open');
+      if($(this).scrollTop() > 0){
+        mobileToggle.toggleClass('on');
+      } else {
+        mobileToggle.addClass('on');
+      }
     });
-
     mobileMenu.click(function () {
       $(this).find('ul').slideToggle();
       $(this).siblings().find('ul').slideUp();
