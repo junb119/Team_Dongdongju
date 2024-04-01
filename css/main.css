@@ -439,20 +439,29 @@
   .popup {
     display: none;
   }
+  .main_award {
+    padding: 160px 0;
+  }
   .main_award .content {
-    /* padding: 2% 8%; */
+    flex-direction: column;
+    align-items: center;
   }
   .main_award .content:after {
     display: none;
   }
   .main_award .year_wrap {
-    width: 0;
+    width: 100%;
+    height: 500px;
+    background: var(--C-white);
+    /* display: none; */
   }
   .main_award .year_wrap .year_txt {
-    left: 0;
+    left: 50%;
     top: 0;
+    width: 100%;
+    transform: translateX(-50%);
     background: var(--C-white);
-    padding: 100px 0 80px 0;
+    padding: 100px 0 30px 0;
   }
   .main_award .year_wrap .year_txt em {
     font-size: var(--T-H5);
@@ -461,18 +470,25 @@
     font-size: 18px;
     padding: 15px 0 35px 0;
   }
+  .year_txt:nth-child(2),
+  .year_txt:nth-child(3),
+  .year_txt:nth-child(4) {
+    display: none;
+  }
   .pagination {
     display: none;
   }
   main .main_award .content img:first-of-type {
     transform: scale(1);
+    width: 300px;
+    margin: 0 auto
   }
 
   .award_slide {
     text-align: center;
   }
   main .main_award .slidewrapper {
-    padding-top: 1000px;
+    padding-top: 500px;
   }
   .main_award .award_slide li {
     padding-bottom: 40px;

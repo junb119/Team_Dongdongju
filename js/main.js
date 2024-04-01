@@ -179,17 +179,20 @@ $(window).scroll(() => {
   }
 
   // 해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
-  let sct = $(window).scrollTop();
-  awardSlide.each(function (idx) {
-    if ($(this).offset().top - 250 <= sct) {
-      content.removeClass('on');
-      content.eq(idx).addClass('on');
-
-      slideBtn.removeClass('show');
-      slideBtn.eq(idx).addClass('show');
-    }
-  });
-  // --해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
+  if ($(window).width() > 500) {
+    let sct = $(window).scrollTop();
+    awardSlide.each(function (idx) {
+      if ($(this).offset().top - 250 <= sct) {
+        content.removeClass('on');
+        content.eq(idx).addClass('on');
+  
+        slideBtn.removeClass('show');
+        slideBtn.eq(idx).addClass('show');
+      }
+    });
+    // --해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
+    
+  }
 });
 // pagination a를 클릭했을 때 해당되는 위치로 이동 + class명 추가
 slideBtn.click(function (e) {
