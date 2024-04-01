@@ -2,12 +2,12 @@
   --line: 0px;
 }
 .lf {
-  text-align: left;
-  transform: translateX(400px);
+  text-align: right;
+  transform: translateX(-1150px);
 }
 .rg {
-  text-align: right;
-  transform: translateX(-400px);
+  text-align: left;
+  transform: translateX(1150px);
 }
 .sub_history {
   padding: 500px 0 300px 0;
@@ -24,7 +24,7 @@
   top: -155px;
   transform: translateX(-50%);
   width: 10px;
-  height: 4800px;
+  height: 4387px;
   border: 2px solid var(--C-orange);
   opacity: .5;
   border-radius: 30px;
@@ -43,7 +43,7 @@
 }
 
 .history_txt {
-  text-align: center;
+  /* text-align: center; */
 }
 .history_txt strong {
   display: block;
@@ -58,8 +58,9 @@
 
 .history_txt:nth-child(3),
 .history_txt:nth-child(5),
-.history_txt:nth-child(6),
+.history_txt:nth-child(7),
 .history_txt:nth-child(8),
-.history_txt:nth-child(10) {
-  padding-bottom: 160px;
+.history_txt:nth-child(10),
+.history_txt:nth-child(12) {
+  padding-bottom: 100px;
 }

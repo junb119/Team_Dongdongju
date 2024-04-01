@@ -23,7 +23,7 @@
 }
 
 .sub_gso {
-  padding-bottom: 260px;
+  padding: 260px 0 160px 0;
 }
 .gso_wrap img {
   width: 50%;

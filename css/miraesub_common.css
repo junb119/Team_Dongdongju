@@ -4,7 +4,9 @@
   font-family: var(--T-mainfont);
 }
 
-
+body {
+  overflow-x: hidden;
+}
 .sub_tit_wrap {
     position: sticky;
     width: 100%;

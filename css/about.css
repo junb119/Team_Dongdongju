@@ -1,11 +1,3 @@
-@import url("normalize.css");
-@import url("reset.css");
-
-
-body {
-  overflow-x: hidden;
-}
-
 /* about circle */
 .sub_vision,
 .sub_slogan,
