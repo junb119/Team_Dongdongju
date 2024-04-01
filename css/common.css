@@ -404,6 +404,9 @@ html.hidden {
     display: block;
     z-index: 1;
   }
+  .m_menu_btn.open span {
+   background: #000;
+  }
   .m_menu_wrap.open {
     transform: translateX(0);
   }
