@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pagination.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/adv.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
@@ -17,89 +18,50 @@
           <img src="./images/pr/advTitleBG.jpg" alt="" />
         </div>
       </section>
-      <section class="adv_wrapper df fdc aic">
-        <div class="adv_info df jcc aic">
-          <div class="adv_total"><span>total | </span><span>0</span></div>
-          <div class="search_adv">
-            <form name="" action="" class="">
-              <select name="content" id="content">
-                <option value="영상" name="content">영상</option>
-                <option value="인쇄" name="content">인쇄</option>
-              </select>
-              <label for="search">검색</label>
-              <input type="text" name="search" />
-              <span>돋보기</span>
-            </form>
+      <section class="adv_wrapper df">
+        
+          <div class="adv_info df aic">
+            <div class="adv_total"><span>total | </span><span>0</span></div>
+            <div class="search_adv">
+              <label for="type">select_adv</label>
+              <input type="checkbox" id="type" name="type">
+            </div>
           </div>
-        </div>
-        <div class="display_adv">
-          <video src="" controls></video>
-        </div>
-        <div class="list_container">
-          <ul class="list_adv video df">
-            <li>
+          <div class="display_adv">
+            <video src="" controls></video>
+          </div>
+        
+        <div class="list_container df fdc jcc aic">
+          <div class="pagination">
+            <!-- <div class="page_button">
+              <a href="#" class="prev">prev</a>
+              <a href="#" class="next">next</a>
+            </div>
+            <ul class="page_number df">
+              <li class="active"><a href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li><a href="">5</a></li>
+              <li><a href="">...</a></li>
+              <li><a href="">300</a></li>
+            </ul>
+            </div>
+            <div class="go_to_page df">
+              <label for="">ff</label>
+              <input type="text" />
+              <span>of</span><span>336</span>
+              <a href="">go</a>
+            </div> -->
+          </div>
+          <ul class="list_adv">
+            <!-- <li>
               <figure><img src="" alt="" /></figure>
               <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
-            <li>
-              <figure><img src="" alt="" /></figure>
-              <figcaption></figcaption>
-            </li>
+            </li> -->
           </ul>
         </div>
-        <div class="pagination df">
-          <div class="page_button">
-            <a href="#" class="prev">prev</a>
-            <a href="#" class="next">next</a>
-          </div>
-          <ul class="page_number df">
-            <li class="active"><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-            <li><a href="">...</a></li>
-            <li><a href="">300</a></li>
-          </ul>
-        </div>
-        <div class="go_to_page df">
-          <label for="">ff</label>
-          <input type="text" />
-          <span>of</span><span>336</span>
-          <a href="">go</a>
-        </div>
+        
       </section>
 
       <section></section>
@@ -120,6 +82,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/pagination.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/adv.js"></script>
   </body>
