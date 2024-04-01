@@ -190,17 +190,19 @@ function template(data) {
           </div>
           <p class="article_title">${titleData}</p>
         </div>
-      </a>
-      <div class="kebab">
-        <ul>
-          <li>X</li>
-          <li><a href="">kakaotalk</a></li>
-          <li><a href="">facebook</a></li>
-          <li><a href="">tweeter</a></li>
-          <li><a href="">url</a></li>
-        </ul>
-      </div>
-    </li>`;
+      </a>      
+    </li>`
+    
+    // <div class="kebab">
+    //     <ul>
+    //       <li>X</li>
+    //       <li><a href="">kakaotalk</a></li>
+    //       <li><a href="">facebook</a></li>
+    //       <li><a href="">tweeter</a></li>
+    //       <li><a href="">url</a></li>
+    //     </ul>
+    //   </div>
+    ;
   });
   
   return html;

@@ -2,17 +2,26 @@
 @import url("./pr_common.css");
 
 .adv_wrapper {
+  position: relative;
   padding-top: 45px;
-  gap: 45px;
+  /* gap: 45px; */
+  
 }
-
+.adv_info{
+  position: absolute;
+  left: 8%;
+  top: 5%;
+  gap: var(--T-P)
+  
+}
 .adv_total {
   text-transform: capitalize;
   font-size: var(--T-breadCrumb);
 }
 
 .display_adv {
-  width: 60%;
+  width: 70%;
+  margin: auto;
 }
 .display_adv video,
 .display_adv img {
@@ -21,16 +30,21 @@
 }
 
 .list_container {
-  width: 100%;
-  overflow: scroll;
+  position: relative;
+  gap: 30px;
+  /* overflow: scroll; */
 }
 .list_container .list_adv {
-  gap: 16px;
+  width: 100%;
 }
 .list_container .list_adv li {
+  flex-grow : 0;
   display: flex;
   gap: 24px;
   align-items: center;
+}
+.list_adv > li + li{
+  margin-top: 16px;
 }
 .list_adv li figure img {
   width: calc(100vw / 10);
@@ -41,9 +55,11 @@
 }
 
 .pagination {
+  width: 433px;
   position: relative;
+  margin: 0 36px;
 }
-.pagination .page_button .prev,
+/* .pagination .page_button .prev,
 .pagination .page_button .next {
   position: absolute;
   top: 50%;
@@ -82,7 +98,6 @@
   height: 50px;
   border-radius: 25px;
   text-align: center;
-  /* input 아웃라인? 보더 삭제 */
   border-color: #888;
 }
 .go_to_page a {
@@ -94,4 +109,4 @@
   text-transform: uppercase;
   line-height: 50px;
   
-}
+} */
