@@ -1,17 +1,20 @@
 @import url("normalize.css");
 @import url("reset.css");
 
-#header {
-  /* display: none !important; */
+
+body {
+  overflow-x: hidden;
 }
 
-
-/* about cicle */
+/* about circle */
 .sub_vision,
 .sub_slogan,
 .sub_ir,
 .sub_brochure {
   padding-top: 220px;
+}
+.sub_vision {
+  padding-bottom: 280px;
 }
 .sub_vision>p{
   text-align: center;
@@ -102,18 +105,16 @@
   font-weight: bold;
 }
 .sub_slogan {
-  position: relative;
+  /* position: relative; */
+  background: url(/images/sub/sub_about/slogan_bg.jpg) no-repeat 50% 50%;
+  height: 900px;
 }
 .sub_slogan img {
   padding-top: 160px;
 }
 .slogan_tit {
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 62%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  padding-top: 180px;
 }
 .slogan_tit>p {
   font-size: calc(var(--T-H2) - 5px);
@@ -124,8 +125,7 @@
   font-weight: bold;
 }
   
-.ir_tit,
-.brochure_tit {
+.ir_tit {
   text-align: center;
   padding-bottom: 110px;
 }
@@ -141,26 +141,33 @@ iframe {
 
 .sub_brochure  {
   position: relative;
-}
-.brochure_wrap {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
+  background: url(/images/sub/sub_about/brichure_bg.jpg) no-repeat 50% 50%;
+  height: 1100px;
+  padding-top: 0;
 }
 .brochure_tit {
+  text-align: center;
+  padding-top: 180px;
+}
+.brochure_wrap {
+ padding-top: 150px;
+ justify-content: space-evenly;
+ position: relative;
+}
+
+.brochure_wrap:after {
+  content: '';
   position: absolute;
-  left: 50%;
-  top: 345px;
-  transform: translateX(-50%);
+  left: 282px;
+  top: 115px;
+  width: 610px;
+  height: 470px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
 }
 .brochure_tit h2 {
   color: var(--C-white);
 }
-.brochure_wrap {
-  gap: 200px;
-}
-
 .brochure_kr,
 .brochure_en {
   flex-direction: column;
@@ -183,9 +190,18 @@ iframe {
   font-size: var(--T-P);
   border: none;
   background: none;
-  border: 1px solid var(--C-white);
+  border: 2px solid var(--C-white);
   border-color: transparent transparent var(--C-white) transparent;
+  padding: 0 5px;
+  transition: 0.3s;
 }
 .button_wrap a:first-child {
   margin-right: 70px;
+}
+.button_wrap a:hover {
+  border-color: transparent transparent var(--C-orange) transparent;
+}
+.button_wrap span {
+  font-size: 28px;
+    vertical-align: bottom;
 }

@@ -74,7 +74,7 @@
     }
   }
   
-  nav {
+  .company_nav {
     position: absolute;
     left: 0;
     right: 0;
@@ -91,20 +91,14 @@
       }
     }
   }
-
-  div {
-    position: relative;
-  }
-  .back_area img {
-    display: block;
-    margin: 0 auto;
-    width: 600px;
+  .back_area {
+    height: 700px;
+    background: url(/images/sub/sub_company/logo_bg.png) no-repeat 50% 50%;
+    
   }
   .back_tit {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%);
     text-align: center;
     line-height: var(--T-lh-large);
+    /* transform: translateY(220%); */
+    padding-top: 270px;
   }
