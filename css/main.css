@@ -10,7 +10,7 @@
 @import url("./common.css");
 /* 팝업 - 송림 */
 .popup {
-  width: 650px;
+  width: 550px;
   height: 710px;
   padding: 40px 30px;
   position: fixed;
