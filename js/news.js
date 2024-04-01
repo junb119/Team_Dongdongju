@@ -17,10 +17,9 @@ const fetchData = () => {
     });
 };
 
-// fetchData().then((datas) => {
-//   console.log(datas); //150개
-//   let total = $(".news_info > span");
-//   total.html(`total | ${datas.length}`);
+fetchData().then((datas) => {
+    let total = $(".news_info > span");
+    total.html(`total | ${datas.length}`);
 //   let showCountNews = 12;
 
   // newsList.each(function (idx, item) {
@@ -75,7 +74,7 @@ const fetchData = () => {
 
     // 마지막페이지 넘버 업데이트
   //   $(".lastNum").text(lastPage);
-  // }
+  
 
   // link.attr("href", linkData);
   // img.attr("src", imgData);
@@ -84,10 +83,7 @@ const fetchData = () => {
   // nation.text(nationData);
   // title.text(titleData);
 // });
-// });
-
-let searchInput = document.querySelector('.search_news input[name="search"]');
-
+});
 let curruentNation = "전체";
 let national = $(".search_news .national");
 national.change(function () {
@@ -110,23 +106,6 @@ function listChange() {
 
 // let searchInput = $(".search_news input[name='search']");
 // console.log("s", searchInput.get(0));
-
-searchInput.addEventListener("input", (e) => {
-  for (let item of newsItems) {
-    item.classList.add("d-none");
-  }
-
-  const filterdArray = e.target.value;
-
-  if (filterdArray.length > 0) {
-    for (let fa of filterdArray) {
-      console.log(newsItems[fa.id - 1]);
-      // imageListItems[fa.id - 1].classList.remove("d-none");
-    }
-  } else {
-  }
-  // console.log("test");
-});
 
 // 그리드 리스트
 let showNews = $(".show_news > div");

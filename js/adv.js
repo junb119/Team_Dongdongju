@@ -1,8 +1,8 @@
 const fetchData = () => {
-  return fetch('./data/adv.json')
+  return fetch("./data/adv.json")
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       return response.json();
     })
@@ -11,7 +11,7 @@ const fetchData = () => {
       return data;
     })
     .catch((error) => {
-      console.error('There was a problem with the fetch operation:', error);
+      console.error("There was a problem with the fetch operation:", error);
     });
 };
 
@@ -34,79 +34,36 @@ const fetchData = () => {
 
 //   // 페이지네이션
 
-function getVideo() {
-  $('.pagination').pagination({
-    dataSource: function (done) {
-      $.ajax({
-        type: 'GET',
-        url: '/data/adv_video.json',
-        success: function (response) {
-          done(response);
-        },
-      });
-    },
-    pageSize: 5,
-    showGoInput: true,
-    showGoButton: true,
-    callback: function (data, pagination) {
-      var html = templateVideo(data);
-      $('.list_adv').html(html);
-    },
-  });
+let searchAdv = $(".search_adv");
+let labels = searchAdv.find("label");
+let listContainer = $(".list_adv");
 
-  function templateVideo(data) {
-    // $('.list_adv li').each(function (idx) {
-    //   let thumb = $(this).find('figure img')
-    //   let desc = $(this).find('figcaption')
-    //   let targetData = videoDatas[idx]
-    //   console.log(thumb)
-    //   console.log(desc)
-    //   thumb.attr('src', targetData.img_path)
-    //   desc.text(targetData.title)})
+labels.click(function () {
+  showAdv($(this));
+});
+console.log('w?',searchAdv.find(".active").get(0));
+showAdv(searchAdv.find(".active"));
 
-    var html = '';
-    // for (let i=0; i<6; i++ ){
-    //   let item = data[i]
-    //   const titleData = item.title;
-    //   const imgData = item.img_path
-    //   const videoData = item.video_path
-    //   html += `
-    //   <li>
-    //     <figure>
-    //       <img src="${imgData}" alt="${titleData}" />
-    //     </figure>
-    //     <figcaption>${titleData}</figcaption>
-    //   </li>
-    //   `;
-    // }
+// getVideo();
+//   // --페이지네이션
+// })
 
-    $.each(data, function (index, item) {
-      console.log('index', index);
-      const titleData = item.title;
-      const imgData = item.img_path;
-      const videoData = item.video_path;
-      html += `
-      <li>
-        <figure>
-          <img src="${imgData}" alt="${titleData}" />
-        </figure>
-        <figcaption>${titleData}</figcaption>
-      </li>
-      `;
-    });
-
-    return html;
+function showAdv(target) {
+  let path;
+  let media;
+  if (target.text() === "영상광고") {
+    path = "/data/adv_video.json";
+    media = '<video src="" controls></video>';
+  } else {
+    path = "/data/adv_print.json";
+    media = '<img src="" alt="">';
   }
-}
 
-function getPrint() {
-  $('.list_adv').html('');
-  $('.pagination').html('');
-  $('.pagination').pagination({
+  $(".pagination").pagination({
     dataSource: function (done) {
       $.ajax({
-        type: 'GET',
-        url: '/data/adv_print.json',
+        type: "GET",
+        url: path,
         success: function (response) {
           done(response);
         },
@@ -116,48 +73,42 @@ function getPrint() {
     showGoInput: true,
     showGoButton: true,
     callback: function (data, pagination) {
-      var html = templatePrint(data);
-      $('.list_adv').html(html);
+      
+      var html = template(data);
+      listContainer.html(html);
+    },
+    afterPaging: function () {
+      let list = listContainer.find("li")
+      showMedia(list.eq(0))
+      list.click(function (e) {
+        e.preventDefault();
+        showMedia($(this))
+      });
     },
   });
-
-  function templatePrint(data) {
-    // $('.list_adv li').each(function (idx) {
-    //   let thumb = $(this).find('figure img')
-    //   let desc = $(this).find('figcaption')
-    //   let targetData = videoDatas[idx]
-    //   console.log(thumb)
-    //   console.log(desc)
-    //   thumb.attr('src', targetData.img_path)
-    //   desc.text(targetData.title)})
-
-    var html = '';
-    // for (let i=0; i<6; i++ ){
-    //   let item = data[i]
-    //   const titleData = item.title;
-    //   const imgData = item.img_path
-    //   const videoData = item.video_path
-    //   html += `
-    //   <li>
-    //     <figure>
-    //       <img src="${imgData}" alt="${titleData}" />
-    //     </figure>
-    //     <figcaption>${titleData}</figcaption>
-    //   </li>
-    //   `;
-    // }
-
+  function showMedia(list) {
+    let largePath = list.find("a").attr("data-src");
+    let display = $(".display_adv");
+    display.html(media);
+    $(".display_adv *").attr("src", largePath);
+  }
+  function template(data) {
+    var html = "";
+    $('.adv_total span').text(`total | ${data.length}`)
+    console.log('data',data)
     $.each(data, function (index, item) {
-      console.log('index', index);
+      
       const titleData = item.title;
       const imgData = item.thumb;
       const largeData = item.show_path;
       html += `
       <li>
+        <a href="#" data-src="${largeData}">
         <figure>
           <img src="${imgData}" alt="${titleData}" />
         </figure>
         <figcaption>${titleData}</figcaption>
+        </a>
       </li>
       `;
     });
@@ -165,6 +116,3 @@ function getPrint() {
     return html;
   }
 }
-getVideo();
-//   // --페이지네이션
-// })

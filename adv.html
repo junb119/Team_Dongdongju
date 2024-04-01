@@ -20,17 +20,21 @@
       </section>
       <section class="adv_wrapper df">
         
-          <div class="adv_info df aic">
-            <div class="adv_total"><span>total | </span><span>0</span></div>
-            <div class="search_adv">
-              <label for="type">select_adv</label>
-              <input type="checkbox" id="type" name="type">
+          <div class="left_container  ">
+            <div class="adv_info df aic">
+              <div class="adv_total"><span>total | 0</span></div>
+              <div class="search_adv">
+                <!-- <div class="search_BG">search_BG</div> -->
+                <input type="radio" id="video" name="adv" checked />
+                <label for="video" class="active">영상광고</label>
+                <input type="radio" id="print" name="adv" />
+                <label for="print">인쇄광고</label>
+              </div>
             </div>
-          </div>
-          <div class="display_adv">
-            <video src="" controls></video>
+            <div class="display_adv"></div>
           </div>
         
+
         <div class="list_container df fdc jcc aic">
           <div class="pagination">
             <!-- <div class="page_button">
@@ -61,7 +65,6 @@
             </li> -->
           </ul>
         </div>
-        
       </section>
 
       <section></section>
