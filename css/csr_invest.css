@@ -94,7 +94,6 @@ margin-bottom: 300px;
 }
 .s_contents:nth-child(2){
   animation: slide1 5s ease infinite;
-  cursor: pointer;
   &:hover {
     animation-play-state: paused;}
 }
@@ -122,7 +121,6 @@ margin-bottom: 300px;
 
   .s_contents:nth-child(4){
     animation: slide2 5s ease infinite;
-    cursor: pointer;
     &:hover {
       animation-play-state: paused;}
   }
@@ -150,7 +148,6 @@ margin-bottom: 300px;
 
     .s_contents:nth-child(6){
       animation: slide3 5s ease infinite;
-      cursor: pointer;
       &:hover {
         animation-play-state: paused;}
     }
@@ -178,7 +175,7 @@ margin-bottom: 300px;
 
       .s_contents:nth-child(8){
         animation: slide4 5s ease infinite;
-        cursor: pointer;
+
         &:hover {
           animation-play-state: paused;}
       }

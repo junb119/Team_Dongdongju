@@ -17,7 +17,7 @@ function makeList(result){
         <div class="source">${list[idx].source}</div>
       </div>
       <div class="article_title">${list[idx].title}</div>
-      <div class="article_contents">${list[idx].contents}미래에셋박현주재단은 아동복지시설의 운영을 지원하는 '2024년 미래에셋 희망나눔 공모사업 1차'를 시작했다..</div>
+      <div class="article_contents">${list[idx].contents}</div>
     </a>
   </div>`;
   });
@@ -34,10 +34,49 @@ $(document).ready(function() {
 });
 
 
+
+// // //페이지네이션 생성하기
+// $('.pagination').pagination({
+//   dataSource: function(done){
+//   $.ajax({
+//       type: 'GET',
+//       url: './data/csr_news.json',
+//       success: function(response){
+//           done(response);
+//       }
+//   });
+// },
+//   pageSize: 8,
+//   pageRange: null,
+//   showPageNumbers: true,
+//   callback: function(data, pagination) {
+//       // template method of yourself
+//       var html = template(data);
+//       $('.article').html(html);
+//   }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
 const maxPageNum = 5;
 let pageGroupIdx = 0; //현재 페이지 그룹의 번호
 
+
+
 //페이지네이션 생성하기
+
+
+
 const perPage = 8;
 const rows = document.querySelectorAll('.article');
 const rowsCount = rows.length; //40
