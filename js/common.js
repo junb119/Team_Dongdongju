@@ -56,12 +56,12 @@ $(function () {
     header
       .on('mouseenter', function () {
         if ($(window).width() > 500) {
-          header.stop().animate({ height: headerHeight + subMenuHeight + 75 + 'px' });
+          header.stop().animate({ height: headerHeight + subMenuHeight + 75 + 'px' }, 500);
           headerEvent();
         }
       })
       .on('mouseleave', function () {
-        header.stop().animate({ height: headerHeight + 'px' });
+        header.stop().animate({ height: headerHeight + 'px' }, 300);
       });
     // --header mouseenter,leave 이벤트
 
