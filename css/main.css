@@ -999,6 +999,7 @@
     white-space: nowrap;
     /* font-size: calc(var(--T-base) * 2); */
     z-index: 1000;
+    font-size: var(--T-H3);
   }
   .profit_scroll_wrapper ul {
     left: 20%;
@@ -1012,7 +1013,7 @@
   /* 뉴스 */
   .newsSlider li,
   .advSlider li {
-    width: calc(100vw / 2);
+    width: 200px;
   }
 }
 
