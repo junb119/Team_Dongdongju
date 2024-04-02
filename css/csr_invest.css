@@ -298,6 +298,8 @@ h5 a{
 .magazine_invest .invest:focus,
 .magazine_invest .invest:active {
   transform: perspective(500px) rotateY(0);
+  transition: 0.5s;
+  
 }
 
 .magazine_sage .sage:hover~.sage,
@@ -333,6 +335,10 @@ h5 a{
   opacity: 0.8;
   transition: 0.5s ease;
   visibility: inherit;
+}
+.magazine_invest > div,
+.magazine_sage > div{
+  transition: 0.3s;
 }
 
 
