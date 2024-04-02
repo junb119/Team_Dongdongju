@@ -106,7 +106,7 @@ h3 {
   width: 100vw;
   background-size: cover;
   position: relative;
-  order : -1;
+
 }
 
 .panel:nth-child(2) {
@@ -121,7 +121,7 @@ h3 {
   width: 100vw;
   background-size: cover;
   position: relative;
-  order : -1;
+
 }
 
 .panel:nth-child(3) {
@@ -135,12 +135,12 @@ h3 {
   background: url(../images/sub/sub_csr/sharing.jpg) no-repeat;
   width: 100vw;
   background-size: cover;
-  order : -1;
 }
 
 .panel.active {
   height: 70vh;
   padding-top:124px;
+  order : -1;
 }
 
 

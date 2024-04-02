@@ -191,15 +191,15 @@
 /* 경영철학 - 선진    */
 .vision_title {
   position: relative;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   font-size: calc(var(--T-base) * 4);
   color: var(--C-black);
   font-weight: bold;
-  margin: auto 9%;
-  padding: 5% 0;
+  padding: 5% 9%;
   line-height: 100px;
   height: 80vh;
+  box-sizing: border-box;
 }
 .vision_scroll {
   position: relative;
