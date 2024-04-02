@@ -501,6 +501,7 @@
   main .main_award .slidewrapper {
     padding-top: 500px;
     padding-left: 0;
+    width: 430px;
   }
   .main_award .award_slide li {
     padding-bottom: 40px;
