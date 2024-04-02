@@ -361,15 +361,17 @@ html.hidden {
     transform: translateX(100%);
     transition: 0.5s;
     display: block;
-    padding: 2% 8%;
+    /* padding: 2% 8%; */
+    padding-left: 4%;
 
     .m_gnb{
-      width: 400px;
+      width: 100%;
       flex-direction: column;
       gap: 40px;
 
       li{
         position: relative;
+        width: 400px;
       }
       em {
         cursor: pointer;
