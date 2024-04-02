@@ -331,7 +331,7 @@ html.hidden {
 @media (max-width: 500px){
   #header {
     height: 72px;
-
+    width: 430px;
     .gnb_wrap {
       display: none;
     }
@@ -343,7 +343,9 @@ html.hidden {
     }
     .header_wrapper {
       height: 72px;
-      padding: 0 8%;
+      padding: 0;
+      justify-content: space-around;
+      gap: 130px;
     }
   }
 
