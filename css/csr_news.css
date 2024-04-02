@@ -78,7 +78,7 @@ text-decoration: none;
   margin:auto 8%;
 }
 .date,.source{
-font-size:var(--T-P);
+font-size: calc(var(--T-P) - 4px);
 }
 .date{
 font-weight: Semi Bold;
@@ -90,21 +90,19 @@ font-weight: Semi Bold;
     font-size: 30px;
     font-weight: 41px;
     padding: 20px;
+    height: 140px;
   }
   .article_contents{
     font-size: var(--T-P);
     padding: 20px;
+    line-height: 30px;
   }
   .article_date{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 22px;
   }
 
-input{
-  border-style: #000 1px solid ;
-  border-color: #000;
-}
 
 
 

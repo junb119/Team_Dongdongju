@@ -8,7 +8,7 @@ fetch('./data/csr_news.json')
 
 function makeList(result){
   console.log(result);
-  let list = $(result.products);
+  let list = $(result);
   list.each(function(idx, item){  
     listHtml+=`<div class="article">
     <a href="csr_news_enter.html?id=${idx +1}">
