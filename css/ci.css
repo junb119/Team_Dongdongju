@@ -126,7 +126,9 @@
   margin-top: 50px;
   line-height: var(--T-lh-large);
 }
-
+.slogun {
+  /* height: 100vh; */
+}
 .ci_container.slogun {
   gap: 48px;
 }

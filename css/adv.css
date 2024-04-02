@@ -2,13 +2,15 @@
 @import url("./pr_common.css");
 
 .adv_wrapper {
+  width: 90%;
+  margin: 0 auto;
   position: relative;
   padding-top: 45px;
   /* gap: 45px; */
   align-items: flex-start;
 }
 .left_container{
-  
+  width: 70%;
 }
 .adv_info {
   /* position: absolute; */
@@ -23,7 +25,7 @@
 }
 
 .display_adv {
-  width: 85%;
+  width: 900px;
   margin: auto;
 }
 .display_adv video,
@@ -34,6 +36,7 @@
 }
 
 .list_container {
+  width: 20%;
   position: relative;
   gap: 30px;
   /* overflow: scroll; */
