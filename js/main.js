@@ -518,17 +518,18 @@ function scrollAble() {
 }
 // --스크롤 차단
 
-const mw_768 = window.matchMedia('screen and (max-width: 768px)');
+// const mw_768 = window.matchMedia('screen and (max-width: 768px)');
 
-function responsive() {
-  if (mw_768.matches) {
-    getNoticeSlideWidth();
-  } else {
-    console.log('no');
-  }
-}
+// function responsive() {
+//   if (mw_768.matches) {
+//     getNoticeSlideWidth();
+//   } else {
+//     console.log('no');
+//   }
+// }
 
 $window.resize(function () {
-  responsive();
+  getNoticeSlideWidth();
 });
-responsive();
+// responsive();
+getNoticeSlideWidth();
