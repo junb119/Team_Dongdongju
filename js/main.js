@@ -235,11 +235,11 @@ $window.scroll(function () {
 
   // profit_scroll 이미지 크기조절
   let $windowHeight = $(window).outerHeight();
-  if (sct + $windowHeight >= profitDataOST) {
+  if (sct + $windowHeight + 500 >= profitDataOST) {
     let scrollAmt = sct + ($windowHeight - profitDataOST);
     let leftValue = 30 - (scrollAmt / $windowHeight) * 30;
     let rightValue = 70 + (scrollAmt / $windowHeight) * 30;
-
+    
     document.documentElement.style.setProperty('--clip-left', `${leftValue}%`);
     document.documentElement.style.setProperty('--clip-right', `${rightValue}%`);
   }
@@ -427,7 +427,7 @@ fetchData('./data/adv_video.json').then((datas) => {
     let data = datas[i];
     let title = data.title;
     let link = data.show_path;
-    let img = data.img_path;
+    let img = data.thumb;
 
     html += `<li>
     <a href="${link}" target="_blank">

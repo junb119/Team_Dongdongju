@@ -578,8 +578,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: clip-path 0.1s, opacity 0.5s;
-  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
+  
 }
 
 .profit_data h2 {
@@ -605,6 +604,8 @@
   opacity: 0;
   background: #000;
   transition: opacity 0.5s;
+  transition: clip-path 0.0s, opacity 0.5s;
+  clip-path: polygon(var(--clip-left) 0, var(--clip-right) 0, var(--clip-right) 100%, var(--clip-left) 100%);
 }
 .profitBG img.active {
   opacity: 1;
@@ -874,7 +875,7 @@
 
 /* 뉴스 - 준범*/
 .main_notice .notice_wrapper {
-  height: 100vh;
+  height: calc(100vh - 17px);
   position: sticky;
   top: calc(100vh * 0.18);
 }
