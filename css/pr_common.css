@@ -8,6 +8,7 @@
   height: calc(100vh / 3);
   padding-top: 125px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .title_wrapper {
   margin: 0 8%;
@@ -16,6 +17,7 @@
 
 .pr_title_bg h2 {
   padding-bottom: 47px;
+  text-shadow: 4px 4px 12px rgba(0,0,0,.25);
 }
 .pr_title_bg img {
   position: absolute;
@@ -25,4 +27,8 @@
   height: 100%;
   z-index:-10;
   object-fit: cover;
+  transition: .5s;
+}
+.pr_title_bg img.active{
+  transform: scale(1.1);
 }

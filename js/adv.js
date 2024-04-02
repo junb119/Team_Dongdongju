@@ -14,7 +14,10 @@ const fetchData = () => {
       console.error("There was a problem with the fetch operation:", error);
     });
 };
-
+let prTitle = $('.pr_title_bg img')
+setTimeout(() => {
+  prTitle.addClass('active')
+}, 500);
 // fetchData().then((datas) => {
 // let videoDatas = datas.video
 // let printDatas = datas.print

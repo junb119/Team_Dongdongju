@@ -1,5 +1,7 @@
 /* layout */
-
+#header {
+  display: none;
+}
 /* //layout */
 
 /* position */
@@ -31,22 +33,31 @@ section {
   height: 100vh;
   background: var(--C-blue);
 }
+
 .global_main .gm_main_title,
-.mainBg_container .main_m {
+.mainBg_container .main_m{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
+
+
 .mainBg_container .main_m {
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
+
 
 .global_main .gm_main_title {
   color: var(--C-white);
   right: 304px;
   gap: 16px;
+  opacity: 0;
 }
+
+
+
 .gm_main_title h2 {
   text-align: right;
   order: 2;
@@ -60,6 +71,7 @@ section {
   position: absolute;
   bottom: -48px;
   right: 736px;
+  opacity: 0;
 }
 
 /* //글로벌 미래에셋 메인 */
@@ -73,6 +85,7 @@ section {
   position: relative;
   width: 86%;
   height: calc(100vh / 2);
+  overflow: hidden;
 }
 .gm_sub_title h2 {
   position: absolute;
@@ -83,6 +96,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: .3s
 }
 .gm_sub_title.left h2 {
   right: 30px;
@@ -132,4 +146,5 @@ strong,
 
 .scroll_icon {
   bottom: 0;
+  opacity: 0;
 }

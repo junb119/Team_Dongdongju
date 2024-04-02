@@ -6,11 +6,15 @@
 // 	});
 // }
 // activateFullpage()
-
+let prTitle = $('.pr_title_bg img')
 let ciContainer = $('.ci_container')
 let colorTitle = $('.color_title > div')
 let colors = $('.color')
 let colorCircle = $('.color_circle')
+setTimeout(() => {
+  prTitle.addClass('active')
+}, 500);
+
 colorTitle.click(function() {
   let $this = $(this)
   colorTitle.removeClass('active')
