@@ -5,11 +5,11 @@
 }
 .lf {
   text-align: right;
-  transform: translateX(-1150px);
+  padding-right: 1150px;
 }
 .rg {
   text-align: left;
-  transform: translateX(1150px);
+  padding-left: 1150px;
 }
 .sub_history {
   padding: 500px 0 300px 0;

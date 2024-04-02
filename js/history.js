@@ -3,8 +3,8 @@ var slideHt = $('.history_wrap').height();
 var ost = $('.history_wrap').offset().top - 900;
 var historyBar = $('.history_hidden_line');
 var threshold =  ost + slideHt ;
+var historySlide = $('.history_txt');
 // console.log('오프셋'+ost, '한계'+threshold);
-
 
 
 $(window).scroll(function() {

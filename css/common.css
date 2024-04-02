@@ -425,6 +425,7 @@ html.hidden {
   grid-template-columns: 0.3fr 0.5fr 0.2fr;
   grid-template-rows: 1fr 1fr;
   /* margin: 27.5% 8% 27.5% 8%; */
+  border-top:1px solid #ebebeb;
 }
 
 .footer_left {
