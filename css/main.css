@@ -260,10 +260,9 @@
 
 @media screen and (max-width: 768px) {
   .vision_title {
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     font-size: var(--T-H5);
-    margin: 1% 2%;
     padding: 0 0;
     line-height: auto;
   }

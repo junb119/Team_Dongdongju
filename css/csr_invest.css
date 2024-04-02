@@ -89,7 +89,7 @@ margin-bottom: 300px;
 .s_contents{
   width: calc(33.33% - 60px); /* 각각의 박스는 33.33%의 너비를 가집니다. 여백을 고려하여 계산합니다. */
   margin: 10px auto;
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
   position: relative;
 }
 .s_contents:nth-child(2){
@@ -214,13 +214,14 @@ margin-bottom: 300px;
 .iv_dsc {
   position: absolute;
   width: 180px;
-  background: rgba(217, 217, 217, 0.5);
+  background: rgba(217, 217, 217, 0.37);
   border-radius: 20px;
   padding: 10px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
   left: 110%;
   top: 0; 
   display: none;
+  line-height : 25px;
 }
 
 .s_contents:hover .iv_dsc{
