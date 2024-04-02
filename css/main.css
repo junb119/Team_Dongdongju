@@ -730,7 +730,7 @@
 }
 
 .social_boxes ul li {
-  width: 436px;
+  width: 430px;
   height: 541px;
   border-radius: 50px;
   overflow: hidden;
@@ -988,6 +988,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.5;
+    width: 100%;
   }
 
   .profit_data h2 {
