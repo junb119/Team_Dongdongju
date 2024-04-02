@@ -329,9 +329,12 @@ html.hidden {
   }
 }
 @media (max-width: 500px){
+  body {
+    overflow-x: hidden;
+  }
   #header {
     height: 72px;
-    width: 430px;
+    width: 100%;
     .gnb_wrap {
       display: none;
     }
@@ -361,8 +364,8 @@ html.hidden {
     transform: translateX(100%);
     transition: 0.5s;
     display: block;
-    /* padding: 2% 8%; */
-    padding-left: 4%;
+    padding: 2% 8%;
+    /* padding-left: 4%; */
 
     .m_gnb{
       width: 100%;
