@@ -914,10 +914,12 @@
 }
 
 .notice_slide_wrapper {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+  padding: 30px 0;
 }
 .notice_slide_wrapper .notice_slide_container {
+  width: calc(100vw - 17px);
   gap: 100px;
 }
 .notice_slide_wrapper .newsSlider,
