@@ -28,7 +28,7 @@ function makeContent(news){
   <div class="article_title"> ${news.title}</div>
   <div class="article_contents">${news.contents}</div>
   <div class="cta"><a href="">원문보러가기</a></div>
-  <div class="back"><a href="">뒤로가기</a></div>
+  <div class="back"><a href="javascript:history.back()">뒤로가기</a></div>
 </div>
 
 `;
