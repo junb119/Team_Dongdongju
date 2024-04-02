@@ -19,9 +19,7 @@ $(function () {
       langMenu = $('.lang_wrap a');
 
     // header scroll,mouseenter 이벤트 효과 함수 생성
-    subMenu
-    console.log('submenu', $(subMenu).height());
-    console.log('submenu', subMenu);
+    
     function headerEvent() {
       header.addClass('fixed');
       mainMenu.addClass('on');
