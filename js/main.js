@@ -62,10 +62,10 @@ function playVideoAnimation(visited) {
   const $videoFirst = $(".first_main");
 
   if (visited) {
-    $videoContent
-      .eq(1)
-      .find("video")
-      .attr("src", "./images/main/main_video/main_video_bg2.mp4");
+    // $videoContent
+    //   .eq(1)
+    //   .find("video")
+    //   .attr("src", "./images/main/main_video/main_video_bg2.mp4");
     $videoContent.removeClass("active");
     $videoContent.eq(1).addClass("active");
     popup.classList.add("hide");
@@ -109,13 +109,13 @@ function playVideoAnimation(visited) {
                           .eq(1)
                           .addClass("active");
 
-                        $videoContent
-                          .eq(1)
-                          .find("video")
-                          .attr(
-                            "src",
-                            "./images/main/main_video/main_video_bg3.mp4"
-                          );
+                        // $videoContent
+                        //   .eq(1)
+                        //   .find("video")
+                        //   .attr(
+                        //     "src",
+                        //     "./images/main/main_video/main_video_bg3.mp4"
+                        //   );
                         $("#header").slideDown();
                         scrollAble();
                         setTimeout(() => {
