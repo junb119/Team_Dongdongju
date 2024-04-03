@@ -374,7 +374,7 @@ html.hidden {
 
       li{
         position: relative;
-        width: 400px;
+        /* width: 400px; */
       }
       em {
         cursor: pointer;
