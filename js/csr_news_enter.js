@@ -1,7 +1,6 @@
 let url = location.href;
 let targetId = url.split('?id=')[1];
-let targetBody = 
-console.log(targetId);
+// let targetBody = 
 let targetUl = $('.container');
 let listHtml = '';
 
@@ -13,7 +12,6 @@ fetch('./data/csr_news.json')
   
     return item.id == targetId;
   });
-    console.log(news);
     makeContent(news[0]);
 });
 
@@ -29,9 +27,7 @@ function makeContent(news){
   <div class="article_contents">${news.contents}</div>
   <div class="cta"><a href="">원문보러가기</a></div>
   <div class="back"><a href="javascript:history.back()">뒤로가기</a></div>
-</div>
-
-`;
+</div>`;
 
 targetUl.html(listHtml);
 } 

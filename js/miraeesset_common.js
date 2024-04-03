@@ -5,7 +5,7 @@ let lastScrollTop  = 0;
 
 $(window).scroll(function () {
   var st = $(this).scrollTop();
-  console.log(st);
+  //console.log(st);
 
   if (st > lastScrollTop && st > 300 ) {
     // 스크롤 다운 시 실행할 코드
@@ -14,7 +14,7 @@ $(window).scroll(function () {
     // 스크롤 업 시 실행할 코드
     header.slideDown(); // header를 아래로 나타나게 함
     if(st === 0){
-      console.log('0000');
+     // console.log('0000');
       header.css({display:'none'});
     }
   }
@@ -27,19 +27,19 @@ $(window).scroll(function () {
 let targetSection = document.querySelector('.sub_tit_wrap');
 let sectionStart = targetSection.offsetTop;
 let sectionHeight = targetSection.offsetHeight;
-console.log(sectionStart, sectionHeight)
+//console.log(sectionStart, sectionHeight)
 
 window.addEventListener('scroll',()=>{
   let scrollTop = window.scrollY;
   let scrollPastSection = sectionStart + sectionHeight;
-  console.log('scroll:'+scrollTop, 'sps:'+scrollPastSection);
+  //console.log('scroll:'+scrollTop, 'sps:'+scrollPastSection);
 
 
   let scrollFraction = 0;
 
   if(scrollTop > sectionStart) {
     scrollFraction = (scrollTop - sectionStart) / sectionHeight;
-    console.log(scrollFraction);
+  //  console.log(scrollFraction);
   }
   if(scrollTop >= scrollPastSection) {
     scrollFraction = 1;

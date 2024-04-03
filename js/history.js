@@ -15,7 +15,7 @@ $(window).scroll(function() {
   if (sct >= ost && sct <= threshold) {
       var percent = ((sct - ost) / (threshold - ost)) * 100;
       percent = Math.min(100, Math.max(0, percent)); // percent 값을 0과 100 사이로 제한
-      console.log(percent);
+     // console.log(percent);
       // percent 값에 따라 애니메이션 적용
       // 예시: percent 값을 어떤 요소의 width에 적용하여 애니메이션 효과를 줌
       historyBar.css("--line", percent +'%');
