@@ -114,7 +114,7 @@ function playVideoAnimation(visited) {
                           .find("video")
                           .attr(
                             "src",
-                            "./images/main/main_video/main_video_bg1.mp4"
+                            "./images/main/main_video/main_video_bg3.mp4"
                           );
                         $("#header").slideDown();
                         scrollAble();
