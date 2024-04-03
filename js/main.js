@@ -200,7 +200,7 @@ slideBtn.click(function (e) {
   e.preventDefault();
 
   let slideOst = awardSlide.eq($(this).parent().index()).offset().top;
-  console.log(slideOst);
+  //console.log(slideOst);
   $('html,body').stop().animate({ scrollTop: slideOst }, 500, 'easeOutCubic');
   //  slideBtn.removeClass('show');
   //  slideBtn.eq(e).addClass('show');
@@ -310,7 +310,6 @@ $(window).scroll(function(){
   } else {
     subbox.removeClass("animate");
   }
-  console.log($(window).scrollTop())
 });
 
 let subboxDesc = $(".subdesc");
@@ -423,7 +422,7 @@ fetchData('./data/news.json').then((datas) => {
 fetchData('./data/adv_video.json').then((datas) => {
   html = '';
   for (let i = 0; i < showNoticeCount; i++) {
-    console.log('datas',datas[i])
+    //console.log('datas',datas[i])
     let data = datas[i];
     let title = data.title;
     let link = data.show_path;

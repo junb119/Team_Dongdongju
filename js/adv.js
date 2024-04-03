@@ -41,7 +41,7 @@ let listContainer = $(".list_adv");
 labels.click(function () {
   showAdv($(this));
 });
-console.log('w?',searchAdv.find(".active").get(0));
+//console.log('w?',searchAdv.find(".active").get(0));
 showAdv(searchAdv.find(".active"));
 
 // getVideo();
@@ -95,7 +95,7 @@ function showAdv(target) {
   function template(data) {
     var html = "";
     $('.adv_total span').text(`total | ${data.length}`)
-    console.log('data',data)
+    //console.log('data',data)
     $.each(data, function (index, item) {
       
       const titleData = item.title;

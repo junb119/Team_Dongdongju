@@ -88,7 +88,7 @@ let curruentNation = "전체";
 let national = $(".search_news .national");
 national.change(function () {
   curruentNation = national.val();
-  console.log(curruentNation);
+  //console.log(curruentNation);
   listChange();
 });
 
@@ -100,7 +100,7 @@ function listChange() {
     return $(item).find(".text_content .national").text() === curruentNation;
   });
   for (let nItem of newNationalItems) {
-    console.log(nItem);
+   // console.log(nItem);
   }
 }
 
