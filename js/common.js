@@ -94,6 +94,10 @@ function headerWhite() {
   mobileToggle.removeClass("on");
   headerLogo.attr("src", "images/main/main_header/main_logo_white.png");
 }
+
+function headerTransparency(opacity) {
+  header.css({ background: `rgba(0,0,0,${opacity})` });
+}
 // header scroll,mouseenter 이벤트 효과 함수 생성
 
 // --header scroll,mouseenter 이벤트 효과 함수 생성

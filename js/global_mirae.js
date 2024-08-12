@@ -7,8 +7,7 @@ function activateFullpage() {
     afterLoad: function (origin, destination, direction) {
       let titleBg = destination.item.querySelector(".gm_sub_title img");
       $(titleBg).css({ transform: "scale(1.1)" });
-      $("#header").css({ background: "rgba(0,0,0,.5)" });
-
+      headerTransparency(0.5);
       // if (destination.index >= 5) {
       //   // Index of the section after which you want normal scroll
       //   fullpage_api.setAutoScrolling(false);
