@@ -1,4 +1,12 @@
+
+// import { Scrooth, scrollDisable, scrollAble ,setHeader } from "./common.js";
+// setHeader(headerEvent);
+
+// setHeader.headerBlack();
 // common
+// setHeaderFooter();
+setHeaderFooter();
+
 let $window = $(window);
 let $windowHeight = $window.outerHeight();
 let sct = 0;
@@ -123,7 +131,7 @@ function playVideoAnimation() {
                         //   .attr(
                         //     "src",
                         //     "./images/main/main_video/main_video_bg3.mp4"
-                        //   );
+                        //   );;
                         $("#header").slideDown();
                         scrollAble();
                         setTimeout(() => {
@@ -146,7 +154,7 @@ playVideoAnimation();
 // --헤더 - 송림
 
 // 경영철학 - 선진
-function BusinessPhilosophy() {
+function businessPhilosophy() {
   // vision_scroll 이미지 크기조절
 
   let visionScr = $(".vision_scroll"),
@@ -204,7 +212,7 @@ function awardHistory() {
   ) {
     console.log("award");
     let scrolledAmount = sct - (sectionStart - 400);
-    let value = Math.max(1, 3 - (scrolledAmount * 0.08) / 100);
+    let value = Math.max(1, 3 - (scrolledAmount * 0.12) / 100);
     // document.documentElement.style.setProperty('--scale', value);
     $(".main_award .content img:first-of-type").css("--scale", value);
     //--최초 이미지 커졌다 작아지는 이벤트
@@ -212,10 +220,12 @@ function awardHistory() {
 
   // 해당 slide에 도달하면 같은 내용의 txt로 변경되는 이벤트
   if ($(window).width() > 500) {
-    let sct = $(window).scrollTop();
     awardSlide.each(function (idx) {
-      if ($(this).offset().top - 250 <= sct) {
+      if ($(this).offset().top - 250 <= sct && sct <= endOfEl($(this))) {
+        // content.eq(idx).siblings(".year_txt").removeClass("on");
+        // content.eq(idx).siblings(".year_txt").removeClass("on");
         content.removeClass("on");
+        // content.eq(idx).addClass("on");
         content.eq(idx).addClass("on");
 
         slideBtn.removeClass("show");
@@ -358,7 +368,7 @@ function csr() {
     }
   } else if (activated) {
     subbox.removeClass("animate");
-    console.log("test3");
+    // console.log("test3");
   }
 
   let subboxDesc = $(".subdesc");
@@ -395,107 +405,217 @@ function csr() {
   // --사회공헌 - 선진
 }
 
-function newsAni() {
+let mainNews = $(".main_notice");
+let vScroll = $(".vertical_scroll");
+let mainNewsOST = mainNews.offset().top;
+let noticeWrapper = mainNews.find(".notice_slide_container");
+// let newsTitle = noticeWrapper.find('.news_title');
+// let advTitle = noticeWrapper.find('.adv_title');
+let activeTitle = $(".titleContainer > div");
+let noticeSlideContainer = $(".notice_slide_container");
+let activeSlide = $(".notice_slide_container > ul");
+let slide1Width = activeSlide.eq(0).outerWidth();
+function notice() {
   // 뉴스 - 준범
-  let mainNews = $(".main_notice");
-  let vScroll = $(".vertical_scroll");
-  let mainNewsOST = mainNews.offset().top;
-  let noticeWrapper = mainNews.find(".notice_slide_container");
-  // let newsTitle = noticeWrapper.find('.news_title');
-  // let advTitle = noticeWrapper.find('.adv_title');
-  let activeTitle = $(".titleContainer > div");
-  let noticeSlideContainer = $(".notice_slide_container");
-  let activeSlide = $(".notice_slide_container > ul");
-  let slide1Width = activeSlide.eq(0).outerWidth();
-
-  function getNoticeSlideWidth() {
-    slide1Width = activeSlide.eq(0).outerWidth();
-    let noticeSlideWidth =
-      activeSlide.eq(0).outerWidth() +
-      activeSlide.eq(1).outerWidth() +
-      $window.outerHeight();
-    mainNews.css({ height: noticeSlideWidth });
-  }
-  // getNoticeSlideWidth();
-
-  mainNews.mouseenter(function () {
-    $(window).scroll(function () {
-      let sct = $(window).scrollTop();
-      // console.log(sct)
-      let verScrollAmt = sct - mainNewsOST;
-      if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
-        activeTitle.removeClass("active");
-        activeTitle.eq(0).addClass("active");
-        noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
-      } else if (sct >= mainNewsOST + slide1Width) {
-        activeTitle.removeClass("active");
-        activeTitle.eq(1).addClass("active");
-        noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
-      }
-    });
-  });
-
-  function fetchData(path) {
-    return fetch(path)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        // 읽어온 JSON 데이터를 반환
-        return data;
-      })
-      .catch((error) => {
-        console.error("There was a problem with the fetch operation:", error);
-      });
-  }
-  let showNoticeCount = 6;
-  fetchData("./data/news.json").then((datas) => {
-    html = "";
-    for (let i = 0; i < showNoticeCount; i++) {
-      let data = datas[i];
-      let title = data.title;
-      let link = data.link;
-      let img = data.img;
-
-      html += `<li>
-      <a href="${link}" target="_blank">
-        <div class="card_top df aic">
-          <p class="card_title">${title}</p>
-        </div>
-        <img src="${img}" alt="" />
-      </a>
-      </li>`;
-      $(".newsSlider").html(html);
-      // getNoticeSlideWidth();
+  // mainNews.mouseenter(function () {
+  // $window.scroll(function () {
+  if (sct >= mainNewsOST && sct <= endOfEl(mainNews)) {
+    // let sct = $(window).scrollTop();
+    // console.log(sct)
+    let verScrollAmt = sct - mainNewsOST;
+    if (sct >= mainNewsOST && sct < mainNewsOST + slide1Width) {
+      console.log("news1");
+      activeTitle.removeClass("active");
+      activeTitle.eq(0).addClass("active");
+      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
+    } else if (sct >= mainNewsOST + slide1Width) {
+      console.log("news2");
+      activeTitle.removeClass("active");
+      activeTitle.eq(1).addClass("active");
+      noticeWrapper.css({ transform: `translateX(${-verScrollAmt}px)` });
     }
-  });
-  fetchData("./data/adv_video.json").then((datas) => {
-    html = "";
-    for (let i = 0; i < showNoticeCount; i++) {
-      //console.log('datas',datas[i])
-      let data = datas[i];
-      let title = data.title;
-      let link = data.show_path;
-      let img = data.thumb;
-
-      html += `<li>
-      <a href="${link}" target="_blank">
-        <div class="card_top df aic">
-          <p class="card_title">${title}</p>
-        </div>
-        <img src="${img}" alt="${title}" />
-      </a>
-      </li>`;
-      $(".advSlider").html(html);
-      // getNoticeSlideWidth();
-    }
-  });
+  }
+  // });
+  // });
 
   // --뉴스 - 준범
 }
+
+function getNoticeSlideWidth() {
+  slide1Width = activeSlide.eq(0).outerWidth();
+  let noticeSlideWidth =
+    activeSlide.eq(0).outerWidth() +
+    activeSlide.eq(1).outerWidth() +
+    $windowHeight;
+  mainNews.css({ height: noticeSlideWidth });
+}
+
+// function fetchData(path) {
+// return fetch(path)
+//   .then((response) => {
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+//     return response.json();
+//   })
+//   .then((data) => {
+//     // 읽어온 JSON 데이터를 반환
+//     return data;
+//   })
+//   .catch((error) => {
+//     console.error("There was a problem with the fetch operation:", error);
+//   });
+// }
+
+// function setSlide() {
+//   let showNoticeCount = 6;
+//   fetchData("./data/news.json").then((datas) => {
+//     html = "";
+//     for (let i = 0; i < showNoticeCount; i++) {
+//       let data = datas[i];
+//       let title = data.title;
+//       let link = data.link;
+//       let img = data.img;
+
+//       html += `<li>
+//       <a href="${link}" target="_blank">
+//         <div class="card_top df aic">
+//           <p class="card_title">${title}</p>
+//         </div>
+//         <img src="${img}" alt="" />
+//       </a>
+//       </li>`;
+//       $(".newsSlider").html(html);
+//       // getNoticeSlideWidth();
+//     }
+//   });
+//   fetchData("./data/adv_video.json").then((datas) => {
+//     html = "";
+//     for (let i = 0; i < showNoticeCount; i++) {
+//       //console.log('datas',datas[i])
+//       let data = datas[i];
+//       let title = data.title;
+//       let link = data.show_path;
+//       let img = data.thumb;
+
+//       html += `<li>
+//       <a href="${link}" target="_blank">
+//         <div class="card_top df aic">
+//           <p class="card_title">${title}</p>
+//         </div>
+//         <img src="${img}" alt="${title}" />
+//       </a>
+//       </li>`;
+//       $(".advSlider").html(html);
+//       // getNoticeSlideWidth();
+//     }
+//   });
+// }
+// setSlide.then(() => {
+//   getNoticeSlideWidth()
+// });
+
+function fetchData(url) {
+  return fetch(url).then((response) => response.json());
+}
+function generateHtml(dataArray, isNews = true) {
+  let html = "";
+  for (let i = 0; i < dataArray.length; i++) {
+    let data = dataArray[i];
+    let title = data.title;
+    let link = isNews ? data.link : data.show_path;
+    let img = isNews ? data.img : data.thumb;
+    let altText = isNews ? title : title || ""; // alt text for image
+
+    html += `<li>
+      <a href="${link}" target="_blank">
+        <div class="card_top df aic">
+          <p class="card_title">${title}</p>
+        </div>
+        <img src="${img}" alt="${altText}" />
+      </a>
+    </li>`;
+  }
+  return html;
+}
+
+// function setSlide() {
+//   let showNoticeCount = 6;
+
+//   // Create an array of promises for fetching data
+//   let newsPromise = fetchData("./data/news.json");
+//   let advPromise = fetchData("./data/adv_video.json");
+
+//   // Use Promise.all to wait for both fetches to complete
+//   return Promise.all([newsPromise, advPromise]).then(([newsData, advData]) => {
+//     // Process news data
+//     let newsHtml = "";
+//     for (let i = 0; i < showNoticeCount; i++) {
+//       let data = newsData[i];
+//       let title = data.title;
+//       let link = data.link;
+//       let img = data.img;
+
+//       newsHtml += `<li>
+//         <a href="${link}" target="_blank">
+//           <div class="card_top df aic">
+//             <p class="card_title">${title}</p>
+//           </div>
+//           <img src="${img}" alt="${title}" />
+//         </a>
+//       </li>`;
+//     }
+//     $(".newsSlider").html(newsHtml);
+
+//     // Process adv data
+//     let advHtml = "";
+//     for (let i = 0; i < showNoticeCount; i++) {
+//       let data = advData[i];
+//       let title = data.title;
+//       let link = data.show_path;
+//       let img = data.thumb;
+
+//       advHtml += `<li>
+//         <a href="${link}" target="_blank">
+//           <div class="card_top df aic">
+//             <p class="card_title">${title}</p>
+//           </div>
+//           <img src="${img}" alt="${title}" />
+//         </a>
+//       </li>`;
+//     }
+//     $(".advSlider").html(advHtml);
+
+//     // Call the function to set slide width after HTML is updated
+//     getNoticeSlideWidth();
+//   });
+// }
+
+// Call setSlide and handle any additional actions
+function setSlide() {
+  let showNoticeCount = 6;
+
+  // Create an array of promises for fetching data
+  let newsPromise = fetchData("./data/news.json");
+  let advPromise = fetchData("./data/adv_video.json");
+
+  // Use Promise.all to wait for both fetches to complete
+  return Promise.all([newsPromise, advPromise]).then(([newsData, advData]) => {
+    // Generate HTML for news data
+    let newsHtml = generateHtml(newsData.slice(0, showNoticeCount), true);
+    $(".newsSlider").html(newsHtml);
+
+    // Generate HTML for adv data
+    let advHtml = generateHtml(advData.slice(0, showNoticeCount), false);
+    $(".advSlider").html(advHtml);
+
+    // Call the function to set slide width after HTML is updated
+    getNoticeSlideWidth();
+  });
+}
+
+// Call setSlide and handle any additional actions
+setSlide();
 
 // 스크롤 애니메이션
 $window.scroll(function () {
@@ -503,97 +623,96 @@ $window.scroll(function () {
   // console.log("sct:", sct);
   startEl = sct + $(window).outerHeight();
   // console.log(sct)
-  BusinessPhilosophy();
+  if (sct > 0) {
+    headerBlack();
+  } else {
+    headerWhite();
+  }
+
+  businessPhilosophy();
   awardHistory();
   numericData();
+  notice();
   csr();
 });
 
 function endOfEl(el) {
   return el.offset().top + el.outerHeight();
 }
-function startOfEl(el) {}
 
-// 푸터 - 선진
-// --푸터 - 선진
 // award 슬라이드 이벤트
 
 // 부드러운 슬라이드
-class Scrooth {
-  constructor({
-    element = window,
-    strength = 10,
-    acceleration = 1.2,
-    deceleration = 0.975,
-  } = {}) {
-    this.element = element;
-    this.distance = strength;
-    this.acceleration = acceleration;
-    this.deceleration = deceleration;
-    this.running = false;
+// class Scrooth {
+//   constructor({
+//     element = window,
+//     strength = 10,
+//     acceleration = 1.2,
+//     deceleration = 0.975,
+//   } = {}) {
+//     this.element = element;
+//     this.distance = strength;
+//     this.acceleration = acceleration;
+//     this.deceleration = deceleration;
+//     this.running = false;
 
-    this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
-      passive: false,
-    });
-    this.scroll = this.scroll.bind(this);
-  }
+//     this.element.addEventListener("wheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.element.addEventListener("mousewheel", this.scrollHandler.bind(this), {
+//       passive: false,
+//     });
+//     this.scroll = this.scroll.bind(this);
+//   }
 
-  scrollHandler(e) {
-    e.preventDefault();
+//   scrollHandler(e) {
+//     e.preventDefault();
 
-    if (!this.running) {
-      this.top = this.element.pageYOffset || this.element.scrollTop || 0;
-      this.running = true;
-      this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
-      this.isDistanceAsc = true;
-      this.scroll();
-    } else {
-      this.isDistanceAsc = false;
-      this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
-    }
-  }
+//     if (!this.running) {
+//       this.top = this.element.pageYOffset || this.element.scrollTop || 0;
+//       this.running = true;
+//       this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
+//       this.isDistanceAsc = true;
+//       this.scroll();
+//     } else {
+//       this.isDistanceAsc = false;
+//       this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
+//     }
+//   }
 
-  scroll() {
-    if (this.running) {
-      this.currentDistance *=
-        this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
-        ? (this.running = false)
-        : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance)
-        ? (this.isDistanceAsc = false)
-        : 1;
+//   scroll() {
+//     if (this.running) {
+//       this.currentDistance *=
+//         this.isDistanceAsc === true ? this.acceleration : this.deceleration;
+//       Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false
+//         ? (this.running = false)
+//         : 1;
+//       Math.abs(this.currentDistance) >= Math.abs(this.distance)
+//         ? (this.isDistanceAsc = false)
+//         : 1;
 
-      this.top += this.currentDistance;
-      this.element.scrollTo(0, this.top);
+//       this.top += this.currentDistance;
+//       this.element.scrollTo(0, this.top);
 
-      requestAnimationFrame(this.scroll);
-    }
-  }
-}
+//       requestAnimationFrame(this.scroll);
+//     }
+//   }
+// }
+
+// const scroll = new Scrooth({
+//   element: window,
+//   strength: 40,
+//   acceleration: 1.1,
+//   deceleration: 0.9,
+// });
 
 const scroll = new Scrooth({
   element: window,
-  strength: 40,
-  acceleration: 1.1,
+  strength: 50,
+  acceleration: 1.05,
   deceleration: 0.9,
 });
-// --부드러운 슬라이드
 
-// 스크롤 차단
-function scrollDisable() {
-  $("html, body")
-    .addClass("no_scroll")
-    .on("scroll touchmove mousewheel", function (e) {
-      e.preventDefault();
-    });
-}
-function scrollAble() {
-  $("html, body").removeClass("no_scroll").off("scroll touchmove mousewheel");
-}
 // --스크롤 차단
 
 // const mw_768 = window.matchMedia('screen and (max-width: 768px)');
