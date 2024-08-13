@@ -60,10 +60,10 @@ function showAdv(target) {
   let path;
   let media;
   if (target.text() === "영상광고") {
-    path = "/data/adv_video.json";
+    path = "data/adv_video.json";
     media = '<video src="" controls></video>';
   } else {
-    path = "/data/adv_print.json";
+    path = "data/adv_print.json";
     media = '<img src="" alt="">';
   }
 

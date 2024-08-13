@@ -138,7 +138,7 @@ $(".pagination").pagination({
   dataSource: function (done) {
     $.ajax({
       type: "GET",
-      url: "/data/news.json",
+      url: "data/news.json",
       success: function (response) {
         done(response);
       },
