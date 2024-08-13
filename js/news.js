@@ -1,4 +1,8 @@
 // import fetchData from "./fetchData";
+setHeaderFooter(() => {
+  headerWhite()
+  headerTransparency(.5)
+});
 let filterArray = [];
 const fetchData = () => {
   return fetch("./data/news.json")
@@ -16,14 +20,14 @@ const fetchData = () => {
       console.error("There was a problem with the fetch operation:", error);
     });
 };
-let prTitle = $('.pr_title_bg img')
+let prTitle = $(".pr_title_bg img");
 setTimeout(() => {
-  prTitle.addClass('active')
+  prTitle.addClass("active");
 }, 500);
 fetchData().then((datas) => {
-    let total = $(".news_info > span");
-    total.html(`total | ${datas.length}`);
-//   let showCountNews = 12;
+  let total = $(".news_info > span");
+  total.html(`total | ${datas.length}`);
+  //   let showCountNews = 12;
 
   // newsList.each(function (idx, item) {
   // const link = $(item).find(".link");
@@ -75,9 +79,8 @@ fetchData().then((datas) => {
   //     </li>`;
   //   $(".image-list").append(newsItem);
 
-    // 마지막페이지 넘버 업데이트
+  // 마지막페이지 넘버 업데이트
   //   $(".lastNum").text(lastPage);
-  
 
   // link.attr("href", linkData);
   // img.attr("src", imgData);
@@ -85,7 +88,7 @@ fetchData().then((datas) => {
   // pub.text(publishData);
   // nation.text(nationData);
   // title.text(titleData);
-// });
+  // });
 });
 let curruentNation = "전체";
 let national = $(".search_news .national");
@@ -103,7 +106,7 @@ function listChange() {
     return $(item).find(".text_content .national").text() === curruentNation;
   });
   for (let nItem of newNationalItems) {
-   // console.log(nItem);
+    // console.log(nItem);
   }
 }
 
@@ -151,8 +154,8 @@ $(".pagination").pagination({
 });
 
 function template(data) {
-  var html = '';
-  $.each(data, function(index, item){
+  var html = "";
+  $.each(data, function (index, item) {
     const titleData = item.title;
     const publishData = item.publish;
     const nationData = item.nation;
@@ -173,8 +176,8 @@ function template(data) {
           <p class="article_title">${titleData}</p>
         </div>
       </a>      
-    </li>`
-    
+    </li>`;
+
     // <div class="kebab">
     //     <ul>
     //       <li>X</li>
@@ -184,12 +187,10 @@ function template(data) {
     //       <li><a href="">url</a></li>
     //     </ul>
     //   </div>
-    ;
   });
-  
+
   return html;
 }
-
 
 // for (let i = 0; i < showCountNews; i++) {
 //   const titleData = data.title;

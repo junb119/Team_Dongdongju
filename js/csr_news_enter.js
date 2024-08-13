@@ -1,3 +1,7 @@
+setHeaderFooter(() => {
+  headerBlack();
+});
+
 let url = location.href;
 let targetId = url.split('?id=')[1];
 // let targetBody = 

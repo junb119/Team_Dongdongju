@@ -94,7 +94,6 @@ function headerWhite() {
   mobileToggle.removeClass("on");
   headerLogo.attr("src", "images/main/main_header/main_logo_white.png");
 }
-
 function headerTransparency(opacity) {
   header.css({ background: `rgba(0,0,0,${opacity})` });
 }
@@ -120,7 +119,7 @@ function headerInOut(headerEvent) {
         header
           .stop()
           .animate({ height: headerHeight + subMenuHeight + 75 + "px" }, 500);
-        headerEvent();
+        if (headerEvent) headerEvent();
       }
     })
     .on("mouseleave", function () {

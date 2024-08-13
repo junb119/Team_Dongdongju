@@ -16,8 +16,8 @@ setHeaderFooter(() => {
 //     header.slideDown(); // header를 아래로 나타나게 함
 //     if (st === 0) {
 //       // console.log('0000');
-//       // header.css({display:'none'});
-//     }
+// header.css({display:'none'});
+//  }
 //   }
 
 //   lastScrollTop = st;

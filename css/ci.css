@@ -1,7 +1,6 @@
 @import url("./common.css");
 @import url("./pr_common.css");
 
-
 .ci_title {
   position: sticky;
   top: 0;
@@ -12,6 +11,14 @@
   height: calc(100vh * 2);
   top: calc(100% * (1 / 3));
   background: var(--C-white);
+  /* transition : .3s */
+}
+.section_end {
+  position: sticky;
+  top: calc(100% * (1 / 3));
+  /* height: calc(100vh * 2);
+  top: calc(100% * (1 / 3));
+  background: var(--C-white); */
   /* transition : .3s */
 }
 .content_title {
@@ -60,11 +67,10 @@
   line-height: var(--T-lh);
   cursor: pointer;
   box-sizing: border-box;
-  
 }
 .color_title .ci_orange,
 .color_title .ci_blue {
-  transition: 1s
+  transition: 1s;
 }
 .color_title .ci_orange {
   color: var(--C-orange);
@@ -78,7 +84,6 @@
 }
 .color_title .ci_blue {
   color: var(--C-blue);
-  
 }
 .color_title .ci_blue.active {
   background: var(--C-blue);

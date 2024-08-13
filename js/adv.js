@@ -1,3 +1,8 @@
+setHeaderFooter(() => {
+  headerWhite();
+  headerTransparency(0.5);
+});
+
 const fetchData = () => {
   return fetch("./data/adv.json")
     .then((response) => {
@@ -14,9 +19,9 @@ const fetchData = () => {
       console.error("There was a problem with the fetch operation:", error);
     });
 };
-let prTitle = $('.pr_title_bg img')
+let prTitle = $(".pr_title_bg img");
 setTimeout(() => {
-  prTitle.addClass('active')
+  prTitle.addClass("active");
 }, 500);
 // fetchData().then((datas) => {
 // let videoDatas = datas.video
@@ -76,16 +81,15 @@ function showAdv(target) {
     showGoInput: true,
     showGoButton: true,
     callback: function (data, pagination) {
-      
       var html = template(data);
       listContainer.html(html);
     },
     afterPaging: function () {
-      let list = listContainer.find("li")
-      showMedia(list.eq(0))
+      let list = listContainer.find("li");
+      showMedia(list.eq(0));
       list.click(function (e) {
         e.preventDefault();
-        showMedia($(this))
+        showMedia($(this));
       });
     },
   });
@@ -97,10 +101,9 @@ function showAdv(target) {
   }
   function template(data) {
     var html = "";
-    $('.adv_total span').text(`total | ${data.length}`)
+    $(".adv_total span").text(`total | ${data.length}`);
     //console.log('data',data)
     $.each(data, function (index, item) {
-      
       const titleData = item.title;
       const imgData = item.thumb;
       const largeData = item.show_path;
