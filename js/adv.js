@@ -4,7 +4,7 @@ setHeaderFooter(() => {
 });
 
 const fetchData = () => {
-  return fetch("./data/adv.json")
+  return fetch("data/adv.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");

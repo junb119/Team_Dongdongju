@@ -1,11 +1,11 @@
 // import fetchData from "./fetchData";
 setHeaderFooter(() => {
-  headerWhite()
-  headerTransparency(.5)
+  headerWhite();
+  headerTransparency(0.5);
 });
 let filterArray = [];
 const fetchData = () => {
-  return fetch("./data/news.json")
+  return fetch("data/news.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
