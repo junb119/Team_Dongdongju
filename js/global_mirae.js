@@ -1,3 +1,4 @@
+// fullPage.js
 function activateFullpage() {
   scrollAble();
   $("#fullpage").fullpage({
@@ -73,21 +74,13 @@ function start() {
     }
   );
 }
-// $("body").css({ background: '#00427a' });
 
-// $(function () {
 const element = document.querySelector(".global_main");
 console.log(element);
 const bg = window
   .getComputedStyle(element)
   .getPropertyValue("background-color");
-console.log("d", bg);
-$("body").css({ background: bg });
-start();
-// });
-// section.each(function(){
-// 	if($(window).offset().top === $(this).offset().top){
-// 		console.log('test')
 
-// 	}
-// })
+$("body").css({ background: bg });
+
+start();

@@ -1,25 +1,21 @@
+// 헤더셋
 setHeaderFooter(() => {
   headerWhite();
   headerTransparency(0.5);
 });
 
-// function activateFullpage() {
-// 	$('#fullpage').fullpage({
-// 		//options here
-// 		autoScrolling:true,
-// 		navigation: true,
-// 	});
-// }
-// activateFullpage()
+
 let prTitle = $(".pr_title_bg img");
 let ciContainer = $(".ci_container");
 let colorTitle = $(".color_title > div");
 let colors = $(".color");
 let colorCircle = $(".color_circle");
+
 setTimeout(() => {
   prTitle.addClass("active");
 }, 500);
 
+// 테마 색 변경
 colorTitle.click(function () {
   let $this = $(this);
   colorTitle.removeClass("active");

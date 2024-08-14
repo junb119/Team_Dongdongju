@@ -11,6 +11,7 @@ let header,
   langMenu,
   lastScrollTop = 0;
 
+// 헤더 푸터 html 로드
 let isHeaderFooterLoaded = false;
 console.log("isHeaderFooterLoaded :", isHeaderFooterLoaded);
 function loadHeaderFooter() {
@@ -50,15 +51,8 @@ function setHeaderFooter(callback) {
     if (callback) callback(); // 사용자 콜백 호출
   });
 }
-// function setHeaderFooter(callback) {
-//   $("#header").load("./header.html", function () {
-//     startHeader();
-//     if (callback) callback();
-//   });
-//   $("#footer").load("./footer.html", setFooter);
-// }
-//header 이벤트들
 
+// 헤더 기본 셋
 function setHeader() {
   header = $("#header");
   headerLogo = header.find(".logo img");
@@ -78,6 +72,7 @@ function setHeader() {
   headerScroll();
   headerMobile();
 }
+// 헤더 검은 글씨, 흰 배경
 function headerBlack() {
   header.addClass("fixed");
   mainMenu.addClass("on");
@@ -86,6 +81,7 @@ function headerBlack() {
   mobileToggle.addClass("on");
   headerLogo.attr("src", "images/main/main_header/main_logo.png");
 }
+// 헤더 흰 글씨 , 투명 배경
 function headerWhite() {
   header.removeClass("fixed");
   mainMenu.removeClass("on");
@@ -94,24 +90,12 @@ function headerWhite() {
   mobileToggle.removeClass("on");
   headerLogo.attr("src", "images/main/main_header/main_logo_white.png");
 }
+// 헤더 배경 투명도 조절
 function headerTransparency(opacity) {
   header.css({ background: `rgba(0,0,0,${opacity})` });
 }
-// header scroll,mouseenter 이벤트 효과 함수 생성
 
-// --header scroll,mouseenter 이벤트 효과 함수 생성
-
-//header scroll 이벤트
-
-//--header scroll 이벤트
-
-//header mouseenter,leave 이벤트
-// subMenu.each(function () {
-//   if (subMenuHeight < $(this).height()) {
-//     subMenuHeight = $(this).height();
-//   }
-// });
-
+// header mouseenter,leave 이벤트
 function headerInOut(headerEvent) {
   header
     .on("mouseenter", function () {
@@ -126,7 +110,6 @@ function headerInOut(headerEvent) {
       header.stop().animate({ height: headerHeight + "px" }, 300);
     });
 }
-
 // --header mouseenter,leave 이벤트
 
 // scroll시 헤더 업 다운 이벤트
@@ -144,6 +127,7 @@ function headerScroll() {
   });
 }
 // --scroll시 헤더 업 다운 이벤트
+
 function headerMobile() {
   //모바일 메뉴 이벤트
   mobileBtn.click(function () {
@@ -178,10 +162,6 @@ function headerMobile() {
 //------------------------------------header 이벤트들
 
 function setFooter() {
-  // -----footer 이벤트들
-
-  // -----//footer 이벤트들
-
   // ----backToTop
   const btt = $(".backToTop");
   const $window = $(window);
@@ -279,42 +259,7 @@ function scrollDisable() {
       { passive: false }
     );
 }
+// 스크롤 활성화
 function scrollAble() {
   $("html, body").removeClass("no_scroll").off("scroll touchmove mousewheel");
 }
-// jQuery 문서 준비가 완료된 후 setHeaderFooter 호출
-
-// -----------------------------------------------
-// common.js
-
-// function setHeaderFooter(callback) {
-//   $("#header").load("./header.html", function() {
-//     startHeader();
-//     if (callback) callback(); // 콜백 호출
-//   });
-//   $("#footer").load("./footer.html", setfooter);
-// }
-
-// let header;
-// function startHeader() {
-//   header = $("#header");
-//   setBlack();
-// }
-
-// function setWhite() {
-//   if (header) {
-//     header.css({ background: "#fff" });
-//   }
-// }
-
-// function setBlack() {
-//   if (header) {
-//     header.css({ background: "#000" });
-//   }
-// }
-
-// function setfooter() {
-//   console.log("footer");
-// }
-
-// export { setHeaderFooter, startHeader, setBlack, setWhite, setfooter };

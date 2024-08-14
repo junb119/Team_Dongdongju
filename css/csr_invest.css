@@ -5,15 +5,15 @@
   --C-white: #fff;
   /* 색상 */
   --T-base: 16px;
-  --T-H1: calc(var(--T-base) * 4.375);  /*70px*/
-  --T-H2: calc(var(--T-base) * 3.4375);  /*55px*/
-  --T-H3: calc(var(--T-base) * 3);  /*48px*/
-  --T-H4: calc(var(--T-base) * 2.375);  /*38px*/
-  --T-P: calc(var(--T-base) * 1.5);  /*24px*/
-  --T-subTitle: calc(var(--T-base) * 1.25);  /*20px*/
-  --T-breadCrumb: calc(var(--T-base) * 1.25);  /*20px*/
-  --T-mobileH2: calc(var(--T-base) * 2.5);  /*40px*/
-  --T-mobileP: var(--T-base);  /*16px*/
+  --T-H1: calc(var(--T-base) * 4.375); /*70px*/
+  --T-H2: calc(var(--T-base) * 3.4375); /*55px*/
+  --T-H3: calc(var(--T-base) * 3); /*48px*/
+  --T-H4: calc(var(--T-base) * 2.375); /*38px*/
+  --T-P: calc(var(--T-base) * 1.5); /*24px*/
+  --T-subTitle: calc(var(--T-base) * 1.25); /*20px*/
+  --T-breadCrumb: calc(var(--T-base) * 1.25); /*20px*/
+  --T-mobileH2: calc(var(--T-base) * 2.5); /*40px*/
+  --T-mobileP: var(--T-base); /*16px*/
   /* 폰트 사이즈 */
 
   --T-mainfont: "Noto Sans KR", sans-serif;
@@ -24,9 +24,8 @@
   box-sizing: border-box;
 }
 
-
-.invest_sub{
-  margin-top:124px;
+.invest_sub {
+  margin-top: 124px;
 }
 
 h2 {
@@ -49,9 +48,9 @@ h4 {
   margin-left: 8%;
 }
 
-.cta{
-    text-align: right;
-    margin-right: 8%;
+.cta {
+  text-align: right;
+  margin-right: 8%;
 }
 .subtitle {
   .breadcrumb {
@@ -62,8 +61,8 @@ h4 {
     margin-bottom: 58px;
   }
 
-  .breadcrumb li:nth-child(n+2):before {
-    content: ' > ';
+  .breadcrumb li:nth-child(n + 2):before {
+    content: " > ";
   }
 
   p {
@@ -83,128 +82,138 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 28%;
-text-align: center;
-margin-bottom: 300px;
+  text-align: center;
+  margin-bottom: 300px;
 }
-.s_contents{
-  width: calc(33.33% - 60px); /* 각각의 박스는 33.33%의 너비를 가집니다. 여백을 고려하여 계산합니다. */
+.s_contents {
+  width: calc(
+    33.33% - 60px
+  ); /* 각각의 박스는 33.33%의 너비를 가집니다. 여백을 고려하여 계산합니다. */
   margin: 10px auto;
   filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.25));
   position: relative;
 }
-.s_contents:nth-child(2){
+.s_contents:nth-child(2) {
   animation: slide1 5s ease infinite;
   &:hover {
-    animation-play-state: paused;}
+    animation-play-state: paused;
+  }
 }
 @keyframes slide1 {
   0% {
-   left: 0;
-   top: 0;
+    left: 0;
+    top: 0;
   }
   25% {
     left: 0;
     top: 5px;
-   }
+  }
   50% {
-   left: 5px;
-   top: 0px;
+    left: 5px;
+    top: 0px;
   }
   75% {
     left: 0px;
     bottom: 5px;
-   }
-  100% {
-   left: 0;
-   top: 0;
-  }}
-
-  .s_contents:nth-child(4){
-    animation: slide2 5s ease infinite;
-    &:hover {
-      animation-play-state: paused;}
   }
-  @keyframes slide2 {
-    0% {
-     left: 0;
-     top: 0;
-    }
-    25% {
-      left: 0px;
-      bottom: 5px;
-     }
-    50% {
-     left: 5px;
-     top: 0px;
-    }
-    75% {
-      left: 0;
-      top: 5px;
-     }
-    100% {
-     left: 0;
-     top: 0;
-    }}
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
 
-    .s_contents:nth-child(6){
-      animation: slide3 5s ease infinite;
-      &:hover {
-        animation-play-state: paused;}
-    }
-    @keyframes slide3 {
-      0% {
-       left: 0;
-       top: 0;
-      }
-      25% {
-        left: 0px;
-        top: 5px;
-       }
-      50% {
-       right: 5px;
-       top: 0px;
-      }
-      75% {
-        left: 5px;
-        top: 5px;
-       }
-      100% {
-       left: 0;
-       top: 0;
-      }}
+.s_contents:nth-child(4) {
+  animation: slide2 5s ease infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes slide2 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 0px;
+    bottom: 5px;
+  }
+  50% {
+    left: 5px;
+    top: 0px;
+  }
+  75% {
+    left: 0;
+    top: 5px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
 
-      .s_contents:nth-child(8){
-        animation: slide4 5s ease infinite;
+.s_contents:nth-child(6) {
+  animation: slide3 5s ease infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes slide3 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 0px;
+    top: 5px;
+  }
+  50% {
+    right: 5px;
+    top: 0px;
+  }
+  75% {
+    left: 5px;
+    top: 5px;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
 
-        &:hover {
-          animation-play-state: paused;}
-      }
-      @keyframes slide4 {
-        0% {
-         left: 0;
-         top: 0;
-        }
-        10%{
-          left: 0px;
-          bottom: 5px;
-        }
-        25% {
-          left: 0px;
-          bottom: 10px;
-         }
-        50% {
-         left: 5px;
-         top: 0px;
-        }
-        75% {
-          left: 0;
-          top: 5px;
-         }
-        100% {
-         right: 5px;
-         top: 0;
-        }}
-.s_contents img{
+.s_contents:nth-child(8) {
+  animation: slide4 5s ease infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes slide4 {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  10% {
+    left: 0px;
+    bottom: 5px;
+  }
+  25% {
+    left: 0px;
+    bottom: 10px;
+  }
+  50% {
+    left: 5px;
+    top: 0px;
+  }
+  75% {
+    left: 0;
+    top: 5px;
+  }
+  100% {
+    right: 5px;
+    top: 0;
+  }
+}
+.s_contents img {
   width: 130px;
   text-align: center;
   display: inline-block;
@@ -219,15 +228,14 @@ margin-bottom: 300px;
   padding: 10px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.1));
   left: 110%;
-  top: 0; 
+  top: 0;
   display: none;
-  line-height : 25px;
+  line-height: 25px;
 }
 
-.s_contents:hover .iv_dsc{
+.s_contents:hover .iv_dsc {
   display: block;
 }
-
 
 h5 {
   text-align: right;
@@ -235,10 +243,10 @@ h5 {
   top: 80px;
   padding: 10px 0;
 }
-h5 a{
+h5 a {
   display: inline-block;
   border-radius: 50%;
-  background:gray;
+  background: gray;
 }
 
 .channel_banner {
@@ -277,9 +285,7 @@ h5 a{
   overflow: hidden;
   position: relative;
   transform-style: preserve-3d;
-  transition: background-color 0.5 ease,
-    color 0.5s ease,
-    transform 0.5s ease;
+  transition: background-color 0.5 ease, color 0.5s ease, transform 0.5s ease;
 }
 
 .magazine_sage:hover .sage,
@@ -300,15 +306,14 @@ h5 a{
 .magazine_invest .invest:active {
   transform: perspective(500px) rotateY(0);
   transition: 0.5s;
-  
 }
 
-.magazine_sage .sage:hover~.sage,
-.magazine_sage .sage:focus~.sage,
-.magazine_sage .sage:active~.sage,
-.magazine_invest .invest:hover~.invest,
-.magazine_invest .invest:focus~.invest,
-.magazine_invest .invest:active~.invest {
+.magazine_sage .sage:hover ~ .sage,
+.magazine_sage .sage:focus ~ .sage,
+.magazine_sage .sage:active ~ .sage,
+.magazine_invest .invest:hover ~ .invest,
+.magazine_invest .invest:focus ~ .invest,
+.magazine_invest .invest:active ~ .invest {
   transform: perspective(500px) rotateY(-30deg);
   transition: 0.3s;
 }
@@ -321,7 +326,6 @@ h5 a{
   text-align: center;
   transition: box-shadow 0.5s ease;
   visibility: hidden;
-
 }
 
 .magazine_sage .sage:hover p,
@@ -338,10 +342,9 @@ h5 a{
   visibility: inherit;
 }
 .magazine_invest > div,
-.magazine_sage > div{
+.magazine_sage > div {
   transition: 0.3s;
 }
-
 
 .sage:nth-child(1) {
   background: url(../images/sub/sub_csr/sage_1.png) no-repeat;

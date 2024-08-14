@@ -1,5 +1,5 @@
+// 슬라이드
 const slider = $('.slider');
-
 $(document).on('click',activate); 
 
 function activate(e){

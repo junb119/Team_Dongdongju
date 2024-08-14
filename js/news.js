@@ -3,6 +3,8 @@ setHeaderFooter(() => {
   headerWhite();
   headerTransparency(0.5);
 });
+
+// 뉴스데이터 로드
 let filterArray = [];
 const fetchData = () => {
   return fetch("data/news.json")
@@ -20,76 +22,18 @@ const fetchData = () => {
       console.error("There was a problem with the fetch operation:", error);
     });
 };
+// 배경 애니메이션
 let prTitle = $(".pr_title_bg img");
 setTimeout(() => {
   prTitle.addClass("active");
 }, 500);
+
+// 뉴스 전체 갯수
 fetchData().then((datas) => {
   let total = $(".news_info > span");
   total.html(`total | ${datas.length}`);
-  //   let showCountNews = 12;
-
-  // newsList.each(function (idx, item) {
-  // const link = $(item).find(".link");
-  // const img = $(item).find(".thumb");
-  // const date = $(item).find(".date");
-  // const pub = $(item).find(".text_content .media");
-  // const nation = $(item).find(".text_content .national");
-  // const title = $(item).find(".text_content  .article_title");
-
-  // const data = datas[idx];
-  // const titleData = data.title;
-  // const publishData = data.publish;
-  // const nationData = data.nation;
-  // const dateData = data.date;
-  // const imgData = data.img;
-  // const linkData = data.link;
-
-  // for (let i = 0; i < showCountNews; i++) {
-  //   const lastPage = Math.ceil(datas.length / showCountNews);
-  //   const data = datas[i];
-  //   const titleData = data.title;
-  //   const publishData = data.publish;
-  //   const nationData = data.nation;
-  //   const dateData = data.date;
-  //   const imgData = data.img;
-  //   const linkData = data.link;
-  //   const newsItem = `
-  //     <li class="news_item">
-  //       <a href="${linkData}" class="link" target="_blank">
-  //         <img src="${imgData}" alt="" class="thumb" />
-  //         <div class="text_content">
-  //           <div class="tag df">
-  //             <span class="date">${dateData}</span>
-  //             <span class="media">${publishData}</span>
-  //             <span class="national">${nationData}</span>
-  //           </div>
-  //           <p class="article_title">${titleData}</p>
-  //         </div>
-  //       </a>
-  //       <div class="kebab">
-  //         <ul>
-  //           <li>X</li>
-  //           <li><a href="">kakaotalk</a></li>
-  //           <li><a href="">facebook</a></li>
-  //           <li><a href="">tweeter</a></li>
-  //           <li><a href="">url</a></li>
-  //         </ul>
-  //       </div>
-  //     </li>`;
-  //   $(".image-list").append(newsItem);
-
-  // 마지막페이지 넘버 업데이트
-  //   $(".lastNum").text(lastPage);
-
-  // link.attr("href", linkData);
-  // img.attr("src", imgData);
-  // date.text(dateData);
-  // pub.text(publishData);
-  // nation.text(nationData);
-  // title.text(titleData);
-  // });
 });
+
 let curruentNation = "전체";
 let national = $(".search_news .national");
 national.change(function () {
@@ -109,9 +53,6 @@ function listChange() {
     // console.log(nItem);
   }
 }
-
-// let searchInput = $(".search_news input[name='search']");
-// console.log("s", searchInput.get(0));
 
 // 그리드 리스트
 let showNews = $(".show_news > div");

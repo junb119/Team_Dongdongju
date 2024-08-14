@@ -1,8 +1,10 @@
+// 헤더 셋
 setHeaderFooter(() => {
   headerWhite();
   headerTransparency(0.5);
 });
 
+// json 연동
 const fetchData = () => {
   return fetch("data/adv.json")
     .then((response) => {
@@ -19,29 +21,13 @@ const fetchData = () => {
       console.error("There was a problem with the fetch operation:", error);
     });
 };
+// 배경 애니메이션
 let prTitle = $(".pr_title_bg img");
 setTimeout(() => {
   prTitle.addClass("active");
 }, 500);
-// fetchData().then((datas) => {
-// let videoDatas = datas.video
-// let printDatas = datas.print
 
-// $('.list_adv li').each(function (idx) {
-
-//   let thumb = $(this).find('figure img')
-//   let desc = $(this).find('figcaption')
-//   let targetData = videoDatas[idx]
-//   console.log(thumb)
-//   console.log(desc)
-//   thumb.attr('src', targetData.img_path)
-//   desc.text(targetData.title)
-//   })
-
-//   $('.display_adv video').attr('src', videoDatas[0].video_path)
-
-//   // 페이지네이션
-
+// 페이지네이션
 let searchAdv = $(".search_adv");
 let labels = searchAdv.find("label");
 let listContainer = $(".list_adv");
@@ -49,13 +35,9 @@ let listContainer = $(".list_adv");
 labels.click(function () {
   showAdv($(this));
 });
-//console.log('w?',searchAdv.find(".active").get(0));
 showAdv(searchAdv.find(".active"));
 
-// getVideo();
-//   // --페이지네이션
-// })
-
+// 광고 표시
 function showAdv(target) {
   let path;
   let media;
