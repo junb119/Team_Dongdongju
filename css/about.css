@@ -8,11 +8,11 @@
 .sub_vision {
   padding-bottom: 280px;
 }
-.sub_vision>p{
+.sub_vision > p {
   text-align: center;
   font-size: var(--T-H4);
 }
-.sub_vision>p>strong {
+.sub_vision > p > strong {
   font-weight: bold;
 }
 .circle_wrap {
@@ -57,7 +57,7 @@
   transform: translate(-50%, -50%);
 }
 .vision_txt .st {
-  padding-bottom:40px;
+  padding-bottom: 40px;
 }
 .value {
   position: absolute;
@@ -79,7 +79,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: #FFF0E2;
+  background: #fff0e2;
   position: relative;
 }
 .value_circle:first-child,
@@ -98,7 +98,7 @@
 }
 .sub_slogan {
   /* position: relative; */
-  background: url(/images/sub/sub_about/slogan_bg.jpg) no-repeat 50% 50%;
+  background: url(../images/sub/sub_about/slogan_bg.jpg) no-repeat 50% 50%;
   height: 900px;
 }
 .sub_slogan img {
@@ -108,7 +108,7 @@
   text-align: center;
   padding-top: 180px;
 }
-.slogan_tit>p {
+.slogan_tit > p {
   font-size: calc(var(--T-H2) - 5px);
   padding-bottom: 60px;
 }
@@ -116,7 +116,7 @@
   font-size: var(--T-H2);
   font-weight: bold;
 }
-  
+
 .ir_tit {
   text-align: center;
   padding-bottom: 110px;
@@ -135,9 +135,9 @@ iframe {
   height:315px; */
 }
 
-.sub_brochure  {
+.sub_brochure {
   position: relative;
-  background: url(/images/sub/sub_about/brichure_bg.jpg) no-repeat 50% 50%;
+  background: url("/images/sub/sub_about/brichure_bg.jpg") no-repeat 50% 50%;
   height: 1100px;
   padding-top: 0;
 }
@@ -146,13 +146,13 @@ iframe {
   padding-top: 180px;
 }
 .brochure_wrap {
- padding-top: 150px;
- justify-content: space-evenly;
- position: relative;
+  padding-top: 150px;
+  justify-content: space-evenly;
+  position: relative;
 }
 
 .brochure_wrap:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 282px;
   top: 115px;
@@ -175,7 +175,7 @@ iframe {
 .brochure_kr em,
 .brochure_en em {
   font-size: 34px;
-} 
+}
 .button_wrap {
   padding-top: 54px;
 }
@@ -199,5 +199,5 @@ iframe {
 }
 .button_wrap span {
   font-size: 28px;
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
