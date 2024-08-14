@@ -137,7 +137,7 @@ iframe {
 
 .sub_brochure {
   position: relative;
-  background: url("/images/sub/sub_about/brichure_bg.jpg") no-repeat 50% 50%;
+  background: url("../images/sub/sub_about/brichure_bg.jpg") no-repeat 50% 50%;
   height: 1100px;
   padding-top: 0;
 }
