@@ -8,6 +8,13 @@
 - scrollTop, offset 기반 정밀 인터랙션
 - JSON 기반 동적 콘텐츠 로딩
 - 브랜드 몰입형 메인 시퀀스 애니메이션
+---
+
+## 🔗 링크
+
+- [🖼️ Live Demo 보기]([https://junbs-profile.vercel.app/](https://junb119.github.io/Team_Dongdongju/))
+
+---
 
 ## ✅ 주요 특징
 
