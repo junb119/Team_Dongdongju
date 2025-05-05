@@ -538,60 +538,6 @@ function generateHtml(dataArray, isNews = true) {
   }
   return html;
 }
-
-// function setSlide() {
-//   let showNoticeCount = 6;
-
-//   // Create an array of promises for fetching data
-//   let newsPromise = fetchData("./data/news.json");
-//   let advPromise = fetchData("./data/adv_video.json");
-
-//   // Use Promise.all to wait for both fetches to complete
-//   return Promise.all([newsPromise, advPromise]).then(([newsData, advData]) => {
-//     // Process news data
-//     let newsHtml = "";
-//     for (let i = 0; i < showNoticeCount; i++) {
-//       let data = newsData[i];
-//       let title = data.title;
-//       let link = data.link;
-//       let img = data.img;
-
-//       newsHtml += `<li>
-//         <a href="${link}" target="_blank">
-//           <div class="card_top df aic">
-//             <p class="card_title">${title}</p>
-//           </div>
-//           <img src="${img}" alt="${title}" />
-//         </a>
-//       </li>`;
-//     }
-//     $(".newsSlider").html(newsHtml);
-
-//     // Process adv data
-//     let advHtml = "";
-//     for (let i = 0; i < showNoticeCount; i++) {
-//       let data = advData[i];
-//       let title = data.title;
-//       let link = data.show_path;
-//       let img = data.thumb;
-
-//       advHtml += `<li>
-//         <a href="${link}" target="_blank">
-//           <div class="card_top df aic">
-//             <p class="card_title">${title}</p>
-//           </div>
-//           <img src="${img}" alt="${title}" />
-//         </a>
-//       </li>`;
-//     }
-//     $(".advSlider").html(advHtml);
-
-//     // Call the function to set slide width after HTML is updated
-//     getNoticeSlideWidth();
-//   });
-// }
-
-// Call setSlide and handle any additional actions
 function setSlide() {
   let showNoticeCount = 6;
 
