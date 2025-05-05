@@ -12,7 +12,7 @@
 
 ## 🔗 링크
 
-- [🖼️ Live Demo 보기]([https://junbs-profile.vercel.app/](https://junb119.github.io/Team_Dongdongju/))
+- [🖼️ Live Demo 보기](https://junb119.github.io/Team_Dongdongju/)
 
 ---
 
