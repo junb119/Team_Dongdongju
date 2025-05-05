@@ -89,22 +89,31 @@
 ![브랜드 시네마틱 애니메이션](readmeImg/mirea_intro.gif)
 
 - 수치 증가 애니메이션
+![수치 증가 애니메이션](readmeImg/mirea_numeric.gif)
+
 - 스크롤 기반 배경/텍스트 전환
+![스크롤 기반 배경/텍스트 전환](readmeImg/mirea_sales.gif)
+
 - 뉴스/광고 가로 슬라이드
+![뉴스/광고 가로 슬라이드](readmeImg/mirea_notice.gif)
+
 - 감속 기반 커스텀 스크롤
 
 ### 글로벌 미래에셋
 - 풀페이지 구조 구성
 - 배경 확대 + 헤더 동적 노출
+![글로벌 미래에셋](readmeImg/mirea_global.gif)
 
 ### 뉴스 / 광고
 - JSON 데이터 기반 비동기 로딩
-- 국가 필터 / 뷰 전환 / 대표 미디어 동적 교체
+- 뷰 전환 / 대표 미디어 동적 교체
+![뉴스](readmeImg/mirea_news.gif)
+![광고](readmeImg/mirea_adv.gif)
 
 ### CI 페이지
 - 컬러 테마 선택에 따른 스타일 전환
 - sticky 기반 단계적 콘텐츠 노출
-
+![ci](readmeImg/mirea_ci.gif)
 ---
 
 ## 🛠 공통 기능: Header
