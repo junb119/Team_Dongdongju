@@ -86,7 +86,7 @@
 
 ### 메인 페이지
 - 브랜드 시네마틱 애니메이션
-![Uploading mirea_intro.gif…]()
+![브랜드 시네마틱 애니메이션](readmeImg/mirea_intro.gif)
 
 - 수치 증가 애니메이션
 - 스크롤 기반 배경/텍스트 전환
